@@ -1,0 +1,189 @@
+$ git log -p -n 2
+commit 72f6a7d29ff7a3c33109ece297c4da1d92a45e44
+Author: Elena Piscopia <elena@example.net>
+Date:   Mon Feb 17 08:50:02 2020 +0100
+
+    Add note on datalad clone
+
+diff --git a/notes.txt b/notes.txt
+index bfa64d7..18a0315 100644
+--- a/notes.txt
++++ b/notes.txt
+@@ -5,3 +5,9 @@ The command "datalad save [-m] PATH" saves the file
+ (modifications) to history. Note to self:
+ Always use informative, concise commit messages.
+ 
++The command 'datalad clone URL/PATH [PATH]'
++installs a dataset from e.g., a URL or a path.
++If you install a dataset into an existing
++dataset (as a subdataset), remember to specify the
++root of the superdataset with the '-d' option.
++
+
+commit 9bb3629f431bb1b34651a55e8c95e49c71035d1e
+Author: Elena Piscopia <elena@example.net>
+Date:   Mon Feb 17 08:49:32 2020 +0100
+
+    [DATALAD] Recorded changes
+
+diff --git a/.gitmodules b/.gitmodules
+new file mode 100644
+index 0000000..37b3468
+--- /dev/null
++++ b/.gitmodules
+@@ -0,0 +1,5 @@
++[submodule "recordings/longnow"]
++	path = recordings/longnow
++	url = https://github.com/datalad-datasets/longnow-podcasts.git
++	branch = master
++	datalad-id = b3ca2718-8901-11e8-99aa-a0369f7c647e
+diff --git a/recordings/longnow b/recordings/longnow
+new file mode 160000
+index 0000000..dcc34fb
+--- /dev/null
++++ b/recordings/longnow
+@@ -0,0 +1 @@
++Subproject commit dcc34fbe669b06ced84ced381ba0db21cf5e665f
+
+commit 12ced25277c47d5f52946937ef28df87e61b3d42
+Author: Elena Piscopia <elena@example.net>
+Date:   Mon Feb 17 08:49:29 2020 +0100
+
+    add note on datalad save
+
+diff --git a/notes.txt b/notes.txt
+index 3a7a1fe..bfa64d7 100644
+--- a/notes.txt
++++ b/notes.txt
+@@ -1,3 +1,7 @@
+ One can create a new dataset with 'datalad create [--description] PATH'.
+ The dataset is created empty
+ 
++The command "datalad save [-m] PATH" saves the file
++(modifications) to history. Note to self:
++Always use informative, concise commit messages.
++
+
+commit 63d50c8818d6982bd158b14e34e1601db03c6a6e
+Author: Elena Piscopia <elena@example.net>
+Date:   Mon Feb 17 08:49:28 2020 +0100
+
+    Add notes on datalad create
+
+diff --git a/notes.txt b/notes.txt
+new file mode 100644
+index 0000000..3a7a1fe
+--- /dev/null
++++ b/notes.txt
+@@ -0,0 +1,3 @@
++One can create a new dataset with 'datalad create [--description] PATH'.
++The dataset is created empty
++
+
+commit 8d3b831c9850ec783870c26d516db78ac4a5d1d1
+Author: Elena Piscopia <elena@example.net>
+Date:   Mon Feb 17 08:49:26 2020 +0100
+
+    add beginners guide on bash
+
+diff --git a/books/bash_guide.pdf b/books/bash_guide.pdf
+new file mode 120000
+index 0000000..00ca6bd
+--- /dev/null
++++ b/books/bash_guide.pdf
+@@ -0,0 +1 @@
++../.git/annex/objects/WF/Gq/MD5E-s1198170--0ab2c121bcf68d7278af266f6a399c5f.pdf/MD5E-s1198170--0ab2c121bcf68d7278af266f6a399c5f.pdf
+\ No newline at end of file
+
+commit 393f24fbefdddfa4df6f7c0691a73268eb881023
+Author: Elena Piscopia <elena@example.net>
+Date:   Mon Feb 17 08:49:17 2020 +0100
+
+    add reference book about git
+
+diff --git a/books/progit.pdf b/books/progit.pdf
+new file mode 120000
+index 0000000..c5d2ab2
+--- /dev/null
++++ b/books/progit.pdf
+@@ -0,0 +1 @@
++../.git/annex/objects/G6/Gj/MD5E-s12465653--05cd7ed561d108c9bcf96022bc78a92c.pdf/MD5E-s12465653--05cd7ed561d108c9bcf96022bc78a92c.pdf
+\ No newline at end of file
+
+commit 44aa3e27dfd88183567f22a6a835e042171391f0
+Author: Elena Piscopia <elena@example.net>
+Date:   Mon Feb 17 08:49:12 2020 +0100
+
+    add books on Python and Unix to read later
+
+diff --git a/books/TLCL.pdf b/books/TLCL.pdf
+new file mode 120000
+index 0000000..4c84b61
+--- /dev/null
++++ b/books/TLCL.pdf
+@@ -0,0 +1 @@
++../.git/annex/objects/jf/3M/MD5E-s2120211--06d1efcb05bb2c55cd039dab3fb28455.pdf/MD5E-s2120211--06d1efcb05bb2c55cd039dab3fb28455.pdf
+\ No newline at end of file
+diff --git a/books/byte-of-python.pdf b/books/byte-of-python.pdf
+new file mode 120000
+index 0000000..58c0629
+--- /dev/null
++++ b/books/byte-of-python.pdf
+@@ -0,0 +1 @@
++../.git/annex/objects/F1/Wz/MD5E-s4242644--f4e1c8ebfb5c89a69ff6d268eb2e63e3.pdf/MD5E-s4242644--f4e1c8ebfb5c89a69ff6d268eb2e63e3.pdf
+\ No newline at end of file
+
+commit c74e2b7951db566d5ccce7faeb2f86584d4d6321
+Author: Elena Piscopia <elena@example.net>
+Date:   Mon Feb 17 08:48:47 2020 +0100
+
+    Instruct annex to add text files to Git
+
+diff --git a/.gitattributes b/.gitattributes
+index c3aaefe..519a1f9 100644
+--- a/.gitattributes
++++ b/.gitattributes
+@@ -1,3 +1,4 @@
+ 
+ * annex.backend=MD5E
+-**/.git* annex.largefiles=nothing
+\ No newline at end of file
++**/.git* annex.largefiles=nothing
++* annex.largefiles=((mimeencoding=binary)and(largerthan=0))
+\ No newline at end of file
+
+commit dbaf9fae9f69b9bfea1a6b7e2f374335f41702c1
+Author: Elena Piscopia <elena@example.net>
+Date:   Mon Feb 17 08:48:46 2020 +0100
+
+    [DATALAD] new dataset
+
+diff --git a/.datalad/.gitattributes b/.datalad/.gitattributes
+new file mode 100644
+index 0000000..b540820
+--- /dev/null
++++ b/.datalad/.gitattributes
+@@ -0,0 +1,4 @@
++
++config annex.largefiles=nothing
++metadata/aggregate* annex.largefiles=nothing
++metadata/objects/** annex.largefiles=(anything)
+\ No newline at end of file
+diff --git a/.datalad/config b/.datalad/config
+new file mode 100644
+index 0000000..eadd52e
+--- /dev/null
++++ b/.datalad/config
+@@ -0,0 +1,2 @@
++[datalad "dataset"]
++	id = ed80af32-5159-11ea-a727-6533dd7bb2c6
+diff --git a/.gitattributes b/.gitattributes
+new file mode 100644
+index 0000000..c3aaefe
+--- /dev/null
++++ b/.gitattributes
+@@ -0,0 +1,3 @@
++
++* annex.backend=MD5E
++**/.git* annex.largefiles=nothing
+\ No newline at end of file

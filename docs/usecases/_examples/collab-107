@@ -1,0 +1,4 @@
+
+$ datalad clone /myanalysis bobs_analysis
+[INFO] Cloning myanalysis into '/home/me/usecases/collab/bobs_analysis' 
+install(ok): /home/me/usecases/collab/bobs_analysis (dataset)
