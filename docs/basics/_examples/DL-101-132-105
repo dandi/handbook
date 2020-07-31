@@ -1,2 +1,0 @@
-$ datalad status -d . midterm_project/
-untracked: midterm_project/an_empty_file (file)

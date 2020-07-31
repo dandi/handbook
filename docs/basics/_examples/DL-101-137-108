@@ -1,3 +1,0 @@
-$ git log -n 2 --oneline
-b96ba14 save cropped logos to Git
-b52a714 content removed from git annex

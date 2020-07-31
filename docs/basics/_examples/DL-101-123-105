@@ -1,3 +1,0 @@
-$ cat .datalad/config
-[datalad "dataset"]
-	id = ed80af32-5159-11ea-a727-6533dd7bb2c6

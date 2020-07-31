@@ -10,24 +10,15 @@ Installation and configuration
   version, you can get information on your version of DataLad by typing
   ``datalad --version`` into your terminal.
 
-Install DataLad
-^^^^^^^^^^^^^^^
+Install DANDI client
+^^^^^^^^^^^^^^^^^^^^
 
-The content in this chapter is largely based on the information given on the
-`DataLad website <https://www.datalad.org/get_datalad.html>`_
-and the `DataLad documentation <http://docs.datalad.org/en/latest/gettingstarted.html>`_.
-
-Beyond DataLad itself, the installation requires Python, :term:`Git`,
-:term:`git-annex`, and potentially Pythons package manager ``pip``.
+Beyond DANDI client itself, the installation requires :term:`Python`,
+and potentially Pythons package manager ``pip``.
 The instructions below detail how to install
 each of these components for different common operating systems. Please
-`file an issue <https://github.com/datalad-handbook/book/issues/new>`_
+`file an issue <https://github.com/dandi/handbook/issues/new>`_
 if you encounter problems.
-
-Note that while these installation instructions will provide you with the core
-DataLad tool, many
-`extensions <http://docs.datalad.org/en/latest/index.html#extension-packages>`_
-exist, and they need to be installed separately, if needed.
 
 .. figure:: ../artwork/src/install.svg
    :width: 70%
@@ -49,21 +40,10 @@ DataLad and all of its software dependencies (including the git-annex-standalone
 
 .. code-block:: bash
 
-   $ sudo apt-get install datalad
+   $ sudo apt-get install dandi
 
 The command above will also upgrade existing installations to the most recent
 available version.
-
-Linux: CentOS, Redhat, Fedora, or similar systems
-"""""""""""""""""""""""""""""""""""""""""""""""""
-
-For CentOS, Redhat, Fedora, or similar distributions, there is an rpm
-git-annex-standalone available
-`here <https://git-annex.branchable.com/install/rpm_standalone/>`_.
-Subsequently, DataLad can be installed via ``pip``.
-
-Alternatively, DataLad can be installed together with :term:`Git` and
-:term:`git-annex` via ``conda`` as outlined in the section below.
 
 
 Linux-machines with no root access (e.g. HPC systems)
@@ -77,7 +57,7 @@ can be installed with `Miniconda <https://docs.conda.io/en/latest/miniconda.html
   $ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
   $ bash Miniconda3-latest-Linux-x86_64.sh
   # acknowledge license, keep everything at default
-  $ conda install -c conda-forge datalad
+  $ conda install -c conda-forge dandi
 
 This should install :term:`Git`, :term:`git-annex`, and DataLad.
 The installer automatically configures the shell to make conda-installed

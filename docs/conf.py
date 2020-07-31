@@ -98,7 +98,7 @@ master_doc = 'index'
 
 # General information about the project.
 current_year = datetime.datetime.now().year
-project = u'datalad-handbook'
+project = u'dandi-handbook'
 copyright = (u'2019-{} CC-BY-SA').format(current_year)
 
 # The version info for the project you're documenting, acts as replacement for
@@ -162,7 +162,7 @@ smartquotes = True
 trim_footnote_reference_space = True
 
 # -- Options for HTML output ---------------------------------------------------
-html_baseurl = 'http://handbook.datalad.org/'
+html_baseurl = 'http://handbook.dandi.org/'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
@@ -174,8 +174,8 @@ html_theme = 'alabaster'
 # more options: https://alabaster.readthedocs.io/en/latest/customization.html
 html_theme_options = {
     'show_powered_by': False,
-    'github_user': 'datalad-handbook',
-    'github_repo': 'book',
+    'github_user': 'dandi',
+    'github_repo': 'handbook',
     'github_banner': True,
     'show_related': True,
     # colors
@@ -194,7 +194,7 @@ html_theme_path = ['_themes']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'The DataLad Handbook'
+html_title = 'The DANDI Handbook'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -255,7 +255,7 @@ html_show_sphinx = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'dataladhandbookdoc'
+htmlhelp_basename = 'dandihandbookdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -265,8 +265,8 @@ htmlhelp_basename = 'dataladhandbookdoc'
 latex_documents = [
   (
       'index',
-      'dataladhandbook.tex',
-      u'The DataLad Handbook',
+      'dandihandbook.tex',
+      u'The DANDI Handbook',
       u' \\and '.join(a.replace(' ', '~') for a in authors),
       'manual'),
 ]
@@ -316,7 +316,7 @@ latex_elements = {
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'dataladhandbook', u'The DataLad Handbook',
+    ('index', 'dandihandbook', u'The DANDI Handbook',
      [u'all'], 1)
 ]
 
@@ -324,7 +324,7 @@ man_pages = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'dataladhandbook'
+epub_title = u'dandihandbook'
 epub_author = u'all'
 epub_publisher = u'all'
 epub_copyright = u'2019–{}, all'.format(current_year)
