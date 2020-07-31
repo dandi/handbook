@@ -98,7 +98,7 @@ master_doc = 'index'
 
 # General information about the project.
 current_year = datetime.datetime.now().year
-project = u'datalad-handbook'
+project = u'dandi-handbook'
 copyright = (u'2019-{} CC-BY-SA').format(current_year)
 
 # The version info for the project you're documenting, acts as replacement for
@@ -162,7 +162,7 @@ smartquotes = True
 trim_footnote_reference_space = True
 
 # -- Options for HTML output ---------------------------------------------------
-html_baseurl = 'http://handbook.datalad.org/'
+html_baseurl = 'http://handbook.dandi.org/'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
@@ -174,8 +174,8 @@ html_theme = 'alabaster'
 # more options: https://alabaster.readthedocs.io/en/latest/customization.html
 html_theme_options = {
     'show_powered_by': False,
-    'github_user': 'datalad-handbook',
-    'github_repo': 'book',
+    'github_user': 'dandi',
+    'github_repo': 'handbook',
     'github_banner': True,
     'show_related': True,
     # colors
@@ -194,7 +194,7 @@ html_theme_path = ['_themes']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'The DataLad Handbook'
+html_title = 'The DANDI Handbook'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -255,7 +255,7 @@ html_show_sphinx = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'dataladhandbookdoc'
+htmlhelp_basename = 'dandihandbookdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -265,33 +265,65 @@ htmlhelp_basename = 'dataladhandbookdoc'
 latex_documents = [
   (
       'index',
-      'dataladhandbook.tex',
-      u'The DataLad Handbook',
-      u' \\and '.join(a.replace(' ', '~') for a in authors),
+      'dandihandbook.tex',
+      u'The DANDI Handbook',
+      u'',
       'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-latex_logo = None
+latex_logo = '../artwork/logo.pdf'
 
 latex_toplevel_sectioning = 'part'
 latex_show_pagerefs = True
 latex_show_urls = 'footnote'
 latex_elements = {
-    'papersize': 'a4',
+    'papersize': 'a4paper',
     'pointsize': '11pt',
     'figure_align': 'H',
-    'extraclassoptions': 'openany,oneside',
-    'fncychap' : r'\usepackage[Bjarne]{fncychap}',
+    'maketitle': r"""
+\begin{titlepage}
+\raggedleft
+\rule{1pt}{\textheight}
+\hspace{0.05\textwidth}
+\parbox[b]{0.75\textwidth}{
+\includegraphics[width=0.75\textwidth]{logo.pdf}\\
+{\Huge\textbf{The handbook}}\hfill{\footnotesize %s}\\[1\baselineskip]
+{\Large Introduction \textbullet\ Advanced topics \textbullet\ Use cases}\\[2\baselineskip]
+{\Large\textsc{Adina~Wagner \& Michael~Hanke}\\[1\baselineskip]
+{\small \textit{with}}\\[1\baselineskip]
+{
+\raggedright
+%s\\
+}}
+}
+\end{titlepage}
+""" % (
+        release,
+        ', '.join('\\mbox{%s}' % a for a in authors[1:-1]),
+    ),
+    'extraclassoptions': 'openany,twoside',
+    'fncychap': r'\usepackage[Bjarne]{fncychap}',
     'passoptionstopackages': r'\PassOptionsToPackage{svgnames}{xcolor}',
     'preamble': r"""
 \usepackage{charter}
 \usepackage[defaultsans]{lato}
 \usepackage{inconsolata}
+
+% nice boxes
+\usepackage[skins,breakable]{tcolorbox}
+\tcbset{enhanced}
+
 \setcounter{tocdepth}{1}
 \usepackage{xcolor}
-\setcounter{secnumdepth}{0}
+\definecolor{dataladyellow}{HTML}{FFA200}
+\definecolor{dataladblue}{HTML}{7FD5FF}
+\definecolor{dataladgray}{HTML}{333333}
+\definecolor{windowsblue}{HTML}{00A4EF}
+\definecolor{windowsgreen}{HTML}{66CC33}
+\definecolor{windowsyellow}{HTML}{FFCC00}
+\setcounter{secnumdepth}{1}
 \newsavebox{\selvestebox}
 \newenvironment{colbox}[1]
   {\newcommand\colboxcolor{#1}%
@@ -301,6 +333,8 @@ latex_elements = {
    \begin{center}
    \colorbox[HTML]{\colboxcolor}{\usebox{\selvestebox}}
    \end{center}}
+\newcommand*\ruleline[1]{\par\noindent\raisebox{.8ex}{\makebox[\linewidth]{\hrulefill\hspace{1ex}\raisebox{-.8ex}{#1}\hspace{1ex}\hrulefill}}}
+\newenvironment{colortext}{\color{orange}}{\ignorespacesafterend}
 """,
 }
 
@@ -316,7 +350,7 @@ latex_elements = {
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'dataladhandbook', u'The DataLad Handbook',
+    ('index', 'dandihandbook', u'The DANDI Handbook',
      [u'all'], 1)
 ]
 
@@ -324,7 +358,7 @@ man_pages = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'dataladhandbook'
+epub_title = u'dandihandbook'
 epub_author = u'all'
 epub_publisher = u'all'
 epub_copyright = u'2019–{}, all'.format(current_year)
