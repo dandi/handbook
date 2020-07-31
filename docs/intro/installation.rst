@@ -3,12 +3,6 @@
 Installation and configuration
 ------------------------------
 
-.. note::
-
-  The handbook is written for DataLad version 0.12.
-  If you already have DataLad installed but are unsure whether it is the correct
-  version, you can get information on your version of DataLad by typing
-  ``datalad --version`` into your terminal.
 
 Install DANDI client
 ^^^^^^^^^^^^^^^^^^^^
@@ -49,7 +43,7 @@ available version.
 Linux-machines with no root access (e.g. HPC systems)
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
-If you want to install DataLad on a machine you do not have root access to, DataLad
+If you want to install DANDI on a machine you do not have root access to, DataLad
 can be installed with `Miniconda <https://docs.conda.io/en/latest/miniconda.html>`_.
 
 .. code-block:: bash
@@ -59,93 +53,16 @@ can be installed with `Miniconda <https://docs.conda.io/en/latest/miniconda.html
   # acknowledge license, keep everything at default
   $ conda install -c conda-forge dandi
 
-This should install :term:`Git`, :term:`git-annex`, and DataLad.
 The installer automatically configures the shell to make conda-installed
 tools accessible, so no further configuration is necessary.
 
-To update an existing installation with conda, use ``conda update datalad``.
-
-macOS/OSX
-"""""""""
-
-A common way to install packages on OS X is via the
-`homebrew <https://brew.sh/>`_ package manager.
-First, install the homebrew package manager. Note that prior
-to the installation, `Xcode <https://apps.apple.com/us/app/xcode/id497799835>`_
-needs to be installed from the Mac App Store.
-Homebrew then can be installed using the command following the
-instructions on their webpage (linked above).
-
-Next, `install git-annex <https://git-annex.branchable.com/install/OSX/>`_. The
-easiest way to do this is via ``brew``::
-
-   $ brew install git-annex
-
-Once git-annex is available, DataLad can be installed via Pythons package
-manager ``pip`` as described below. ``pip`` should already be installed by
-default. Recent macOS versions may have ``pip3`` instead of ``pip`` -- use
-:term:`tab completion` to find out which is installed. If it is ``pip3``, run::
-
-   $ pip3 install datalad~=0.12
-
-instead of the code snippets in the section below.
-
-If this results in a ``permission denied`` error, install DataLad into
-a user's home directory:
-
-.. code-block:: bash
-
-   $ pip3 install --user datalad~=0.12
+To update an existing installation with conda, use ``conda update dandi``.
 
 
-.. findoutmore:: If something is not on PATH...
+Using Python's package manager ``pip``
+""""""""""""""""""""""""""""""""""""""
 
-    Recent macOS versions may warn after installation that scripts were installed
-    into locations that were not on ``PATH``::
-
-       The script chardetect is installed in '/Users/awagner/Library/Python/3.7/bin' which is not on PATH.
-       Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
-
-    To fix this, add these paths to the ``$PATH`` environment variable.
-    You can either do this for your own user (1), or for all users of the computer (2)
-    (requires using ``sudo`` and authenticating with your computer's password):
-
-    (1) Add something like (exchange the user name accordingly)
-
-    .. code-block:: bash
-
-       export PATH=$PATH:/Users/awagner/Library/Python/3.7/bin
-
-    to the *profile* file of your shell. If you use a :term:`bash` shell, this may
-    be ``~/.bashrc`` or ``~/.bash_profile``, if you are using a :term:`zsh` shell,
-    it may be ``~/.zshrc`` or ``~/.zprofile``. Find out which shell you are using by
-    typing ``echo $SHELL`` into your terminal.
-
-    (2) Alternatively, configure it *system-wide*, i.e., for all users of your computer
-    by adding the the path ``/Users/awagner/Library/Python/3.7/bin`` to the file
-    ``/etc/paths``, e.g., with the editor :term:`nano`:
-
-    .. code-block:: bash
-
-       sudo nano /etc/paths
-
-    The contents of this file could look like this afterwards (the last line was
-    added):
-
-    .. code-block:: bash
-
-        /usr/local/bin
-        /usr/bin
-        /bin
-        /usr/sbin
-        /sbin
-        /Users/awagner/Library/Python/3.7/bin
-
-
-Using Pythons package manager ``pip``
-"""""""""""""""""""""""""""""""""""""
-
-DataLad can be installed via Pythons package manager
+DataLad can be installed via Python's package manager
 `pip <https://pip.pypa.io/en/stable/>`_.
 ``pip`` comes with Python distributions, e.g., the Python distributions
 downloaded from `python.org <https://www.python.org>`_. When downloading
