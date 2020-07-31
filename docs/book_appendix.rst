@@ -8,5 +8,4 @@ Appendix
 
    glossary
    contributing
-   teaching
    acknowledgements
