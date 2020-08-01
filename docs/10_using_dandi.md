@@ -70,7 +70,7 @@ To create an account on DANDI, you will need to.
 
 1. [Create a Github account](https://github.com/) if you don't have one.
 1. Using your Github account [register a DANDI account](https://gui.dandiarchive.org/#/user/register).
-   **Make sure to use the Register with OAuth option**
+   **Make sure to use the Register with OAuth option.**
 1. You will receive an email acknowledging activation of your account within 24
 hours. You can now login to DANDI using the Github by clicking on the login
 button.
@@ -94,7 +94,7 @@ button.
       done, note the dataset identifer. We will call this `<dataset_id>`.
     1. Convert your data to NWB 2.1+ in a local folder. Let's call this `<source_folder>`
     This step can be complex depending on your data. Feel free to [reach out to
-    us for help](/#where-to-communicate).
+    us for help](../#where-to-communicate).
     1. Validate the NWB files by running: `dandi validate <source_folder>`
     1. Preparing a dataset folder for upload:
         1. `dandi download https://dandiarchive.org/<dataset_id>/draft`
