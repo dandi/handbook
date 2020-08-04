@@ -97,7 +97,7 @@ button.
     us for help](../#where-to-communicate).
     1. Validate the NWB files by running: `dandi validate <source_folder>`
     1. Preparing a dataset folder for upload:
-        1. `dandi download https://dandiarchive.org/<dataset_id>/draft`
+        1. `dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft`
         1. `cd <dataset_id>`
         1. `dandi organize <source_folder> -f dry`
         1. `dandi organize <source_folder> -f symlink`
