@@ -13,8 +13,7 @@ This site provides information on how to interact with the archive.
 and use the tag [dandi](https://neurostars.org/tag/dandi).
 - Report DANDI related bugs [here](https://github.com/dandi/dandiarchive/issues).
 - [Register on DANDI using Github](https://gui.dandiarchive.org/#/user/register)
-and we will invite you to the DANDI Slack workspace. **Make sure to use the
-Register with OAuth option.** See [here for details on how to register](./10_using_dandi/#create-an-account-on-dandi).
+and we will invite you to the DANDI Slack workspace. See [here for details on how to register](./10_using_dandi/#create-an-account-on-dandi).
 - Email us: [info@dandiarchive.org](mailto: info@dandiarchive.org)
 
 ## How to use this documentation
