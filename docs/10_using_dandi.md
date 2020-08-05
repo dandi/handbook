@@ -70,7 +70,6 @@ To create an account on DANDI, you will need to.
 
 1. [Create a Github account](https://github.com/) if you don't have one.
 1. Using your Github account [register a DANDI account](https://gui.dandiarchive.org/#/user/register).
-   **Make sure to use the Register with OAuth option.**
 1. You will receive an email acknowledging activation of your account within 24
 hours. You can now login to DANDI using the Github by clicking on the login
 button.
