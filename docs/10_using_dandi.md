@@ -102,7 +102,7 @@ button.
         1. `dandi organize <source_folder> -f symlink`
         1. `dandi upload`
     1. Add metadata on the Web. Click on the `Edit metadata` link by visiting
-    your dandiset landing page: `https://dandiarchive.org/<dataset_id>/draft`
+    your dandiset landing page: `https://dandiarchive.org/dandiset/<dataset_id>/draft`
     1. Use the dandiset URL:
         1. in your preprint
         1. To download, anyone can use the dandi CLI:
