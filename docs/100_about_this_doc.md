@@ -1,11 +1,11 @@
 # About this documentation
 
-This documentation is a work in progress and we wellcome any input: if something
+This documentation is a work in progress and we welcome any input: if something
 is missing or unclear, let us know by [opening an issue on our repository](https://github.com/dandi/handbook).
 
-## Serving the doc locally
+## Serving the docs locally
 
-This project uses [MkDocs](https://www.mkdocs.org/) tool with [Material theme](https://squidfunk.github.io/mkdocs-material/)
+This project uses the [MkDocs](https://www.mkdocs.org/) tool with the [Material theme](https://squidfunk.github.io/mkdocs-material/)
 and extra plugins to generate the website.
 
 To test locally, you will need to install the Python dependencies. To do that, type the following commands:
@@ -27,4 +27,4 @@ mkdocs serve
 ```
 
 Finally, open up [`http://127.0.0.1:8000/`](http://127.0.0.1:8000/) in your
-browser, and you should see the default home page of the being displayed.
+browser, and you should see the default home page of the documentation being displayed.
