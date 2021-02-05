@@ -1,20 +1,20 @@
 # Working with DANDI
 
-DANDI provides access to and an archive to submit cellular neurophysiology
-datasets. We refer to such datasets as a `Dandiset`.
+DANDI provides access to an archive that stores cellular neurophysiology
+datasets. We refer to such datasets as `Dandisets`.
 
-1. A `Dandiset` is organized in a structured manner to help improve users and
-software tools can interact with it.
+1. A `Dandiset` is organized in a structured manner to help users and
+software tools interact with it.
 1. Each `Dandiset` has a unique persistent identifier that you can use to go directly
 to the `Dandiset` (e.g., [https://identifiers.org/DANDI:000004](https://identifiers.org/DANDI:000004)).
-You can use this identifier to cite the `Dandiset` in your publications or providing
+You can use this identifier to cite the `Dandiset` in your publications or provide
 direct access to a `Dandiset`.
 
 ## DANDI components
 
 ### The DANDI Web application
 
-[DANDI Web application](https://dandiarchive.org/) allows you to:
+The [DANDI Web application](https://dandiarchive.org/) allows you to:
 
 1. Browse `Dandisets`.
 1. Search across `Dandisets`.
@@ -30,7 +30,7 @@ The [DANDI Python client](https://pypi.org/project/dandi/) allows you to:
 
 1. Download `Danidsets` and individual subject folders or files.
 1. Organize your data locally before upload.
-1. Upload your `Dandiset`
+1. Upload `Dandisets`.
 
 ### The Dandihub analysis platform
 
@@ -46,9 +46,9 @@ You can download entire `Dandisets` or single files.
 
 ### Downloading a file
 
-#### Using the Web application.
+#### Using the Web application
 
-Each `Dandiset` has a `View Data` option. This provides a folder like view to
+Each `Dandiset` has a `View Data` option. This provides a folder-like view to
 navigate a `Dandiset`. Any file in the `Dandiset` has a download icon next to it.
 You can click this icon to download a file to your device where you are browsing
 or right click to get the download URL of the file. You can then use this URL
@@ -78,7 +78,7 @@ button.
 
 1. Setup
     - If you do not have a DANDI account, please [create an account](#create-an-account-on-dandi)
-    - Log in to DANDI, copy your API key. This is under your user initials on the
+    - Log in to DANDI and copy your API key. This is under your user initials on the
     top right after logging in.
     - Locally
         - Create a Python environment (e.g., Miniconda, virtualenv)
@@ -104,9 +104,7 @@ button.
         1. `dandi upload`
     1. Add metadata on the Web. Click on the `Edit metadata` link by visiting
     your dandiset landing page: `https://dandiarchive.org/dandiset/<dataset_id>/draft`
-    1. Use the dandiset URL:
-        1. in your preprint
-        1. To download, anyone can use the dandi CLI:
+    1. Use the dandiset URL in your preprint directly, or download it using the dandi CLI:
             `dandi download <dandiset_url>`
 
 ## Publish a Dandiset
