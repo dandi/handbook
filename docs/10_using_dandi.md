@@ -60,7 +60,10 @@ or in a [Jupyter notebook on Dandihub](https://hub.dandiarchive.org).
 First install the Python client using `pip install dandi` in a Python 3.6+
 environment.
 
-1. Downloading a `Dandiset`.
+1. Downloading a `Dandiset`, e.g.:
+
+`dandi download https://identifiers.org/DANDI:000004`
+
 1. Downloading a subject.
 1. Downloading a file.
 
