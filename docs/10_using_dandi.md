@@ -84,8 +84,8 @@ button.
         - Create a Python environment (e.g., Miniconda, virtualenv)
         - Install the DANDI CLI into your Python environment
 
-            `pip install "dandi>=0.6.0"`
-        - **Make sure you have version 0.6.0 or higher**    
+            `pip install "dandi>=0.6.2"`
+        - **Make sure you have version 0.6.2 or higher**
 
 1. Data upload/management workflow
     1. Register a dandiset to generate an identifier. You will be asked to enter
@@ -100,7 +100,7 @@ button.
         1. `dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft`
         1. `cd <dataset_id>`
         1. `dandi organize <source_folder> -f dry`
-        1. `dandi organize <source_folder> -f symlink`
+        1. `dandi organize <source_folder>`
         1. `dandi upload`
     1. Add metadata on the Web. Click on the `Edit metadata` link by visiting
     your dandiset landing page: `https://dandiarchive.org/dandiset/<dataset_id>/draft`
