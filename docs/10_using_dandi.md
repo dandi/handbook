@@ -63,8 +63,10 @@ environment.
 
 1. Downloading a `Dandiset`, e.g.:
 `dandi download https://identifiers.org/DANDI:000004`
-1. Downloading a subject.
-1. Downloading a file.
+1. Downloading data for a specific subject from a dandiset, e.g.:
+`dandi download https://api.dandiarchive.org/api/dandisets/000003/versions/draft/assets/?path=sub-YutaMouse20`
+1. Downloading a specific file from a dandiset (a link for the specific file could be found on the dandiarchive.org website), e.g.:
+`dandi download https://api.dandiarchive.org/api/dandisets/000004/versions/draft/assets/9d9f379d-9fd1-4872-8c49-3891dfb693ab/download/`
 
 ## Create an account on DANDI
 
