@@ -89,7 +89,7 @@ button.
         - Install the DANDI CLI into your Python environment
 
             `pip install "dandi>=0.14"`
-        - **Make sure you have version 0.14 or higher**
+        - **Make sure you have version 0.14.2 or higher**
 
 1. Data upload/management workflow
     1. Register a dandiset to generate an identifier. You will be asked to enter
