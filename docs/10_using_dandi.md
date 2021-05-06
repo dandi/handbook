@@ -57,12 +57,17 @@ or in a [Jupyter notebook on Dandihub](https://hub.dandiarchive.org).
 
 #### Using the Python CLI
 
-First install the Python client using `pip install dandi` in a Python 3.6+
+First install the Python client using `pip install dandi` in a Python 3.7+
 environment.
 
-1. Downloading a `Dandiset`.
-1. Downloading a subject.
-1. Downloading a file.
+
+1. Downloading a `Dandiset`, e.g.:
+`dandi download https://identifiers.org/DANDI:000004`
+1. Downloading data for a specific subject from a dandiset
+(names of the subjects could be found on the gui.dandiarchive.org website or by running `dandi ls -r https://identifiers.org/DANDI:000004`), e.g.:
+`dandi download https://api.dandiarchive.org/api/dandisets/000004/versions/draft/assets/?path=sub-P10HMH`
+1. Downloading a specific file from a dandiset (a link for the specific file could be found on the gui.dandiarchive.org website), e.g.:
+`dandi download https://api.dandiarchive.org/api/dandisets/000004/versions/draft/assets/9d9f379d-9fd1-4872-8c49-3891dfb693ab/download/`
 
 ## Create an account on DANDI
 
@@ -84,8 +89,8 @@ button.
         - Create a Python environment (e.g., Miniconda, virtualenv)
         - Install the DANDI CLI into your Python environment
 
-            `pip install "dandi>=0.6.2"`
-        - **Make sure you have version 0.6.2 or higher**
+            `pip install "dandi>=0.14"`
+        - **Make sure you have version 0.14.2 or higher**
 
 1. Data upload/management workflow
     1. Register a dandiset to generate an identifier. You will be asked to enter
@@ -105,7 +110,7 @@ button.
     1. Add metadata on the Web. Click on the `Edit metadata` link by visiting
     your dandiset landing page: `https://dandiarchive.org/dandiset/<dataset_id>/draft`
     1. Use the dandiset URL in your preprint directly, or download it using the dandi CLI:
-            `dandi download <dandiset_url>`
+            `dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft`
 
 ## Publish a Dandiset
 
