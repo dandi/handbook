@@ -23,11 +23,10 @@ and we will invite you to the DANDI Slack workspace. See [here for details on ho
 - If you want to know more about the DANDI project, its goals and the problems
 it tries to solve: check out our [introduction](./01_introduction.md).
 
-- The DANDI archive stores cellular neurophysiology datasets using NWB, BIDS,
-and other BRAIN Initiative standards. If you are unfamiliar with such things,
-head over to our [FAQ](./98_FAQ.md). You do not need an in depth understanding of
-what those things are to use the DANDI archive but some "big picture" conceptual
-understanding could save you from a lot of confusion. 😉
+- The DANDI archive stores neurophysiology datasets including electrophysiology,
+optophysiology, and behavioral time-series, and images from immunostaining
+experiments using [NWB](https://www.nwb.org/nwb-neurophysiology/),
+[BIDS](https://bids.neuroimaging.io/), and other BRAIN Initiative standards.
 
 - Not sure how the project is organized? Check out the [project structure](./20_project_structure)
 page.

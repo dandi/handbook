@@ -1,9 +1,10 @@
 # Introduction
 
 ## Advantages of using DANDI
-- An open data archive to submit cellular neurophysiology data.
-- A persistent, versioned and growing collection of standardized cellular
-neurophysiology data.
+- An open data archive to submit neurophysiology data for electrophysiology,
+optophysiology, and behavioral time-series, and images from immunostaining
+experiments
+- A persistent, versioned and growing collection of standardized datasets.
 - Rich metadata to support search across data.
 - A place to house data to collaborate across research sites.
 - Consistent and transparent data standards to simplify software development.
@@ -27,8 +28,9 @@ varied data sources.
 ## Our solution
 
 We have developed a [FAIR (Findable, Accessible, Interoperable, Reusable)](https://www.force11.org/group/fairgroup/fairprinciples)
-data archive to house standardized cellular neurophysiology and associated data.
-We use the [Neurodata Without Borders](https://nwb.org), [Brain Imaging Data Structure](BIDS),
+data archive to house standardized neurophysiology and associated data.
+We use the [Neurodata Without Borders](https://nwb.org),
+[Brain Imaging Data Structure](https://bids.neuroimaging.io/),
 [Neuroimaging Data Model](NIDM) and other [BRAIN Initiative](https://braininitiative.nih.gov/)
 standards to organize and search the data. A Jupyterhub-based analysis platform
 provides easy access to the data. The data can be accessed programmatically
