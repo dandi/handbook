@@ -72,6 +72,8 @@ Enable after publish is in place
   the original uploader to obtain consent. The DOI and the URL of the original
   object are retained.
 -->
+- **User data on Dandihub:** At present user data on Dandihub will be removed at
+  periodic intervals and should not be seen as persistent.
 
 ## Longevity
 
