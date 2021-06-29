@@ -97,6 +97,23 @@ However, this is not strictly required. You can contribute using the standard
 fork-and-pull-request model, but under this workflow we will lose the benefit of
 those previews.
 
+## Email Lists
+
+The project's email domain name services are managed via Terraform as AWS Route
+53 entries. This allows the API server to send emails to users, etc. It also
+means we need a way to forward incoming emails to the proper mailing list--this
+is accomplished with a service called [ImprovMX](https://improvmx.com/).
+
+The email addresses info@dandiarchive.org and help@dandiarchive.org are
+advertised to users as general email addresses to use to ask for information or
+help; both of them are forwarded to dandi@mit.edu, a mailing list containing the
+leaders and developers of the project. The forwarding is done by the ImprovMX
+service, and more such email addresses can be created as needed within that
+service.
+
+If you need the credentials for logging into ImprovMX, speak to [Roni
+Choudhury](roni.choudhury@kitware.com).
+
 ## Miscellaneous Tips
 
 ### Use email address to log into dev Django admin panel
