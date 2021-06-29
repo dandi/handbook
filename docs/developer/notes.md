@@ -114,7 +114,7 @@ service.
 If you need the credentials for logging into ImprovMX, speak to [Roni
 Choudhury](roni.choudhury@kitware.com).
 
-## Miscellaneous Tips
+## Miscellaneous Tips and Information
 
 ### Use email address to log into dev Django admin panel
 
@@ -135,3 +135,12 @@ to DANDI Archive proper is still live. In this case, simply log out of DANDI,
 log back in, and then go to the Django admin panel URL
 (e.g., https://api.dandiarchive.org/admin) and you should be logged back in
 there.
+
+### Why do incoming emails to dandiarchive.org look crazy?
+
+When a user emails help@dandiarchive.org or info@dandiarchive.org, those
+messages are forwarded to dandi@mit.edu (see [above](#email-lists)) so that the
+dev team sees them. However, these emails arrive with a long, spammy-looking
+From address with a Heroku DNS domain; this seems to be an artifact of how
+mit.edu processes emails, and does not occur in general for, e.g., messages sent
+from the API server to users.
