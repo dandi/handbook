@@ -111,8 +111,8 @@ leaders and developers of the project. The forwarding is done by the ImprovMX
 service, and more such email addresses can be created as needed within that
 service.
 
-If you need the credentials for logging into ImprovMX, speak to [Roni
-Choudhury](roni.choudhury@kitware.com).
+If you need the credentials for logging into ImprovMX, speak to Roni
+Choudhury (<roni.choudhury@kitware.com>).
 
 ## Miscellaneous Tips and Information
 
