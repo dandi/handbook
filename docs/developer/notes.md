@@ -99,7 +99,7 @@ those previews.
 
 ## Miscellaneous Tips
 
-### Use email address to log into Django admin panel
+### Use email address to log into dev Django admin panel
 
 Once `dandi-api` is up and running, you can access the Django admin panel at
 http://localhost:8000/admin. The login page asks for a "username" but really it
@@ -107,3 +107,14 @@ is expecting the email address associated with the username.
 
 One easy trick here is to supply the username again as the email address when
 you are setting up the superuser during initial setup.
+
+### Refresh GitHub login to log into prod Django admin panel
+
+To log into the production Django admin panel, you must simply be logged into
+the DANDI Archive production instance using an admin account.
+
+However, at times the Django admin panel login seems to expire while the login
+to DANDI Archive proper is still live. In this case, simply log out of DANDI,
+log back in, and then go to the Django admin panel URL
+(e.g., https://api.dandiarchive.org/admin) and you should be logged back in
+there.
