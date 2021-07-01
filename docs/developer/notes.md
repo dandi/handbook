@@ -32,6 +32,12 @@ as well. You can install `dandi-cli` with a command like `pip install dandi`
 (then invoke `dandi` on the command line to run the tool), or build it locally
 following the instructions in the [`dandi-cli` README](https://github.com/dandi/dandi-cli#readme).
 
+[`dandischema`](https://github.com/dandi/dandischema) is a Python library for 
+creating, maintaining, and validating the DANDI metadata models for dandisets 
+and assets. You may need to make use of this tool when improving models, or 
+migrating metadata. You can install `dandischema` with a command like 
+`pip install dandischema` . When releases are published through dandischema, 
+corresponding json-schemas are generated in the releases folder of the [dandi schema repo](https://github.com/dandi/schema).
 # Important Things to Know
 
 This section gathers some important yet small bullet points of knowledge, useful
