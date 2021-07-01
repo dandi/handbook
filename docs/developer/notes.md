@@ -6,7 +6,7 @@ project.
 # Overview
 
 The DANDI archive dev environment comprises three major pieces of software:
-`dandi-api`, `dandiarchive`, and `dandi-cli`.
+`dandi-api`, `dandiarchive`, `dandi-cli`, and `dandischema`.
 
 [`dandi-api`](https://github.com/dandi/dandi-api) is a Django application that
 serves the DANDI REST API. The Django application makes use of several services
