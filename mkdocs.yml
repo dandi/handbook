@@ -22,7 +22,7 @@ nav:
   #- Glossary: "99_glossary.md"
   - Developer Guide:
     - Project structure: "20_project_structure.md"
-    - Notes: "developer/notes.md"
+    - Notes: "40_development.md"
   #- Schema: "30_schema.md"
   - FAQ: "98_FAQ.md"
   #- Glossary: "99_glossary.md"
