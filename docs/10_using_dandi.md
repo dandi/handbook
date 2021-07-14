@@ -57,12 +57,17 @@ or in a [Jupyter notebook on Dandihub](https://hub.dandiarchive.org).
 
 #### Using the Python CLI
 
-First install the Python client using `pip install dandi` in a Python 3.6+
+First install the Python client using `pip install dandi` in a Python 3.7+
 environment.
 
-1. Downloading a `Dandiset`.
-1. Downloading a subject.
-1. Downloading a file.
+
+1. Downloading a `Dandiset`, e.g.:
+`dandi download https://identifiers.org/DANDI:000004`
+1. Downloading data for a specific subject from a dandiset
+(names of the subjects could be found on the gui.dandiarchive.org website or by running `dandi ls -r https://identifiers.org/DANDI:000004`), e.g.:
+`dandi download https://api.dandiarchive.org/api/dandisets/000004/versions/draft/assets/?path=sub-P10HMH`
+1. Downloading a specific file from a dandiset (a link for the specific file could be found on the gui.dandiarchive.org website), e.g.:
+`dandi download https://api.dandiarchive.org/api/dandisets/000004/versions/draft/assets/9d9f379d-9fd1-4872-8c49-3891dfb693ab/download/`
 
 ## Create an account on DANDI
 
@@ -84,8 +89,12 @@ button.
         - Create a Python environment (e.g., Miniconda, virtualenv)
         - Install the DANDI CLI into your Python environment
 
-            `pip install "dandi>=0.6.0"`
-        - **Make sure you have version 0.6.0 or higher**    
+                pip install "dandi>=0.14"
+
+        - **Make sure you have version 0.14.2 or higher**
+
+        - Store your API key somewhere that the CLI can find it; see ["Storing
+          Access Credentials"](#storing-access-credentials) below.
 
 1. Data upload/management workflow
     1. Register a dandiset to generate an identifier. You will be asked to enter
@@ -100,12 +109,47 @@ button.
         1. `dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft`
         1. `cd <dataset_id>`
         1. `dandi organize <source_folder> -f dry`
-        1. `dandi organize <source_folder> -f symlink`
+        1. `dandi organize <source_folder>`
         1. `dandi upload`
     1. Add metadata on the Web. Click on the `Edit metadata` link by visiting
     your dandiset landing page: `https://dandiarchive.org/dandiset/<dataset_id>/draft`
     1. Use the dandiset URL in your preprint directly, or download it using the dandi CLI:
-            `dandi download <dandiset_url>`
+            `dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft`
+
+## Storing Access Credentials
+
+By default, the DANDI CLI looks for an API key in the `DANDI_API_KEY`
+environment variable.  If this is not set, the CLI will look up the API
+key using the [keyring](https://github.com/jaraco/keyring) library, which
+supports numerous backends, including the system keyring, an encrypted keyfile,
+and a plaintext (unencrypted) keyfile.
+
+- You can store your API key where the `keyring` library can find it by using
+  the `keyring` program: Run `keyring set dandi-api-dandi key` and enter the
+  API key when asked for the password for `key` in `dandi-api-dandi`.
+
+- You can set the backend the `keyring` library uses either by setting the
+  `PYTHON_KEYRING_BACKEND` environment variable or by filling in [the `keyring`
+  library's configuration file](https://github.com/jaraco/keyring#configuring).
+  IDs for the available backends can be listed by running `keyring --list`.  If
+  no backend is specified in this way, the library will use the available
+  backend with the highest priority.
+
+If the API key isn't stored in either the `DANDI_API_KEY` environment variable
+or in the keyring, the CLI will prompt you to enter the API key, and then it
+will store it in the keyring.  This may cause you to be prompted further; you
+may be asked to enter a password to encrypt/decrypt the keyring, or you may be
+asked by your OS to confirm whether to give the DANDI CLI access to the
+keyring.
+
+- If the DANDI CLI encounters an error while attempting to fetch the API key
+  from the default keyring backend, it will fall back to using an encrypted
+  keyfile (the `keyrings.alt.file.EncryptedKeyring` backend).  If the keyfile
+  does not already exist, the CLI will ask you for confirmation; if you answer
+  "yes," the `keyring` configuration file (if does not already exist; see
+  above) will be configured to use `EncryptedKeyring` as the default backend.
+  If you answer "no," the CLI will exit with an error, and you must store the
+  API key somewhere accessible to the CLI on your own.
 
 ## Publish a Dandiset
 
