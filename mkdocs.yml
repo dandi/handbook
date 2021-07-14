@@ -2,6 +2,8 @@ site_name: DANDI documentation
 repo_name: "dandi/handbook"
 repo_url: "https://github.com/dandi/handbook"
 copyright: "CC-BY 4.0"
+use_directory_urls: true
+site_url: https://www.dandiarchive.org/handbook/
 
 # This will use Material them
 theme:
@@ -18,7 +20,9 @@ nav:
   - Welcome: "index.md"
   - Introduction: "01_introduction.md"
   - Using DANDI: "10_using_dandi.md"
-  - Project structure: "20_project_structure.md"
+  - Developer Guide:
+    - Project structure: "20_project_structure.md"
+    - Notes: "40_development.md"
   - About:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
