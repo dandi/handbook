@@ -2,6 +2,8 @@ site_name: DANDI documentation
 repo_name: "dandi/handbook"
 repo_url: "https://github.com/dandi/handbook"
 copyright: "CC-BY 4.0"
+use_directory_urls: true
+site_url: https://www.dandiarchive.org/handbook/
 
 # This will use Material them
 theme:
