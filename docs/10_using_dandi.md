@@ -87,7 +87,7 @@ button.
     top right after logging in.
     - Locally
         - Create a Python environment (not required, but strongly recommended, e.g., [miniconda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands),
-         (virtualenv)[https://docs.python.org/3/library/venv.html])
+         [virtualenv](https://docs.python.org/3/library/venv.html)
         - Install the DANDI CLI into your Python environment
 
                 pip install -U dandi
@@ -101,21 +101,26 @@ button.
       Click `NEW DANDISET` in the Web application (top right corner) after logging in. 
       After you provide name and description, the dataset identifer will be created, 
       we will call this `<dataset_id>`.
-    1. Convert your data to NWB 2.1+ in a local folder. Let's call this `<source_folder>`
-    This step can be complex depending on your data. Feel free to [reach out to
-    us for help](https://github.com/dandi/helpdesk/discussions){:target="_blank"}.
-    1. Validate the NWB files by running: `dandi validate <source_folder>`. 
-    **If you are having trouble with validation, make sure the conversions were run with the most recent version of `PyNWB` and `MatNWB`.**
-    1. Preparing a dataset folder for upload:
-        1. `dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft`
-        1. `cd <dataset_id>`
-        1. `dandi organize <source_folder> -f dry`
-        1. `dandi organize <source_folder>`
-        1. `dandi upload`
-    1. Add metadata on the Web. Click on the `Edit metadata` link by visiting
+    1. NWB format:
+        1. Convert your data to NWB 2.1+ in a local folder. Let's call this `<source_folder>`
+        This step can be complex depending on your data. Feel free to [reach out to
+        us for help](https://github.com/dandi/helpdesk/discussions){:target="_blank"}.
+        1. Validate the NWB files by running: `dandi validate <source_folder>`. 
+        **If you are having trouble with validation, make sure the conversions were run with the most recent version of `PyNWB` and `MatNWB`.**
+        1. Preparing a dataset folder for upload:
+            ```python
+            dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft
+            cd <dataset_id>
+            dandi organize <source_folder> -f dry
+            dandi organize <source_folder>
+            dandi upload
+            ```            
+        1. Add metadata on the Web. Click on the `Edit metadata` link by visiting
     your dandiset landing page: `https://dandiarchive.org/dandiset/<dataset_id>/draft`
-    1. Use the dandiset URL in your preprint directly, or download it using the dandi CLI:
+        1. Use the dandiset URL in your preprint directly, or download it using the dandi CLI:
             `dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft`
+    1. BIDS format:
+        1. Please [reach out to Dandi team for help](https://github.com/dandi/helpdesk/discussions){:target="_blank"}
 
 ## Storing Access Credentials
 
