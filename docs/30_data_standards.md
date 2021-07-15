@@ -7,7 +7,7 @@ automatic metadata extraction and search. DANDI currently supports two data stan
 * For cellular neurophysiology, such as electrophysiology and optical physiology, use [Neurodata Without Borders (NWB)](https://www.nwb.org/nwb-neurophysiology/)
 * For neuroimaging data, such as fMRI and PET, use [Brain Imaging Data Structure (BIDS)](https://bids.neuroimaging.io/)
 
-To share data on DANDI, you will first need to convert your data to the 
+To share data on DANDI, you will first need to convert your data to an 
 appropriate standard. If you would like help determining which standard is most appropriate for 
 your data, please do not hesitate to reach out using the
 [dandi helpdesk](https://github.com/dandi/helpdesk/discussions/new)
