@@ -26,5 +26,5 @@ The best way to get help from the NWB community is through the [NWB user Slack c
 
 ### Brain Imaging Data Format (BIDS)
 [BIDS](https://bids.neuroimaging.io/) is a way to organize and describe neuroimaging and behavioral data. 
-See their [Getting Started page](https://bids.neuroimaging.io/getting_started.html) for instructions for how
+See the [Getting Started page](https://bids.neuroimaging.io/getting_started.html) for instructions for how
 to convert your neuroimaging data to BIDS.
