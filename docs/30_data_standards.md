@@ -18,7 +18,7 @@ and we would be happy to assist.
 neuroscientists with a common standard to share, archive, use, and build analysis tools for neurophysiology 
 data. NWB is designed to store a variety of neurophysiology data, including data from intracellular 
 and extracellular electrophysiology experiments, data from optical physiology experiments, and tracking 
-and stimulus data. The NWB team supports APIs in Python (PyNWB) and MATLAB (MatNWB), with tutorials for 
+and stimulus data. The NWB team supports APIs in Python ([PyNWB](https://pynwb.readthedocs.io/)) and MATLAB ([MatNWB](https://github.com/NeurodataWithoutBorders/matnwb)), with tutorials for 
 writing data broken down by experiment type. See the [NWB Tutorials](https://www.nwb.org/how-to-use/) page for more details.
 Also see the [NWB Conversion Tools user guide for converting data](https://nwb-conversion-tools.readthedocs.io/en/master/user_guide.html)
 for automated conversions from several popular proprietary data formats. 
