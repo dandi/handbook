@@ -20,6 +20,7 @@ nav:
   - Welcome: "index.md"
   - Introduction: "01_introduction.md"
   - Using DANDI: "10_using_dandi.md"
+  - Data standards: "30_data_standards.md"
   - Developer Guide:
     - Project structure: "20_project_structure.md"
     - Notes: "40_development.md"
