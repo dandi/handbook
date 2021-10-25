@@ -204,3 +204,9 @@ For the `download` command, the equivalent is the `-f debug`/`--format debug`
 option:
 
     dandi download -f debug
+
+More advanced users who are familiar with [the Python
+debugger](https://docs.python.org/3/library/pdb.html) can instruct `dandi` to
+automatically open the debugger if any errors occur by supplying the `--pdb`
+option to the command.  Like the `-l`/`--log-level` option, the `--pdb` option
+must be placed between `dandi` and the name of the subcommand.
