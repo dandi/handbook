@@ -62,12 +62,14 @@ environment.
 
 
 1. Downloading a `Dandiset`, e.g.:
-`dandi download https://identifiers.org/DANDI:000004`
+`dandi download DANDI:000023`
 1. Downloading data for a specific subject from a dandiset
-(names of the subjects could be found on the gui.dandiarchive.org website or by running `dandi ls -r https://identifiers.org/DANDI:000004`), e.g.:
-`dandi download https://api.dandiarchive.org/api/dandisets/000004/versions/draft/assets/?path=sub-P10HMH`
+(names of the subjects could be found on the gui.dandiarchive.org website or by running `dandi ls -r DANDI:000023`), e.g.:
+`dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/draft/assets/?path=sub-P10HMH` or a specific version by replacing `draft` with it (e.g. `0.210914.1900` in the case of this dandiset)
 1. Downloading a specific file from a dandiset (a link for the specific file could be found on the gui.dandiarchive.org website), e.g.:
-`dandi download https://api.dandiarchive.org/api/dandisets/000004/versions/draft/assets/9d9f379d-9fd1-4872-8c49-3891dfb693ab/download/`
+`dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/0.210914.1900/assets/1a93dc97-327d-4f9c-992d-c2149e7810ae/download/`
+
+Hint: `dandi download` supports a number of resource identifiers to point to dandiset, folder, or file.  Providing an incorrect URL (e.g. `dandi download wrongurl`) will provide a list of supported identifiers.
 
 ## Create an account on DANDI
 
