@@ -5,6 +5,8 @@ and search across `Dandisets`. You can also create an account to register
 a new `Dandiset`, gain access to [the Dandihub analysis platform](#the-dandihub-analysis-platform), retrieve an `API key` to upload data 
 to your `Dandisets, and finally publish your `Dandisets`.
 
+### Exploring Archive without Registration
+
 #### Browse `Dandisets`
 When you go the [DANDI Web application](https://dandiarchive.org/) you can click 
 on `PUBLIC DANDISET` to have access to all `Dandisets` currently available 
@@ -26,7 +28,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 
 When you click on one of the `Dandisets` you can see that the searching phrase could
-appear in the description, keywards, or in the assets summary.
+appear in the description, keywords, or in the assets summary.
 
 <img
 src="./img/web_search_dandiset.png"
@@ -52,7 +54,7 @@ If you scroll down, you will also find:
 - License
 - Manifest Location
 
-More detailed information you can find after choosing `Metadata` on the right side pannel. 
+More detailed information you can find after choosing `Metadata` on the right side panel. 
 
 <img
 src="./img/web_dandiset_metadata.png"
@@ -65,21 +67,60 @@ If you have written access this is the place where you can edit the metadata, yo
 
 #### Using public `Dandisets`
 
-On the right hand pannel, in addition to `Metadata`, you can find information how to cite the data and how to download the data:
+On the right hand panel, in addition to `Metadata`, you can find information how to cite the data and how to download the data:
 
+<p float="left">
 <img
 src="./img/web_dandiset_rsp.png"
 alt="web_dandiset_rsp_download"
-style="width: 30%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/><img
+style="width: 30%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<img
 src="./img/web_dandiset_rsp_download.png"
 alt="web_dandiset_rsp_download"
 style="width: 30%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+</p>
 
-You can find information how to install `dandi-cli` and how to use the software to download the data on your computer.
+You can find information on how to install `dandi-cli` and how to use the software to download the data on your computer.
 
-The right side pannel allows you also to access the list of folders and files.
+The right side panel allows you also to access the list of folders and files.
 
 <img
 src="./img/web_dandiset_files.png"
 alt="web_dandiset_files"
-style="width: 75%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+
+
+### Using Archive to share data
+
+#### Register to Dandi Archive
+
+In order to use the Archive to share your own data, you have to create an account using your GitHub account:
+
+<img
+src="./img/web_register.png"
+alt="web_register"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+
+Once you register to the Archive, you can access your API key by clickin on your profile button:
+
+<img
+src="./img/web_register_key.png"
+alt="web_register_key"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+
+#### Creating a new Dandiset
+
+As a registered user you can create a new `Dandiset` and provide a few mandator fields - name and description:
+
+
+<img
+src="./img/web_new_dandiset.png"
+alt="web_new_dandiset"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+
+Once you create a new `Dandiset`, you can see it under the `MY DANDISET` section and you should add more metadata.
+
+<img
+src="./img/web_new_dandiset_meta.png"
+alt="web_new_dandiset_meta"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
