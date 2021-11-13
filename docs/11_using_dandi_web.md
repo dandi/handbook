@@ -70,11 +70,10 @@ On the right hand pannel, in addition to `Metadata`, you can find information ho
 <img
 src="./img/web_dandiset_rsp.png"
 alt="web_dandiset_rsp_download"
-style="width: 40%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
-<img
+style="width: 30%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/><img
 src="./img/web_dandiset_rsp_download.png"
 alt="web_dandiset_rsp_download"
-style="width: 40%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+style="width: 30%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
 You can find information how to install `dandi-cli` and how to use the software to download the data on your computer.
 
