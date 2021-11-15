@@ -124,9 +124,9 @@ two different servers differ slightly.
                 dandi organize <source_folder>
                 dandi upload  # for staging: dandi upload -i dandi-staging
 
-        5. Add metadata by visiting your dandiset landing page: 
+        1. Add metadata by visiting your dandiset landing page: 
        `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
-        6. Use the dandiset URL in your preprint directly, or download it using the dandi CLI:
+        1. Use the dandiset URL in your preprint directly, or download it using the dandi CLI:
             `dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft`
     1. BIDS format:
         1. Please [reach out to Dandi team for help](https://github.com/dandi/helpdesk/discussions).
