@@ -116,7 +116,7 @@ two different servers differ slightly.
         us for help](https://github.com/dandi/helpdesk/discussions).
         1. Validate the NWB files by running: `dandi validate <source_folder>`. 
         **If you are having trouble with validation, make sure the conversions were run with the most recent version of `PyNWB` and `MatNWB`.**
-        3. Preparing a dataset folder for upload:
+        1. Preparing a dataset folder for upload:
 
                 dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft
                 cd <dataset_id>
