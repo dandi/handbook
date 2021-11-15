@@ -114,7 +114,7 @@ two different servers differ slightly.
         1. Convert your data to NWB 2.1+ in a local folder. Let's call this `<source_folder>`
         This step can be complex depending on your data. Feel free to [reach out to
         us for help](https://github.com/dandi/helpdesk/discussions).
-        2. Validate the NWB files by running: `dandi validate <source_folder>`. 
+        1. Validate the NWB files by running: `dandi validate <source_folder>`. 
         **If you are having trouble with validation, make sure the conversions were run with the most recent version of `PyNWB` and `MatNWB`.**
         3. Preparing a dataset folder for upload:
 
