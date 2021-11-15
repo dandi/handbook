@@ -83,6 +83,13 @@ button.
 
 ## Uploading a Dandiset
 
+DANDI provides a production server (http://dandiarchive.org/) for real data and an identical staging server 
+(https://gui-staging.dandiarchive.org/) for test data.
+When you create a dandiset, a permanent ID is automatically assigned to it.
+To prevent the production server from being inundated with test dandisets, we encourage developers to develop 
+against the staging server. The below instructions will alert you to where the commands for interacting with these 
+two different servers differ slightly. 
+
 1. Setup
     - If you do not have a DANDI account, please [create an account](#create-an-account-on-dandi)
     - Log in to DANDI and copy your API key. Click on your user initials on the
@@ -107,19 +114,19 @@ button.
         1. Convert your data to NWB 2.1+ in a local folder. Let's call this `<source_folder>`
         This step can be complex depending on your data. Feel free to [reach out to
         us for help](https://github.com/dandi/helpdesk/discussions).
-        1. Validate the NWB files by running: `dandi validate <source_folder>`. 
+        2. Validate the NWB files by running: `dandi validate <source_folder>`. 
         **If you are having trouble with validation, make sure the conversions were run with the most recent version of `PyNWB` and `MatNWB`.**
-        1. Preparing a dataset folder for upload:
+        3. Preparing a dataset folder for upload:
 
                 dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft
                 cd <dataset_id>
                 dandi organize <source_folder> -f dry
                 dandi organize <source_folder>
-                dandi upload
+                dandi upload  # for staging: dandi upload -i dandi-staging
 
-        1. Add metadata on the Web. Click on the `Edit metadata` link by visiting
-    your dandiset landing page: `https://dandiarchive.org/dandiset/<dataset_id>/draft`
-        1. Use the dandiset URL in your preprint directly, or download it using the dandi CLI:
+        5. Add metadata by visiting your dandiset landing page: 
+       `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
+        6. Use the dandiset URL in your preprint directly, or download it using the dandi CLI:
             `dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft`
     1. BIDS format:
         1. Please [reach out to Dandi team for help](https://github.com/dandi/helpdesk/discussions).
