@@ -83,6 +83,13 @@ button.
 
 ## Uploading a Dandiset
 
+DANDI provides a production server (http://dandiarchive.org/) for real data and an identical staging server 
+(https://gui-staging.dandiarchive.org/) for test data.
+When you create a dandiset, a permanent ID is automatically assigned to it.
+To prevent the production server from being inundated with test dandisets, we encourage developers to develop 
+against the staging server. The below instructions will alert you to where the commands for interacting with these 
+two different servers differ slightly. 
+
 1. Setup
     - If you do not have a DANDI account, please [create an account](#create-an-account-on-dandi)
     - Log in to DANDI and copy your API key. Click on your user initials on the
@@ -115,10 +122,10 @@ button.
                 cd <dataset_id>
                 dandi organize <source_folder> -f dry
                 dandi organize <source_folder>
-                dandi upload
+                dandi upload  # for staging: dandi upload -i dandi-staging
 
-        1. Add metadata on the Web. Click on the `Edit metadata` link by visiting
-    your dandiset landing page: `https://dandiarchive.org/dandiset/<dataset_id>/draft`
+        1. Add metadata by visiting your dandiset landing page: 
+       `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
         1. Use the dandiset URL in your preprint directly, or download it using the dandi CLI:
             `dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft`
     1. BIDS format:
