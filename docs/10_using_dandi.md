@@ -93,7 +93,7 @@ two different servers differ slightly.
 1. Setup
     - If you do not have a DANDI account, please [create an account](#create-an-account-on-dandi)
     - Log in to DANDI and copy your API key. Click on your user initials on the
-    top right after logging in.
+    top right after logging in. (production and staging servers have different API keys)
     - Locally
         - Create a Python environment (not required, but strongly recommended, e.g., [miniconda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands),
          [virtualenv](https://docs.python.org/3/library/venv.html)
