@@ -134,7 +134,14 @@ two different servers differ slightly.
 ## Storing Access Credentials
 
 By default, the DANDI CLI looks for an API key in the `DANDI_API_KEY`
-environment variable.  If this is not set, the CLI will look up the API
+environment variable.  To set this on linux or osx, in run
+
+```bash
+export DANDI_API_KEY=personal-key-value
+```
+(note that there are no spaces around the "=").
+
+If this is not set, the CLI will look up the API
 key using the [keyring](https://github.com/jaraco/keyring) library, which
 supports numerous backends, including the system keyring, an encrypted keyfile,
 and a plaintext (unencrypted) keyfile.
