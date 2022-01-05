@@ -33,14 +33,13 @@
 
 ## Access and Reuse
 
-- **Access to data objects:** Files may be deposited under open <!--or embargoed-->
-  access. Access to metadata and data files is provided over standard protocols
-  such as HTTPS.
+- **Access to data objects:** Files deposited to the archive are accessible to the public 
+  openly or accessible to collaborators for embargoed datasets. Access to metadata and data 
+  files is provided over standard protocols such as HTTPS.
 - **Use and re-use of data objects:** Use and re-use is subject to the terms of the license
   under which the data objects were deposited.
 - **Metadata access and reuse:** Metadata records, provided by the users or extracted from the assets, are licensed under CC0. All metadata is made publicly available and can be harvested.
 
-<!--
 - **Embargo status:** Users may deposit content under an embargo status and
   provide an anticipated end date for the embargo. The repository will restrict
   access to the data until the end of the embargo period; at which time, the
@@ -51,7 +50,6 @@
 - **Restricted Access:** Depositors of embargoed datasets have the ability to
   share access with other collaborators. These files will not be made publicly
   available till the end of the embargo period.
--->
 
 ## Removal
 
@@ -61,8 +59,7 @@
   violation. Alternatively, content found to already have an external DOI will
   have the DANDI DOI invalidated and the record updated to indicate the original
   external DOI. User access may be revoked on violation of Terms of Use.
-<!--
-Enable after publish is in place
+
 - **Withdrawal:** If the uploaded research object must later be withdrawn, the
   reason for the withdrawal will be indicated on a tombstone page, which will
   henceforth be served in its place. Withdrawal is considered an exceptional
@@ -70,7 +67,7 @@ Enable after publish is in place
   uploader. In any other circumstance reasonable attempts will be made to contact
   the original uploader to obtain consent. The DOI and the URL of the original
   object are retained.
--->
+
 - **User data on Dandihub:** At present, user data on Dandihub is being removed
   periodically and Dandihub storage space should not be considered persistent.
 
