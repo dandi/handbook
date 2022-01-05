@@ -92,7 +92,7 @@ Enable after publish is in place
 - **File preservation:** Data files and metadata are backed up nightly and
   replicated into multiple copies in different storage services.
 - **Fixity and authenticity:** All data files are stored along with multiple
-  checksum of the file content. Files are regularly checked against their
+  checksums of the file content. Files are regularly checked against their
   checksums to assure that file content remains constant.
 - **Succession plans:** In case of the repository shut down, best efforts will
   be made to integrate all content into suitable alternative institutional and/or
