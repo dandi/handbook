@@ -11,7 +11,7 @@ the following terms:
    to DANDI’s content is open to all.
 
 1. Content may be uploaded free of charge by those without ready access to an
-   organized data centre.
+   organized data center.
 
 1. The uploader is exclusively responsible for the content that they upload to
    DANDI and shall indemnify and hold the DANDI team free and harmless in
