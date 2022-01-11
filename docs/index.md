@@ -9,11 +9,11 @@ The Web interface to the DANDI archive is located at [https://dandiarchive.org](
 This site provides information on how to interact with the archive.
 
 ## Where to communicate:
-- For general discussion post on [https://neurostars.org](https://neurostars.org)
+- You can ask questions, report bugs, or request features [at our helpdesk](https://github.com/dandi/helpdesk/issues/new/choose)
+- For interacting with the global neuroscience community post on [https://neurostars.org](https://neurostars.org)
 and use the tag [dandi](https://neurostars.org/tag/dandi).
-- Report DANDI related bugs [here](https://github.com/dandi/dandiarchive/issues).
-- [Register on DANDI using Github](https://gui.dandiarchive.org/#/user/register)
-and we will invite you to the DANDI Slack workspace. See [here for details on how to register](./10_using_dandi/#create-an-account-on-dandi).
+- To upload data or to use the DANDI Jupyterhub please [register on DANDI using Github](https://dandiarchive.org/). After
+approving your registration, we will invite you to the DANDI Slack workspace. See [here for details on how to register](./10_using_dandi/#create-an-account-on-dandi).
 - Email us: [info@dandiarchive.org](mailto: info@dandiarchive.org)
 
 ## How to use this documentation
@@ -21,7 +21,7 @@ and we will invite you to the DANDI Slack workspace. See [here for details on ho
 - To start using the archive head over to: [Working with DANDI](./10_using_dandi.md)
 
 - If you want to know more about the DANDI project, its goals and the problems
-it tries to solve: check out our [introduction](./01_introduction.md).
+it tries to solve, check out: our [introduction](./01_introduction.md).
 
 - The DANDI archive stores neurophysiology datasets including electrophysiology,
 optophysiology, and behavioral time-series, and images from immunostaining
