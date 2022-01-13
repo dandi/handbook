@@ -39,7 +39,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 #### `Dandisets` metadata
 
 The landing page of each `Dandiset` contains important information including 
-metadata provided by the owners such as contact information, description, license and keywords, or simple statistics for `Dandiset` such as size of the `Dandiset` and number of files.
+metadata provided by the owners such as contact information, description, license, access information and keywords, or simple statistics for `Dandiset` such as size of the `Dandiset` and number of files.
 
 <img
 src="./img/web_dandiset_lp.png"
@@ -47,12 +47,9 @@ alt="web_dandiset_lp"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
 If you scroll down, you will also find:
-- Access Information
 - Assets Summary
 - Funding Information
-- Dandiset creation date and time
-- License
-- Manifest Location
+- Related Resources
 
 More detailed information you can find after choosing `Metadata` on the right side panel. 
 
