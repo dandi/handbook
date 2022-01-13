@@ -24,6 +24,8 @@ The [DANDI Web application](https://dandiarchive.org/) allows you to:
 1. Retrieve an `API key` to perform data upload to your `Dandisets`.
 1. Publish versions of your `Dandisets`.
 
+If you want to learn more, go to [Working with DANDI Archive web](./11_using_dandi_web.md)
+
 ### The DANDI Python client
 
 The [DANDI Python client](https://pypi.org/project/dandi/) allows you to:
