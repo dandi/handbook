@@ -1,3 +1,5 @@
+# DANDI Style Sheet
+
 Follow the guidelines below when creating and revising text in the DANDI Handbook:
 
 *	**dandi-** repositories (hyphenate, dandi-archive, dandi-cli, *not* dandischema; dandisets is an exception because that is a
