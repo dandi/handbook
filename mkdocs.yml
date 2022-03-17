@@ -24,6 +24,7 @@ nav:
   - Developer Guide:
     - Project structure: "20_project_structure.md"
     - Notes: "40_development.md"
+    - Style Sheet: "50_style_sheet.md"
   - About:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
