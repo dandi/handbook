@@ -1,7 +1,7 @@
-# handbook
+# DANDI Handbook
 Handbook for interacting with the DANDI archive.
 
-## DANDI Style Sheet
+## DANDI Style Guidelines
 
 Follow the guidelines below when creating and revising text in the DANDI Handbook:
 
