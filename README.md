@@ -5,7 +5,7 @@ Handbook for interacting with the DANDI archive.
 
 Follow the guidelines below when creating and revising text in the DANDI Handbook:
 
-*	**dandi-** repositories (hyphenate, dandi-archive, dandi-cli, *not* dandischema; dandisets is an exception because that is a
+*	**dandi-** repositories (hyphenate, dandi-archive, dandi-cli, *not* dandischema; Dandisets is an exception because that is a
 complete word, i.e. it is not using dandi as a prefix to a noun)
 *	**Dandiset** (**not** dandiset)
 *	file names - use lower case (e.g. **development.md**)
