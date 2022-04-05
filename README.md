@@ -11,7 +11,7 @@ complete word
 *	file names — use lower case (e.g. **development.md**)
 *	headings — use Title Capitalization (for 1st and 2nd levels) and follow with an intro sentence
 *	**GitHub** — use camel case (**not** github or Github)
-*	instructional language should be direct, imperative, active, straightforward (e.g. "Install the files in your Python environment", *not* "Files could be installed in your Python environment")
+*	instructional language — should be direct, imperative, active, straightforward (e.g. "Install the files in your Python environment", *not* "Files could be installed in your Python environment")
 *	**JupyterHub** — use camel case (**not** Jupyterhub)
 *	**license** (**not** licence); in general, prefer American spelling
 *	limited use of "please"
