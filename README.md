@@ -5,8 +5,8 @@ Handbook for interacting with the DANDI archive.
 
 Follow the guidelines below when creating and revising text in the DANDI Handbook:
 
-*	**dandi-** repositories (hyphenate, dandi-archive, dandi-cli, *not* dandischema; Dandisets is an exception because that is a
-complete word, i.e. it is not using dandi as a prefix to a noun)
+*	**dandi-** repositories - hyphenate the names of DANDI GitHub repositories (e.g. **dandi-archive**); Dandisets is an exception because it is a
+complete word
 *	**Dandiset** (**not** dandiset)
 *	file names - use lower case (e.g. **development.md**)
 *	headings - use Title Capitalization (for 1st and 2nd levels) and follow with an intro sentence
