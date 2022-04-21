@@ -119,10 +119,24 @@ two different servers differ slightly.
       After you provide name and description, the dataset identifer will be created, 
       we will call this `<dataset_id>`.
     1. NWB format:
-        1. Convert your data to NWB 2.1+ in a local folder. Let's call this `<source_folder>`
+        1. Convert your data to NWB 2.1+ in a local folder. Let's call this `<source_folder>`.
+        We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
         This step can be complex depending on your data. Feel free to [reach out to
         us for help](https://github.com/dandi/helpdesk/discussions).
-        1. Validate the NWB files by running: `dandi validate <source_folder>`. 
+        1. Check your files for [NWB Best Practices](https://nwbinspector.readthedocs.io/en/dev/best_practices/best_practices_index.html) by installing
+        the [NWBInspector](https://nwbinspector.readthedocs.io/en/dev/user_guide/user_guide.html) (`pip install -U nwbinspector`) and running
+
+                nwbinspector <source_folder> --config dandi
+                
+        1. Thoroughly read through the NWBInspector report and try to address as many issues as possible. **DANDI will prevent validation and upload of any issues
+        labeled as level 'CRITICAL' or above when using the `--config dandi` option.**
+        We recommend regularly running the inspector early in the process to generate the best NWB files possible.
+        Please note that some autodetected violations, such as `check_data_orientation`, may be safely ignored in the event that the data is confirmed to be in the correct form; this can be done using either the `--ignore <name_of_check_to_suppress>` flag or a config file. See [the NWBInspector CLI documentation](https://nwbinspector.readthedocs.io/en/dev/user_guide/command_line_usage.html) for more details and other options, or type `nwbinspector --help`.
+        If the report is too large to efficiently navigate in your console, a report can be saved using
+
+                nwbinspector <source_folder> --config dandi --report-save-path <report_location>.txt
+        
+        1. Once your files are confirmed to adhere to the Best Practices, perform an official validation of the NWB files by running: `dandi validate <source_folder>`. 
         **If you are having trouble with validation, make sure the conversions were run with the most recent version of `PyNWB` and `MatNWB`.**
         1. Preparing a dataset folder for upload:
 
