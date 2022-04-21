@@ -6,20 +6,20 @@
   must not violate privacy or copyright, or breach confidentiality or non-disclosure
   agreements for data collected from human subjects.
 - **Status of research data:** Empirical (not simulated) data and associated metadata from any stage of the
-  research study life-cycle is accepted.  Simulated data is handled on a case-by-case basis, please contact the DANDI team 
+  research study life-cycle is accepted.  Simulated data is handled on a case-by-case basis, contact the DANDI team 
 - **Eligible users:** Anyone working with the data in the scope of the archive may register as a user of DANDI. All users are
   allowed to deposit content for which they possess the appropriate rights
   and which falls within the **scope** of the archive.
 - **Ownership:** By uploading content, no change of ownership is implied and no
   property rights are transferred to the DANDI team. All uploaded content remains
-  the property of the parties prior to submission, and must be accompanied with a License allowing
+  the property of the parties prior to submission, and must be accompanied by a License allowing
   DANDI project data access, archival, and re-distribution (see **License** below).
 - **Data file formats:** DANDI only accepts data using standardized formats such
   as [Neurodata Without Borders](https://nwb.org), [Brain Imaging Data Structure](https://bids.neuroimaging.io/),
   [Neuroimaging Data Model](NIDM) and other [BRAIN Initiative](https://braininitiative.nih.gov/)
   standards. We are working with the community to improve these standards and to
   make DANDI archive FAIR.
-- **Volume and size limitations:** There is a limit of 5TB per file and we currently
+- **Volume and size limitations:** There is a limit of 5TB per file. We currently
   accept any size of standardized datasets, as long as you can upload them over
   an HTTPS connection. However, if you plan to upload more than 10TB of data please
   get in touch with us.
@@ -43,9 +43,9 @@
 - **Embargo status:** Users may deposit content under an embargo status and
   provide an anticipated end date for the embargo. The repository will restrict
   access to the data until the end of the embargo period; at which time, the
-  content will become publically available automatically. The end of the embargo
+  content will automatically become publicly available. The end of the embargo
   period is the earliest of the date provided by submitter, the first publication
-  using the data, or the end of funding support for the collection and/or disemmination
+  using the data, or the end of funding support for the collection and/or dissemination
   of the dataset.
 - **Restricted Access:** Depositors of embargoed datasets have the ability to
   share access with other collaborators. These files will not be made publicly
@@ -91,7 +91,7 @@
 - **Fixity and authenticity:** All data files are stored along with multiple
   checksums of the file content. Files are regularly checked against their
   checksums to assure that file content remains constant.
-- **Succession plans:** In case of the repository shut down, best efforts will
+- **Succession plans:** In case of a repository shutdown, our best efforts will
   be made to integrate all content into suitable alternative institutional and/or
   other repositories overlapping in the scope of the DANDI archive.
 

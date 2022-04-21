@@ -1,4 +1,4 @@
-site_name: DANDI documentation
+site_name: DANDI Documentation
 repo_name: "dandi/handbook"
 repo_url: "https://github.com/dandi/handbook"
 copyright: "CC-BY 4.0"
@@ -20,14 +20,14 @@ nav:
   - Welcome: "index.md"
   - Introduction: "01_introduction.md"
   - Using DANDI: "10_using_dandi.md"
-  - Data standards: "30_data_standards.md"
+  - Data Standards: "30_data_standards.md"
   - Developer Guide:
-    - Project structure: "20_project_structure.md"
+    - Project Structure: "20_project_structure.md"
     - Notes: "40_development.md"
   - About:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
-  - About this doc: "100_about_this_doc.md"
+  - About This Doc: "100_about_this_doc.md"
 
 # list of extension
 markdown_extensions:

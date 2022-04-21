@@ -64,7 +64,8 @@ If you have written access this is the place where you can edit the metadata, yo
 
 #### Using public `Dandisets`
 
-On the right hand panel, in addition to `Metadata`, you can find information how to cite the data and how to download the data:
+On the right-hand panel, in addition to `Metadata`, you can find information on how to cite the data and how to 
+download the data:
 
 <p float="left">
 <img

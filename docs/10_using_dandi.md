@@ -1,4 +1,4 @@
-# Working with DANDI
+# Using DANDI
 
 DANDI provides access to an archive that stores cellular neurophysiology
 datasets. We refer to such datasets as `Dandisets`.
@@ -6,40 +6,40 @@ datasets. We refer to such datasets as `Dandisets`.
 1. A `Dandiset` is organized in a structured manner to help users and
 software tools interact with it.
 1. Each `Dandiset` has a unique persistent identifier that you can use to go directly
-to the `Dandiset` (e.g., [https://identifiers.org/DANDI:000004](https://identifiers.org/DANDI:000004)).
+to the `Dandiset` (e.g. [https://identifiers.org/DANDI:000004](https://identifiers.org/DANDI:000004)).
 You can use this identifier to cite the `Dandiset` in your publications or provide
 direct access to a `Dandiset`.
 
-## DANDI components
+## DANDI Components
 
 ### The DANDI Web application
 
 The [DANDI Web application](https://dandiarchive.org/) allows you to:
 
-1. Browse `Dandisets`.
-1. Search across `Dandisets`.
-1. Create an account to register a new `Dandiset` or gain access to
-[the Dandihub analysis platform](#the-dandihub-analysis-platform).
-1. Add collaborators to your `Dandiset`.
-1. Retrieve an `API key` to perform data upload to your `Dandisets`.
-1. Publish versions of your `Dandisets`.
+* Browse `Dandisets`
+* Search across `Dandisets`
+* Create an account to register a new `Dandiset` or gain access to
+[the Dandihub analysis platform](#the-dandihub-analysis-platform)
+* Add collaborators to your `Dandiset`
+* Retrieve an `API key` to perform data upload to your `Dandisets`
+* Publish versions of your `Dandisets`
 
-If you want to learn more, go to [Working with DANDI Archive web](./11_using_dandi_web.md)
+If you want to learn more, go to [Working with DANDI Archive web](./11_using_dandi_web.md).
 
 ### The DANDI Python client
 
 The [DANDI Python client](https://pypi.org/project/dandi/) allows you to:
 
-1. Download `Danidsets` and individual subject folders or files.
-1. Organize your data locally before upload.
-1. Upload `Dandisets`.
+* Download `Danidsets` and individual subject folders or files
+* Organize your data locally before upload
+* Upload `Dandisets`
 
 ### The Dandihub analysis platform
 
 [Dandihub](https://hub.dandiarchive.org) provides a Jupyter environment to
 interact with the DANDI archive. To use the hub, you will need to register an
-account using [the DANDI Web application](#the-dandi-web-application). Please
-note that `Dandihub` is not intended for significant computation, but provides a
+account using [the DANDI Web application](#the-dandi-web-application). Note
+ that `Dandihub` is not intended for significant computation, but provides a
 place to introspect `Dandisets` and files.
 
 ## Downloading from DANDI
@@ -63,39 +63,45 @@ First install the Python client using `pip install dandi` in a Python 3.7+
 environment.
 
 
-1. Downloading a `Dandiset`, e.g.:
+1. Downloading a `Dandiset`, e.g. 
 `dandi download DANDI:000023`
-1. Downloading data for a specific subject from a dandiset
-(names of the subjects could be found on the gui.dandiarchive.org website or by running `dandi ls -r DANDI:000023`), e.g.:
-`dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/draft/assets/?path=sub-P10HMH` or a specific version by replacing `draft` with it (e.g. `0.210914.1900` in the case of this dandiset)
-1. Downloading a specific file from a dandiset (a link for the specific file could be found on the gui.dandiarchive.org website), e.g.:
+1. Downloading data for a specific subject from a Dandiset
+(names of the subjects could be found on the gui.dandiarchive.org website or by running `dandi ls -r DANDI:000023`), 
+   e.g. 
+`dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/draft/assets/?path=sub-P10HMH` or a 
+   specific version by replacing `draft` with it (e.g. `0.210914.1900` in the case of this Dandiset)
+1. Downloading a specific file from a Dandiset (a link for the specific file could be found on the gui.dandiarchive.
+   org website), e.g.:
 `dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/0.210914.1900/assets/1a93dc97-327d-4f9c-992d-c2149e7810ae/download/`
 
-Hint: `dandi download` supports a number of resource identifiers to point to dandiset, folder, or file.  Providing an incorrect URL (e.g. `dandi download wrongurl`) will provide a list of supported identifiers.
+Hint: `dandi download` supports a number of resource identifiers to point to Dandiset, folder, or file.  Providing 
+an incorrect URL (e.g. `dandi download wrongurl`) will provide a list of supported identifiers.
 
-## Create an account on DANDI
+## Creating an Account on DANDI
 
-To create an account on DANDI, you will need to.
+To create an account on DANDI:
 
-1. [Create a Github account](https://github.com/) if you don't have one.
-1. Using your Github account [register a DANDI account](https://gui.dandiarchive.org/#/user/register).
-1. You will receive an email acknowledging activation of your account within 24
-hours. You can now login to DANDI using the Github by clicking on the login
+1. [Create a GitHub account](https://github.com/) if you don't have one.
+2. Using your GitHub account, [register a DANDI account](https://gui.dandiarchive.org/#/user/register).
+
+You will receive an email acknowledging activation of your account within 24
+hours, after which you can log in to DANDI using GitHub by clicking the login
 button.
 
 ## Uploading a Dandiset
 
 DANDI provides a production server (http://dandiarchive.org/) for real data and an identical staging server 
 (https://gui-staging.dandiarchive.org/) for test data.
-When you create a dandiset, a permanent ID is automatically assigned to it.
-To prevent the production server from being inundated with test dandisets, we encourage developers to develop 
+When you create a Dandiset, a permanent ID is automatically assigned to it.
+To prevent the production server from being inundated with test Dandisets, we encourage developers to develop 
 against the staging server. The below instructions will alert you to where the commands for interacting with these 
 two different servers differ slightly. 
 
 1. Setup
-    - If you do not have a DANDI account, please [create an account](#create-an-account-on-dandi)
-    - Log in to DANDI and copy your API key. Click on your user initials on the
-    top right after logging in. Production (dandiarchive.org) and staging (gui-staging.dandiarchive.org) servers have different API keys and different logins.
+    - If you do not have a DANDI account, [create an account](#create-an-account-on-dandi).
+    - Log in to DANDI and copy your API key. Click on your user initials in the
+    top-right corner after logging in. Production (dandiarchive.org) and staging (gui-staging.dandiarchive.org) servers 
+      have different API keys and different logins.
     - Locally
         - Create a Python environment (not required, but strongly recommended, e.g., [miniconda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands),
          [virtualenv](https://docs.python.org/3/library/venv.html)
@@ -107,7 +113,7 @@ two different servers differ slightly.
           Access Credentials"](#storing-access-credentials) below.
 
 1. Data upload/management workflow
-    1. Register a dandiset to generate an identifier. You will be asked to enter
+    1. Register a Dandiset to generate an identifier. You will be asked to enter
       basic metadata, a name (title) and description (abstract) for your dataset.
       Click `NEW DANDISET` in the Web application (top right corner) after logging in. 
       After you provide name and description, the dataset identifer will be created, 
@@ -126,9 +132,9 @@ two different servers differ slightly.
                 dandi organize <source_folder>
                 dandi upload  # for staging: dandi upload -i dandi-staging
 
-        1. Add metadata by visiting your dandiset landing page: 
+        1. Add metadata by visiting your Dandiset landing page: 
        `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
-        1. Use the dandiset URL in your preprint directly, or download it using the dandi CLI:
+        1. Use the Dandiset URL in your preprint directly, or download it using the dandi CLI:
             `dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft`
     1. BIDS format:
         1. Please [reach out to Dandi team for help](https://github.com/dandi/helpdesk/discussions).
@@ -170,12 +176,12 @@ keyring.
   from the default keyring backend, it will fall back to using an encrypted
   keyfile (the `keyrings.alt.file.EncryptedKeyring` backend).  If the keyfile
   does not already exist, the CLI will ask you for confirmation; if you answer
-  "yes," the `keyring` configuration file (if does not already exist; see
+  "yes," the `keyring` configuration file (if it does not already exist; see
   above) will be configured to use `EncryptedKeyring` as the default backend.
   If you answer "no," the CLI will exit with an error, and you must store the
   API key somewhere accessible to the CLI on your own.
 
-## Publish a Dandiset
+## Publishing a Dandiset
 
 **🛠 Work in progress 🛠**
 
@@ -214,7 +220,7 @@ In addition, many commands can be put into a developer-specific mode for
 showing raw progress information instead of fancy progress bars.  For the
 `delete`, `organize`, `upload`, and `validate` commands, this can be done by
 setting the `DANDI_DEVEL` environment variable and passing `--devel-debug` to
-the command, like so:
+the command:
 
     DANDI_DEVEL=1 dandi upload --devel-debug
 

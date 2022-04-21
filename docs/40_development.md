@@ -6,7 +6,7 @@ project.
 # Overview
 
 The DANDI archive dev environment comprises three major pieces of software:
-`dandi-api`, `dandiarchive`, `dandi-cli`, and `dandischema`.
+`dandi-archive`, `dandi-cli`, and `dandi-schema`.
 
 [`dandi-api`](https://github.com/dandi/dandi-api) is a Django application that
 serves the DANDI REST API. The Django application makes use of several services
@@ -18,10 +18,10 @@ asynchronous compute tasks as needed to implement API semantics), and RabbitMQ
 The easiest way to run the API along with its services is through a Docker
 Compose setup, as detailed in the [`dandi-api` README](https://github.com/dandi/dandi-api#readme).
 
-[`dandiarchive`](https://github.com/dandi/dandiarchive) is the web frontend
-application; it connects to `dandi-api` and provides a user interface to all of
-the DANDI functionality. `dandiarchive` is a standard web application built with
-`yarn`. See the [`dandiarchive` README](https://github.com/dandi/dandiarchive#readme)
+[`dandi-archive`](https://github.com/dandi/dandi-archive) is the web frontend
+application; it connects to `dandi-api` and provides a user interface to all the DANDI functionality. 
+`dandi-archive` is a standard web application built with
+`yarn`. See the [`dandi-archive` README](https://github.com/dandi/dandi-archive#readme)
 for instructions on how to build it locally.
 
 [`dandi-cli`](https://github.com/dandi/dandi-cli) is a Python command line tool
@@ -32,12 +32,12 @@ as well. You can install `dandi-cli` with a command like `pip install dandi`
 (then invoke `dandi` on the command line to run the tool), or build it locally
 following the instructions in the [`dandi-cli` README](https://github.com/dandi/dandi-cli#readme).
 
-[`dandischema`](https://github.com/dandi/dandischema) is a Python library for 
+[`dandi-schema`](https://github.com/dandi/dandi-schema) is a Python library for 
 creating, maintaining, and validating the DANDI metadata models for dandisets 
 and assets. You may need to make use of this tool when improving models, or 
-migrating metadata. You can install `dandischema` with a command like 
-`pip install dandischema` . When releases are published through dandischema, 
-corresponding json-schemas are generated in the releases folder of the [dandi schema repo](https://github.com/dandi/schema).
+migrating metadata. You can install `dandi-schema` with a command like 
+`pip install dandi-schema` . When releases are published through dandi-schema, 
+corresponding json-schemas are generated in the release folder of the [dandi schema repo](https://github.com/dandi/schema).
 # Important Things to Know
 
 This section gathers some important yet small bullet points of knowledge, useful
@@ -50,7 +50,7 @@ codebases. Some basic understanding of these technologies is the bare minimum
 requirement for contributing meaningfully, but keep in mind that the DANDI team
 can help you get spun up as well.
 
-### `dandiarchive`
+### `dandi-archive`
 
 **JavaScript/TypeScript.** The DANDI archive code is a standard JavaScript web
 application, but we try to implement new functionality using TypeScript.
@@ -60,7 +60,7 @@ application state is managed through VueX.
 
 **Vuetify.** The components make heavy use of the Vuetify component library.
 
-For general help with `dandiarchive`, contact @waxlamp.
+For general help with `dandi-archive`, contact @waxlamp.
 
 ### `dandi-api`
 
@@ -77,7 +77,7 @@ For general help with `dandi-api`, contact @waxlamp.
 ## Deployment
 
 The DANDI project uses automated services to continuously deploy both the
-`dandi-api` backend and the `dandiarchive` frontend.
+`dandi-api` backend and the `dandi-archive` frontend.
 
 Heroku manages backend deployment automatically from the `master` branch of the
 `dandi-api` repository. For this reason it is important that pull requests pass
@@ -86,8 +86,8 @@ Terraform code stored in the `dandi-infrastructure` repository. If you need
 access to the Heroku DANDI organization, talk to @satra.
 
 Netlify manages the frontend deployment process. Similarly to `dandi-api`, these
-deployments are based on the `master` branch of `dandiarchive`. The
-[`netlify.toml` file](https://github.com/dandi/dandiarchive/blob/master/netlify.toml)
+deployments are based on the `master` branch of `dandi-archive`. The
+[`netlify.toml` file](https://github.com/dandi/dandi-archive/blob/master/web/netlify.toml)
 controls Netlify settings. The @dandibot GitHub account is the "owner" of the
 Netlify account used for this purpose; in order to get access to that account,
 speak to @satra.
@@ -139,7 +139,7 @@ the DANDI Archive production instance using an admin account.
 However, at times the Django admin panel login seems to expire while the login
 to DANDI Archive proper is still live. In this case, simply log out of DANDI,
 log back in, and then go to the Django admin panel URL
-(e.g., https://api.dandiarchive.org/admin) and you should be logged back in
+(e.g. https://api.dandiarchive.org/admin) and you should be logged back in
 there.
 
 ### Why do incoming emails to dandiarchive.org look crazy?
@@ -148,5 +148,5 @@ When a user emails help@dandiarchive.org or info@dandiarchive.org, those
 messages are forwarded to dandi@mit.edu (see [above](#email-lists)) so that the
 dev team sees them. However, these emails arrive with a long, spammy-looking
 From address with a Heroku DNS domain; this seems to be an artifact of how
-mit.edu processes emails, and does not occur in general for, e.g., messages sent
-from the API server to users.
+mit.edu processes emails, and does not occur in general (e.g. messages sent
+from the API server to users).

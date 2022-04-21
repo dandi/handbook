@@ -1,9 +1,9 @@
-# About this documentation
+# About This Documentation
 
 This documentation is a work in progress and we welcome all input: if something
 is missing or unclear, let us know by [opening an issue on our helpdesk](https://github.com/dandi/helpdesk/issues/new/choose).
 
-## Serving the docs locally
+## Serving the Docs Locally
 
 This project uses the [MkDocs](https://www.mkdocs.org/) tool with the [Material theme](https://squidfunk.github.io/mkdocs-material/)
 and extra plugins to generate the website.
