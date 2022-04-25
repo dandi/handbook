@@ -9,20 +9,21 @@ The Web interface to the DANDI archive is located at [https://dandiarchive.org](
 This site provides information on how to interact with the archive.
 
 ## Where to Communicate:
-- You can ask questions, report bugs, or request features [at our helpdesk](https://github.com/dandi/helpdesk/issues/new/choose)
+- You can ask questions, report bugs, or request features [at our helpdesk](https://github.
+  com/dandi/helpdesk/issues/new/choose).
 - For interacting with the global neuroscience community, post on [https://neurostars.org](https://neurostars.org)
 and use the tag [dandi](https://neurostars.org/tag/dandi).
-- To upload data or to use the DANDI Jupyterhub, [register on DANDI using Github](https://dandiarchive.org/). 
+- To upload data or to use the DANDI JupyterHub, [register on DANDI using GitHub](https://dandiarchive.org/). 
   After
 approving your registration, we will invite you to the DANDI Slack workspace. See [here for details on how to register](./10_using_dandi/#create-an-account-on-dandi).
 - Email us: [info@dandiarchive.org](mailto: info@dandiarchive.org)
 
 ## How to Use This Documentation
 
-- To start using the archive head over to: [Working with DANDI](./10_using_dandi.md).
+- To start using the archive head over to [Working with DANDI](./10_using_dandi.md).
 
-- If you want to know more about the DANDI project, its goals and the problems
-it tries to solve, check out: our [introduction](./01_introduction.md).
+- If you want to know more about the DANDI project, its goals, and the problems
+it tries to solve, check out our [introduction](./01_introduction.md).
 
 - The DANDI archive stores neurophysiology datasets including electrophysiology,
 optophysiology, and behavioral time-series, and images from immunostaining
@@ -38,11 +39,11 @@ page.
 
 ## Contributing and Feedback
 
-We are looking for people to give us feedback on this documentation if anything
-is unclear by [opening an issue on our repository](https://github.com/dandi/handbook/issues).
+We are looking for people to give us feedback on this documentation. If anything
+is unclear, [open an issue on our repository](https://github.com/dandi/handbook/issues).
 
 You can also get in touch on our Slack channel. You will be invited once you
 register an account on the archive.
 
 If you want to get started right away and contribute directly to this
-documentation, you can find references and how-to in the [about section](./100_about_this_doc.md).
+documentation, you can find references and how-to information in the [About section](./100_about_this_doc.md).

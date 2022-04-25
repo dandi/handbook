@@ -59,19 +59,19 @@ or in a [Jupyter notebook on Dandihub](https://hub.dandiarchive.org).
 
 #### Using the Python CLI
 
-First install the Python client using `pip install dandi` in a Python 3.7+
+First, install the Python client using `pip install dandi` in a Python 3.7+
 environment.
 
 
-1. Downloading a `Dandiset`, e.g. 
+1. Download a `Dandiset`, e.g. 
 `dandi download DANDI:000023`
-1. Downloading data for a specific subject from a Dandiset
+1. Download data for a specific subject from a Dandiset
 (names of the subjects could be found on the gui.dandiarchive.org website or by running `dandi ls -r DANDI:000023`), 
    e.g. 
 `dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/draft/assets/?path=sub-P10HMH` or a 
    specific version by replacing `draft` with it (e.g. `0.210914.1900` in the case of this Dandiset)
-1. Downloading a specific file from a Dandiset (a link for the specific file could be found on the gui.dandiarchive.
-   org website), e.g.:
+1. Download a specific file from a Dandiset (a link for the specific file could be found on the gui.dandiarchive.
+   org website), e.g.
 `dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/0.210914.1900/assets/1a93dc97-327d-4f9c-992d-c2149e7810ae/download/`
 
 Hint: `dandi download` supports a number of resource identifiers to point to Dandiset, folder, or file.  Providing 
@@ -102,10 +102,11 @@ two different servers differ slightly.
     - Log in to DANDI and copy your API key. Click on your user initials in the
     top-right corner after logging in. Production (dandiarchive.org) and staging (gui-staging.dandiarchive.org) servers 
       have different API keys and different logins.
-    - Locally
-        - Create a Python environment (not required, but strongly recommended, e.g., [miniconda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands),
-         [virtualenv](https://docs.python.org/3/library/venv.html)
-        - Install the DANDI CLI into your Python environment
+    - Locally:
+        - Create a Python environment (this is not required, but strongly recommended; e.g. [miniconda](https://conda.
+          io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands),
+         [virtualenv](https://docs.python.org/3/library/venv.html).
+        - Install the DANDI CLI into your Python environment:
 
                 pip install -U dandi
 
@@ -114,21 +115,21 @@ two different servers differ slightly.
 
 1. Data upload/management workflow
     1. Register a Dandiset to generate an identifier. You will be asked to enter
-      basic metadata, a name (title) and description (abstract) for your dataset.
+      basic metadata: a name (title) and description (abstract) for your dataset.
       Click `NEW DANDISET` in the Web application (top right corner) after logging in. 
-      After you provide name and description, the dataset identifer will be created, 
+      After you provide a name and description, the dataset identifer will be created; 
       we will call this `<dataset_id>`.
     1. NWB format:
         1. Convert your data to NWB 2.1+ in a local folder. Let's call this `<source_folder>`.
         We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
         This step can be complex depending on your data. Feel free to [reach out to
         us for help](https://github.com/dandi/helpdesk/discussions).
-        1. Check your files for [NWB Best Practices](https://nwbinspector.readthedocs.io/en/dev/best_practices/best_practices_index.html) by installing
+        2. Check your files for [NWB Best Practices](https://nwbinspector.readthedocs.io/en/dev/best_practices/best_practices_index.html) by installing
         the [NWBInspector](https://nwbinspector.readthedocs.io/en/dev/user_guide/user_guide.html) (`pip install -U nwbinspector`) and running
 
                 nwbinspector <source_folder> --config dandi
                 
-        1. Thoroughly read through the NWBInspector report and try to address as many issues as possible. **DANDI will prevent validation and upload of any issues
+        3. Thoroughly read through the NWBInspector report and try to address as many issues as possible. **DANDI will prevent validation and upload of any issues
         labeled as level 'CRITICAL' or above when using the `--config dandi` option.**
         We recommend regularly running the inspector early in the process to generate the best NWB files possible.
         Please note that some autodetected violations, such as `check_data_orientation`, may be safely ignored in the event that the data is confirmed to be in the correct form; this can be done using either the `--ignore <name_of_check_to_suppress>` flag or a config file. See [the NWBInspector CLI documentation](https://nwbinspector.readthedocs.io/en/dev/user_guide/command_line_usage.html) for more details and other options, or type `nwbinspector --help`.
@@ -136,9 +137,9 @@ two different servers differ slightly.
 
                 nwbinspector <source_folder> --config dandi --report-save-path <report_location>.txt
         
-        1. Once your files are confirmed to adhere to the Best Practices, perform an official validation of the NWB files by running: `dandi validate <source_folder>`. 
+        4. Once your files are confirmed to adhere to the Best Practices, perform an official validation of the NWB files by running: `dandi validate <source_folder>`. 
         **If you are having trouble with validation, make sure the conversions were run with the most recent version of `PyNWB` and `MatNWB`.**
-        1. Preparing a dataset folder for upload:
+        5. Prepare a dataset folder for upload:
 
                 dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft
                 cd <dataset_id>
@@ -146,17 +147,16 @@ two different servers differ slightly.
                 dandi organize <source_folder>
                 dandi upload  # for staging: dandi upload -i dandi-staging
 
-        1. Add metadata by visiting your Dandiset landing page: 
+        6. Add metadata by visiting your Dandiset landing page: 
        `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
-        1. Use the Dandiset URL in your preprint directly, or download it using the dandi CLI:
-            `dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft`
-    1. BIDS format:
-        1. Please [reach out to Dandi team for help](https://github.com/dandi/helpdesk/discussions).
+        7. Use the Dandiset URL in your preprint directly, or download it using the DANDI CLI:
+            `dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft`.
+        [Reach out to Dandi team for help](https://github.com/dandi/helpdesk/discussions) with the BIDS format.
 
 ## Storing Access Credentials
 
 By default, the DANDI CLI looks for an API key in the `DANDI_API_KEY`
-environment variable.  To set this on linux or osx, in run
+environment variable.  To set this on linux or osx, run
 
 ```bash
 export DANDI_API_KEY=personal-key-value

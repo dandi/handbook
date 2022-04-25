@@ -8,25 +8,26 @@ project.
 The DANDI archive dev environment comprises three major pieces of software:
 `dandi-archive`, `dandi-cli`, and `dandi-schema`.
 
-[`dandi-api`](https://github.com/dandi/dandi-api) is a Django application that
-serves the DANDI REST API. The Django application makes use of several services
-to provide essential function for the API, including Postgres (to hold
-administrative data about the web application itself), Celery (to run
-asynchronous compute tasks as needed to implement API semantics), and RabbitMQ
-(to act as a message broker between Celery and the rest of the application).
-
-The easiest way to run the API along with its services is through a Docker
-Compose setup, as detailed in the [`dandi-api` README](https://github.com/dandi/dandi-api#readme).
-
 [`dandi-archive`](https://github.com/dandi/dandi-archive) is the web frontend
 application; it connects to `dandi-api` and provides a user interface to all the DANDI functionality. 
 `dandi-archive` is a standard web application built with
 `yarn`. See the [`dandi-archive` README](https://github.com/dandi/dandi-archive#readme)
 for instructions on how to build it locally.
 
+The Django application makes use of several services
+to provide essential function for the DANDI REST API, including Postgres (to hold
+administrative data about the web application itself), Celery (to run
+asynchronous compute tasks as needed to implement API semantics), and RabbitMQ
+(to act as a message broker between Celery and the rest of the application).
+
+The easiest way to run the API along with its services is through a Docker
+Compose setup, as detailed in the [Develop with Docker quickstart](https://github.
+com/dandi/dandi-archive/blob/master/DEVELOPMENT.
+md).
+
 [`dandi-cli`](https://github.com/dandi/dandi-cli) is a Python command line tool
 used to manage downloading and uploading of data with the archive. You may need
-to make use of this tool in developing new features for the frontend and
+to use this tool when developing new features for the frontend and
 backend, but there are other methods of faking data in the system to work with
 as well. You can install `dandi-cli` with a command like `pip install dandi`
 (then invoke `dandi` on the command line to run the tool), or build it locally
@@ -36,7 +37,7 @@ following the instructions in the [`dandi-cli` README](https://github.com/dandi/
 creating, maintaining, and validating the DANDI metadata models for dandisets 
 and assets. You may need to make use of this tool when improving models, or 
 migrating metadata. You can install `dandi-schema` with a command like 
-`pip install dandi-schema` . When releases are published through dandi-schema, 
+`pip install dandi-schema`. When releases are published through dandi-schema, 
 corresponding json-schemas are generated in the release folder of the [dandi schema repo](https://github.com/dandi/schema).
 # Important Things to Know
 
@@ -60,10 +61,6 @@ application state is managed through VueX.
 
 **Vuetify.** The components make heavy use of the Vuetify component library.
 
-For general help with `dandi-archive`, contact @waxlamp.
-
-### `dandi-api`
-
 **Python3.** The backend code is written in Python 3.
 
 **Django/drf/drf-yasg.** The API infrastructure is implemented through a Django application.
@@ -72,7 +69,7 @@ Django views mediate API responses. The REST endpoints are implemented via
 Django Rest Framework (DRF), while DRF-YASG is used to generate Swagger
 documentation.
 
-For general help with `dandi-api`, contact @waxlamp.
+For general help with `dandi-archive`, contact @waxlamp.
 
 ## Deployment
 

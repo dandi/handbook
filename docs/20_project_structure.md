@@ -1,6 +1,6 @@
 # Project Structure
 
-The DANDI project is organized around several Github repositories. The
+The DANDI project is organized around several GitHub repositories. The
 main ones are the following.
 
 1. **The DANDI helpdesk.** This [repository](https://github.com/dandi/helpdesk)
