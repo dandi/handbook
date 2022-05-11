@@ -138,7 +138,10 @@ two different servers differ slightly.
                 cd <dataset_id>
                 dandi organize <source_folder> -f dry
                 dandi organize <source_folder>
-                dandi upload  # for staging: dandi upload -i dandi-staging
+                dandi upload
+
+            For upload to staging server, specify that explicitly via `-i` option, e.g.
+            `dandi upload -i dandi-staging`.
 
         1. Add metadata by visiting your dandiset landing page: 
        `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
