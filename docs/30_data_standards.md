@@ -24,4 +24,4 @@ The best way to get help from the NWB community is through the [NWB user Slack c
 [BIDS](https://bids.neuroimaging.io/) is a way to organize and describe neuroimaging and behavioral data. 
 See the [Getting Started page](https://bids.neuroimaging.io/getting_started.html) for instructions for how to convert your neuroimaging data to BIDS.
 
-For microscopy and associated MR data, use the [current Microscopy Draft BIDS Extension Proposal](https://docs.google.com/document/d/1Nlu6QVQrbOQtdtcRarsONbX5SrOubXWBvkV37LRRqrc/edit).
+For microscopy and associated MR data, use the [BIDS extension for microscopy](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html).
