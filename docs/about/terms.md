@@ -50,7 +50,7 @@ the following terms:
   sensitive personal data are advised to use bespoke platforms rather than open
   dissemination services like DANDI for sharing their data.
 
-** See further the user pages regarding uploading for information on anonymization
+[1] [2] See further the user pages regarding uploading for information on anonymization
 of datasets that contain sensitive personal information.
 
 If you have any questions or comments with respect to DANDI, or if you are unsure

@@ -1,9 +1,9 @@
-# About this documentation
+# About This Documentation
 
 This documentation is a work in progress and we welcome all input: if something
 is missing or unclear, let us know by [opening an issue on our helpdesk](https://github.com/dandi/helpdesk/issues/new/choose).
 
-## Serving the docs locally
+## Serving the Docs Locally
 
 This project uses the [MkDocs](https://www.mkdocs.org/) tool with the [Material theme](https://squidfunk.github.io/mkdocs-material/)
 and extra plugins to generate the website.
@@ -17,8 +17,8 @@ pip install -r requirements.txt
 ```
 
 If you are working on your *fork*, simply replace `https://github.com/dandi/handbook.git`
-by `git clone git@github.com/<username>/handbook.git` where `<username>` is your
-GitHub username
+with `git clone git@github.com/<username>/handbook.git` , where `<username>` is your
+GitHub username.
 
 Once done, you need to run MkDocs. Simply type:
 
@@ -26,5 +26,5 @@ Once done, you need to run MkDocs. Simply type:
 mkdocs serve
 ```
 
-Finally, open up [`http://127.0.0.1:8000/`](http://127.0.0.1:8000/) in your
+Finally, open [`http://127.0.0.1:8000/`](http://127.0.0.1:8000/) in your
 browser, and you should see the default home page of the documentation being displayed.
