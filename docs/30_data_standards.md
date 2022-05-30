@@ -7,7 +7,7 @@ DANDI currently supports two data standards:
 * For cellular neurophysiology, such as electrophysiology and optical physiology, use [Neurodata Without Borders (NWB)](https://www.nwb.org/nwb-neurophysiology/)
 * For neuroimaging data, such as MRI, use [Brain Imaging Data Structure (BIDS)](https://bids.neuroimaging.io/)
 
-For microscopy data from immunostaining, we are participating in the development of the [BIDS extension for microscopy](https://docs.google.com/document/d/1Nlu6QVQrbOQtdtcRarsONbX5SrOubXWBvkV37LRRqrc/edit), using the draft version for current Dandisets.
+For microscopy data from immunostaining, we are using the [BIDS extension for microscopy](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html).
 
 To share data on DANDI, you will first need to convert your data to an appropriate standard.
 If you would like help determining which standard is most appropriate for your data, do not hesitate to reach out using the [dandi helpdesk](https://github.com/dandi/helpdesk/discussions/new) and we would be happy to assist.
