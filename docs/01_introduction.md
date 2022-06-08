@@ -5,44 +5,44 @@
 DANDI is:
 
 - An open data archive to submit neurophysiology data for electrophysiology,
-optophysiology, and behavioral time-series, and images from immunostaining experiments
-- A persistent, versioned, and growing collection of standardized datasets
-- A place to house data to collaborate across research sites
-- Supported by the BRAIN Initiative and the AWS Public dataset programs
+optophysiology, and behavioral time-series, and images from immunostaining experiments.
+- A persistent, versioned, and growing collection of standardized datasets.
+- A place to house data to collaborate across research sites.
+- Supported by the BRAIN Initiative and the AWS Public dataset programs.
 
 DANDI provides significant benefits:
 
+- A [FAIR (Findable, Accessible, Interoperable, Reusable)](https://www.force11.org/group/fairgroup/fairprinciples) data archive to house standardized neurophysiology and associated data.
 - Rich metadata to support search across data
-- Consistent and transparent data standards to simplify software development
-
-
-## The Challenges
-
-- To know which data are useful, data has to be accessible.
-- Non-standardized datasets lead to significant resources needed to understand
-and adapt code to these datasets.
-- The multitude of different hardware platforms and custom binary formats requires significant
-effort to consolidate into reusable datasets.
-- There are many domain general places to house data (e.g. Open Science Framework,
-G-Node, Dropbox, Google drive), but it is difficult to find relevant datasets.
-- Datasets are growing larger requiring compute services to be closer to data.
-- Neurotechnology is evolving and requires flexible extensions to metadata and
-data storage requirements.
-- Consolidating and creating robust algorithms (e.g. spike sorting) requires
-varied data sources.
-
-## Our Solution
-
-We have developed a [FAIR (Findable, Accessible, Interoperable, Reusable)](https://www.force11.org/group/fairgroup/fairprinciples)
-data archive to house standardized neurophysiology and associated data.
-We use the [Neurodata Without Borders](https://nwb.org),
+- Consistent and transparent data standards to simplify data reuse and software development. We use the [Neurodata Without Borders](https://nwb.org), 
 [Brain Imaging Data Structure](https://bids.neuroimaging.io/),
-[Neuroimaging Data Model (NIDM)](http://nidm.nidash.org/), and other [BRAIN Initiative](https://braininitiative.nih.
-gov/)
-standards to organize and search the data. A JupyterHub-based analysis platform
-provides easy access to the data. The data can be accessed programmatically
-allowing for new software and tools to be built. The archive itself is built on
-a software stack of open source products, thus enriching the ecosystem.
+[Neuroimaging Data Model (NIDM)](http://nidm.nidash.org/), and other [BRAIN Initiative](https://braininitiative.nih.gov/) standards to organize and search the data. 
+- The data can be accessed programmatically allowing for software to work directly with data in the cloud.
+- The infrastructure is built on a software stack of open source products, thus enriching the ecosystem.
 
-The archive provides persistent identifiers for versioned datasets, thus improving
-reproducibility of neurophysiology research.
+
+## Neurophysiology informatics challenges and DANDI solutions
+
+| Challenges | Solutions |
+|---|---|
+| Most raw data stay in laboratories. | DANDI provides a public archive for dissemination of raw and derived data. |
+| Non-standardized datasets lead to significant resources needed to understand and adapt code to these datasets. | DANDI standardizes all data using NWB and BIDS standards. |
+| The multitude of different hardware platforms and custom binary formats requires significant
+effort to consolidate into reusable datasets. | The DANDI ecosystem provides tools for converting data from different instruments into NWB and BIDS. |
+| There are many domain general places to house data (e.g. Open Science Framework,
+G-Node, Dropbox, Google drive), but it is difficult to find relevant datasets | DANDI is focused on neurophysiology data and related metadata. |
+| Datasets are growing larger requiring compute services to be closer to data | DANDI provides DANDIhub a JupyterHub instance close to the data. |
+| Neurotechnology is evolving and requires changes to metadata and data storage. | DANDI works with community members to improve data standards, formats, and 
+| Consolidating and creating robust algorithms (e.g. spike sorting) requires varied data sources. | DANDI provides access to many different datasets. |
+|---|---|
+
+
+## Properties of DANDI 
+
+Data identifiers - The archive provides persistent identifiers for versioned datasets and assets, thus improving reproducibility of neurophysiology research.
+
+Data storage - Cloud-based platform on AWS. Data are available from a public S3 bucket. Data from embargoed datasets are available from a private bucket to owners only.
+
+Type of data - The archive accepts cellular neurophysiology data including electrophysiology, optophysiology, and behavioral time-series, and images from immunostaining experiments and other associated data (e.g., participant information, MRI or other modalities).
+
+Accepted Standards and Data File Formats - NWB (HDF5), BIDS (NIfTI, JSON, PNG, OME.BTF, OME.ZARR)
