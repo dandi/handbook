@@ -25,16 +25,15 @@ DANDI provides significant benefits:
 
 | Challenges | Solutions |
 |---|---|
-| Most raw data stay in laboratories. | DANDI provides a public archive for dissemination of raw and derived data. |
+| Most raw data stays in laboratories. | DANDI provides a public archive for dissemination of raw and derived data. |
 | Non-standardized datasets lead to significant resources needed to understand and adapt code to these datasets. | DANDI standardizes all data using NWB and BIDS standards. |
 | The multitude of different hardware platforms and custom binary formats requires significant
 effort to consolidate into reusable datasets. | The DANDI ecosystem provides tools for converting data from different instruments into NWB and BIDS. |
 | There are many domain general places to house data (e.g. Open Science Framework,
 G-Node, Dropbox, Google drive), but it is difficult to find relevant datasets | DANDI is focused on neurophysiology data and related metadata. |
-| Datasets are growing larger requiring compute services to be closer to data | DANDI provides DANDIhub a JupyterHub instance close to the data. |
-| Neurotechnology is evolving and requires changes to metadata and data storage. | DANDI works with community members to improve data standards, formats, and 
+| Datasets are growing larger requiring compute services to be closer to data | DANDI provides DANDIhub, a JupyterHub instance close to the data. |
+| Neurotechnology is evolving and requires changes to metadata and data storage. | DANDI works with community members to improve data standards and formats. |
 | Consolidating and creating robust algorithms (e.g. spike sorting) requires varied data sources. | DANDI provides access to many different datasets. |
-|---|---|
 
 
 ## Properties of DANDI 
