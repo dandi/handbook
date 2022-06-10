@@ -20,6 +20,15 @@ DANDI provides significant benefits:
 - The data can be accessed programmatically allowing for software to work directly with data in the cloud.
 - The infrastructure is built on a software stack of open source products, thus enriching the ecosystem.
 
+### Properties of DANDI 
+
+**Data identifiers:** The archive provides persistent identifiers for versioned datasets and assets, thus improving reproducibility of neurophysiology research.
+
+**Data storage:** Cloud-based platform on AWS. Data are available from a public S3 bucket. Data from embargoed datasets are available from a private bucket to owners only.
+
+**Type of data** The archive accepts cellular neurophysiology data including electrophysiology, optophysiology, and behavioral time-series, and images from immunostaining experiments and other associated data (e.g., participant information, MRI or other modalities).
+
+**Accepted Standards and Data File Formats:** NWB (HDF5), BIDS (NIfTI, JSON, PNG, TIF, OME.TIF, OME.BTF, OME.ZARR)
 
 ## Neurophysiology informatics challenges and DANDI solutions
 
@@ -35,13 +44,3 @@ G-Node, Dropbox, Google drive), but it is difficult to find relevant datasets | 
 | Neurotechnology is evolving and requires changes to metadata and data storage. | DANDI works with community members to improve data standards and formats. |
 | Consolidating and creating robust algorithms (e.g. spike sorting) requires varied data sources. | DANDI provides access to many different datasets. |
 
-
-## Properties of DANDI 
-
-Data identifiers - The archive provides persistent identifiers for versioned datasets and assets, thus improving reproducibility of neurophysiology research.
-
-Data storage - Cloud-based platform on AWS. Data are available from a public S3 bucket. Data from embargoed datasets are available from a private bucket to owners only.
-
-Type of data - The archive accepts cellular neurophysiology data including electrophysiology, optophysiology, and behavioral time-series, and images from immunostaining experiments and other associated data (e.g., participant information, MRI or other modalities).
-
-Accepted Standards and Data File Formats - NWB (HDF5), BIDS (NIfTI, JSON, PNG, OME.BTF, OME.ZARR)
