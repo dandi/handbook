@@ -3,8 +3,9 @@
 
 ## Dandisets
 
-DANDI provides access to an archive that stores cellular neurophysiology
-datasets. We refer to such datasets as `Dandisets`.
+DANDI stores cellular neurophysiology datasets. We refer to such datasets as `Dandisets`.
+
+Formally, a `Dandiset` is a collection of assets (files and their metadata) and metadata about the collection.
 
 1. A `Dandiset` is organized in a structured manner to help users and
 software tools interact with it.
@@ -15,15 +16,15 @@ direct access to a `Dandiset`.
 
 ### **Dandiset actions**
 
-Everyone can view and download public `Dandisets`. 
-If you are an owner of dataset, you can create a new `Dandiset` and upload the data, you can also publish teh `Dandiset`.
+Anyone on the Internet can view and download public `Dandisets`. Registered users can also create `Dandisets`, upload data, and publish the `Dandiset` to generate a DOI for it.
+
 
 You can learn more about the `Dandiset` acctions in separate sections:
 
-- [Dandisets View](./11_view.md)
-- [Dandisets Download](./12_download.md)
-- [Dandisets Upload](./13_upload.md)
-- [Dandisets Publish](./14_publish.md)
+- [View](./11_view.md)
+- [Download](./12_download.md)
+- [Upload](./13_upload.md)
+- [Publish](./14_publish.md)
 
 
 ## DANDI Components
@@ -54,9 +55,9 @@ You should check the [Dandi Debugging section](./15_debugging.md) in case of any
 ### **The Dandihub analysis platform**
 
 [Dandihub](https://hub.dandiarchive.org) provides:
-- a Jupyter Hub to interact with the data stored in Dandi.
+- a JupyterHub instance in the cloud to interact with the data stored in DANDI.
 
-To use the hub, you will need to register an
+To use the hub, you will need to register for an
 account using the [DANDI Web application](https://dandiarchive.org/). 
-Note that `Dandihub` is not intended for significant computation, but provides a place to introspect `Dandisets` and files.
+Note that `Dandihub` is not intended for significant computation, but provides a place to introspect `Dandisets` and to perform some analysis and visualization of data.
 

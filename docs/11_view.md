@@ -12,8 +12,10 @@ alt="web_browse"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
 ## Search `Dandisets`
-In addition you can search across the `Dandisets` for specific contributor name or phrase,
-e.g. "house mouse", to get a subset of all `Dandisets`:
+In addition you can search across the `Dandisets` for any text part of the Dandiset metadata record. 
+The text may be about contributor names, modalities, or species.  For example,  `"house mouse"` will
+return a subset of all `Dandisets`, while `"mouse house"` will likely not return any. When unquoted each
+word is used as an `OR`.
 
 <img
 src="./img/web_search.png"
@@ -21,7 +23,7 @@ alt="web_search"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
 
-When you click on one of the `Dandisets` you can see that the searching phrase could
+When you click on one of the `Dandisets` you can see that the searching phrase can
 appear in the description, keywords, or in the assets summary.
 
 <img
@@ -45,7 +47,9 @@ If you scroll down, you will also find:
 - Funding Information
 - Related Resources
 
-More detailed information you can find after choosing `Metadata` on the right side panel. 
+While most of the metadata is summarized on the landing page, some additional information can be 
+found by clicking `Metadata` on the right side panel. For Dandiset owners, this button also allows 
+adding relevant metadata to populate the landing page.
 
 <img
 src="./img/web_dandiset_metadata.png"
@@ -54,7 +58,8 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 ## File view
 
-The right side panel allows you also to access the list of folders and files.
+The right side panel allows you also to access a file browser to navigate the list of folders and files
+in a Dandiset.
 
 <img
 src="./img/web_dandiset_files.png"
@@ -65,4 +70,4 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 Any file in the `Dandiset` has a download icon
 You can click this icon to download a file to your device where you are browsing
 or right click to get the download URL of the file.
-In addition there is an info icon that leads to full asset metadata. Some file also have a link to external services that can open the file (please note that all of this services have size limits, so they can be used only for small files).
+In addition there is an info icon that leads to full asset metadata. Some files also have a link to external services that can open the file. *Note:* that these services often have size limits and hence are activated only for appropriately sized files.

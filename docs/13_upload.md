@@ -3,7 +3,7 @@
 ## Creating an Account on DANDI
 In order to create a new `Dandiset` and upload your data, you need to have a DANDI account.
 
-To create a DANDI account you need:
+To create a DANDI account:
 
 1. [Create a GitHub account](https://github.com/) if you don't have one.
 2. Using your GitHub account, [register a DANDI account](https://gui.dandiarchive.org/#/user/register).
@@ -14,11 +14,14 @@ button.
 
 ## Creating Dandiset and adding the data
 
-DANDI provides a production server (http://dandiarchive.org/) for real data and an identical staging server 
-(https://gui-staging.dandiarchive.org/) for test data.
+You can create a new Dandiset at http://dandiarchive.org . This Dandiset can be fully public or embargoed according to NIH policy.
 When you create a Dandiset, a permanent ID is automatically assigned to it.
 To prevent the production server from being inundated with test Dandisets, we encourage developers to develop 
-against the staging server. The below instructions will alert you to where the commands for interacting with these 
+against the development server (https://gui-staging.dandiarchive.org/). Please note that the development server
+should not be used to stage your data. All data are uploaded as draft and can be adjusted before publishing on
+the production server. The development server is primarily used by users learning to use DANDI or by developers.
+
+The below instructions will alert you to where the commands for interacting with these 
 two different servers differ slightly. 
 
 ### **Setup**
@@ -73,7 +76,7 @@ two different servers differ slightly.
             dandi organize <source_folder>
             dandi upload
 
-            For upload to staging server, specify that explicitly via `-i` option, e.g.
+            For upload to the development server, specify that explicitly via `-i` option, e.g.
             `dandi upload -i dandi-staging`.
 
     6. Add metadata by visiting your Dandiset landing page: 
