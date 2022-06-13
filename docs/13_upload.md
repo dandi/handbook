@@ -81,9 +81,6 @@ two different servers differ slightly.
 
     6. Add metadata by visiting your Dandiset landing page: 
        `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
-    7. Use the Dandiset URL in your preprint directly, or download it using the DANDI CLI:
-            `dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft`.
-        [Reach out to Dandi team for help](https://github.com/dandi/helpdesk/discussions) with the BIDS format.
 
 **In case you have an issue with using Python CLI, please visit [Dandi Debugging section](./15_debugging.md)**.
 

@@ -5,12 +5,10 @@ first place to check for more information so that you can [file a quality bug
 report](https://github.com/dandi/dandi-cli/issues) is the logs.  Every dandi
 command records a copy of its logs in a logfile, the location of which is
 reported to the user when the command finishes running.  The location of the
-logs varies by platform:
+logs varies by platform, e.g.:
 
 - Linux: `~/.cache/dandi-cli/log` or `$XDG_CACHE_HOME/dandi-cli/log`
 - macOS: `~/Library/Logs/dandi-cli`
-- Windows XP: `C:\Documents and Settings\<username>\Local Settings\Application Data\dandi\dandi-cli\Logs`
-- Windows Vista: `C:\Users\<username>\AppData\Local\dandi\dandi-cli\Logs`
 
 Logs are named with a combination of the time at which the `dandi` command
 started running and the process ID of the command.
