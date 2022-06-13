@@ -1,5 +1,13 @@
 # Using DANDI
 
+The DANDI project can be represented schematically by the figure:
+
+<img
+src="./img/dandi_structure.png"
+alt="dandi_structure"
+style="width: 70%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+
+The Client Site contains DANDI Python CLI and DANDI web application, the Server site contains RESTfulAPI and DANDI JupyterHub. The basic structure to store data together with metadata is called `Dandiset`.
 
 ## Dandisets
 
@@ -17,6 +25,11 @@ direct access to a `Dandiset`.
 ### **Dandiset actions**
 
 Anyone on the Internet can view and download public `Dandisets`. Registered users can also create `Dandisets`, upload data, and publish the `Dandiset` to generate a DOI for it.
+
+<img
+src="./img/dandiset_activity.svg"
+alt="dandiset_activity"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
 
 You can learn more about the `Dandiset` acctions in separate sections:
