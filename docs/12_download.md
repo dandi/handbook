@@ -41,9 +41,13 @@ You can download data for the specific subjects.
 Names of the subjects could be found on DANDI web application or by running a commend with the DANDI CLI: `dandi ls -r DANDI:000023`.
 Once you have the subject id, you can download the data, e.g.:
 
-`dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/draft/assets/?path=sub-P10HMH` 
+`dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/draft/assets/?path=sub-811677083`
 
-You can also replace `draft` with a specific version you are interested in (e.g. `0.210914.1900` in the case of this Dandiset).
+You should replace `draft` with a specific version you are interested in (e.g. `0.210914.1900` in the case of this Dandiset).
+
+You can also use the link from DANDI web application, e.g.:
+
+`dandi download https://dandiarchive.org/dandiset/000023/0.210914.1900/files?location=sub-541516760%2F`
 
 
 ### Download a specific file from a Dandiset 

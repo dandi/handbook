@@ -71,3 +71,15 @@ Any file in the `Dandiset` has a download icon
 You can click this icon to download a file to your device where you are browsing
 or right click to get the download URL of the file.
 In addition there is an info icon that leads to full asset metadata. Some files also have a link to external services that can open the file. *Note:* that these services often have size limits and hence are activated only for appropriately sized files.
+
+
+## My Dandisets
+If you are a registered user and you log in, you will also see `My Dandisets` tab:
+
+<img
+src="./img/my_dandiset.png"
+alt="my_dandiset"
+style="width: 7
+0%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+
+By clicking the tab, you can access all the `Dandisets` you owe, you will also have an option to provide or update any metadata fields.
