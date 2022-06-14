@@ -3,7 +3,7 @@
 The DANDI project can be represented schematically by the figure:
 
 <img
-src="./img/dandi_structure.png"
+src="./img/dandi_structure.svg"
 alt="dandi_structure"
 style="width: 70%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
