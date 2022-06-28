@@ -3,7 +3,7 @@
 The DANDI project can be represented schematically by the figure:
 
 <img
-src="./img/dandi_structure.svg"
+src="../img/dandi_structure.svg"
 alt="dandi_structure"
 style="width: 70%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
@@ -27,7 +27,7 @@ direct access to a `Dandiset`.
 Anyone on the Internet can view and download public `Dandisets`. Registered users can also create `Dandisets`, upload data, and publish the `Dandiset` to generate a DOI for it.
 
 <img
-src="./img/dandiset_activity.svg"
+src="../img/dandiset_activity.svg"
 alt="dandiset_activity"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 

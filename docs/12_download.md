@@ -8,7 +8,7 @@ On the landing page of each `Dandiset` you can find `Download` button on the rig
 
 <p float="left">
 <img
-src="./img/web_dandiset_rsp_download.png"
+src="../img/web_dandiset_rsp_download.png"
 alt="web_dandiset_rsp_download"
 style="width: 30%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 </p>
@@ -18,7 +18,7 @@ style="width: 30%; height: auto; display: block; margin-left: auto;  margin-righ
 The right side panel of the `Dandiset` landing page allows you also to access the list of folders and files.
 
 <img
-src="./img/web_dandiset_files.png"
+src="../img/web_dandiset_files.png"
 alt="web_dandiset_files"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 

@@ -1,3 +1,5 @@
+# Debugging
+
 ## Acquiring Debugging Information
 
 In the event that something goes wrong while using the `dandi` client, the
