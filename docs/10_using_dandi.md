@@ -3,11 +3,11 @@
 The DANDI project can be represented schematically by the figure:
 
 <img
-src="./img/dandi_structure.png"
+src="./img/dandi_structure.svg"
 alt="dandi_structure"
 style="width: 70%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
-The Client Site contains DANDI Python CLI and DANDI web application, the Server site contains RESTfulAPI and DANDI JupyterHub. The basic structure to store data together with metadata is called `Dandiset`.
+The Clients are DANDI Python CLI and DANDI Web application and the Server side contains a RESTful API and DANDI JupyterHub. The file organization to store data together with metadata is called `Dandiset`.
 
 ## Dandisets
 

@@ -82,4 +82,4 @@ alt="my_dandiset"
 style="width: 7
 0%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
-By clicking the tab, you can access all the `Dandisets` you owe, you will also have an option to provide or update any metadata fields.
+By clicking the tab, you can access all the Dandisets you own. For these Dandisets, you can edit and update metadata through the Dandiset actions section, and add or remove other owners or data.
