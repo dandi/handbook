@@ -32,7 +32,7 @@ alt="dandiset_activity"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
 
-You can learn more about the `Dandiset` acctions in separate sections:
+You can learn more about the `Dandiset` actions in separate sections:
 
 - [View](./11_view.md)
 - [Download](./12_download.md)
