@@ -2,9 +2,9 @@
 
 ## Browse `Dandisets`
 
-When you go the [DANDI Web application](https://dandiarchive.org/) you can click 
+When you go to the [DANDI Web application](https://dandiarchive.org/), you can click
 on `PUBLIC DANDISET` to have access to all `Dandisets` currently available 
-in the archive and you can sort them  by name, identifier or date of modification. 
+in the archive and you can sort them by name, identifier, or date of modification.
 
 <img
 src="../img/web_browse.png"
@@ -23,7 +23,7 @@ alt="web_search"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
 
-When you click on one of the `Dandisets` you can see that the searching phrase can
+When you click on one of the `Dandisets`, you can see that the searching phrase can
 appear in the description, keywords, or in the assets summary.
 
 <img
