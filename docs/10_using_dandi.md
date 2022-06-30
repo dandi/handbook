@@ -7,7 +7,7 @@ src="../img/dandi_structure.svg"
 alt="dandi_structure"
 style="width: 70%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
-The Client site contains DANDI Python CLI and DANDI Web application and the Server side contains a RESTful API and DANDI JupyterHub. The file organization to store data together with metadata is called `Dandiset`.
+The Client side contains the DANDI Python CLI and DANDI Web application and the Server side contains a RESTful API and DANDI JupyterHub. The file organization to store data together with metadata is called `Dandiset`.
 
 ## Dandisets
 
