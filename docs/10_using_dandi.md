@@ -1,14 +1,5 @@
 # Using DANDI
 
-The DANDI project can be represented schematically by the figure:
-
-<img
-src="../img/dandi_structure.svg"
-alt="dandi_structure"
-style="width: 70%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
-
-The Client side contains the DANDI Python CLI and DANDI Web application and the Server side contains a RESTful API and DANDI JupyterHub. The file organization to store data together with metadata is called `Dandiset`.
-
 ## Dandisets
 
 DANDI stores cellular neurophysiology datasets. We refer to such datasets as `Dandisets`.
@@ -41,6 +32,15 @@ You can learn more about the `Dandiset` actions in separate sections:
 
 
 ## DANDI Components
+
+The DANDI project can be represented schematically by the figure:
+
+<img
+src="../img/dandi_structure.svg"
+alt="dandi_structure"
+style="width: 70%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+
+The Client side contains the DANDI Python CLI and DANDI Web application and the Server side contains a RESTful API and DANDI JupyterHub. The file organization to store data together with metadata is called `Dandiset`.
 
 ### **The DANDI Web application**
 
