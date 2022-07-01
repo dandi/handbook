@@ -40,7 +40,7 @@ src="../img/dandi_structure.svg"
 alt="dandi_structure"
 style="width: 70%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
-The Clients are DANDI Python CLI and DANDI Web application and the Server side contains a RESTful API and DANDI JupyterHub. The file organization to store data together with metadata is called `Dandiset`.
+The Client side contains the DANDI Python CLI and DANDI Web application and the Server side contains a RESTful API and DANDI JupyterHub. The file organization to store data together with metadata is called `Dandiset`.
 
 ### **The DANDI Web application**
 
@@ -67,8 +67,7 @@ You should check the [Dandi Debugging section](./15_debugging.md) in case of any
 
 ### **The Dandihub analysis platform**
 
-[Dandihub](https://hub.dandiarchive.org) provides:
-- a JupyterHub instance in the cloud to interact with the data stored in DANDI.
+[Dandihub](https://hub.dandiarchive.org) provides a JupyterHub instance in the cloud to interact with the data stored in DANDI.
 
 To use the hub, you will need to register for an
 account using the [DANDI Web application](https://dandiarchive.org/). 
