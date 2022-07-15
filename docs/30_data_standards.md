@@ -17,11 +17,11 @@ If you would like help determining which standard is most appropriate for your d
 NWB is designed to store a variety of neurophysiology data, including data from intracellular and extracellular electrophysiology experiments, data from optical physiology experiments, and tracking and stimulus data.
 The NWB team supports APIs in Python ([PyNWB](https://pynwb.readthedocs.io/)) and MATLAB ([MatNWB](https://github.com/NeurodataWithoutBorders/matnwb)), with tutorials for writing data broken down by experiment type.
 See the [NWB Tutorials](https://www.nwb.org/how-to-use/) page for more details.
-Also see the [NWB Conversion Tools user guide for converting data](https://nwb-conversion-tools.readthedocs.io/en/master/user_guide.html) for automated conversions from several popular proprietary data formats. 
+Also see the [NWB Conversion Tools user guide for converting data](https://nwb-conversion-tools.readthedocs.io/en/main/user_guide.html) for automated conversions from several popular proprietary data formats. 
 The best way to get help from the NWB community is through the [NWB user Slack channel](https://nwb-users.slack.com/).
 
 ## Brain Imaging Data Format (BIDS)
 [BIDS](https://bids.neuroimaging.io/) is a way to organize and describe neuroimaging and behavioral data. 
-See the [Getting Started page](https://bids.neuroimaging.io/getting_started.html) for instructions for how to convert your neuroimaging data to BIDS.
+See the [Getting Started page](https://bids.neuroimaging.io/get_started.html) for instructions for how to convert your neuroimaging data to BIDS.
 
 For microscopy and associated MR data, use the [BIDS extension for microscopy](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html).
