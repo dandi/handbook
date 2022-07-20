@@ -1,19 +1,50 @@
 # Using DANDI
 
-## Dandisets
 
-DANDI stores cellular neurophysiology datasets. We refer to such datasets as `Dandisets`.
+If you are new to DANDI, all you need is a browser and an Internet connection to view and download part or all of a 
+public 
+`Dandiset`. 
+Registration is not required.
 
-Formally, a `Dandiset` is a collection of assets (files and their metadata) and metadata about the collection.
+## Getting Started
 
-1. A `Dandiset` is organized in a structured manner to help users and
+To view a specific public `Dandiset` and download one of its files:
+
+1. At the top of the DANDI Web application, click PUBLIC DANDISETS to see all `Dandisets` currently available in the 
+   archive. You can sort them by name, identifier, or date of modification.
+
+2. Search for a specific `Dandiset` by contributor name, modality, or species.
+
+3. Click a `Dandiset` to open its landing page and view important information such as contact information, 
+   description, license, access information and keywords, and simple statistics.
+
+4. From the right side of the `Dandiset` landing page, click FILES to see a list of all folders and files for that 
+   `Dandiset`. Click the download icon <img
+src="../img/download_file_icon.png"
+alt="download_file_icon"/> to download a 
+   specific file. 
+**Note:** To download an entire `Dandiset`, you will need to follow the instructions in the 
+   [Download](./12_download.md) section to install and use the DANDI Python client tool.
+
+### Next steps
+See the sections that follow for more detailed information about the DANDI project, as well as instructions on how 
+to work with public `Dandisets` or to create and publish you own as a registered user.
+
+## DANDI Project Components
+
+The DANDI project contains the DANDI Web application, the DANDI Python client tool, and the DANDI JupyterHub instance. 
+DANDI stores cellular neurophysiology datasets in `Dandisets`.
+
+### Dandisets
+
+A `Dandiset` is a collection of assets (files and their metadata) and metadata about the collection.
+
+* A `Dandiset` is organized in a structured manner to help users and
 software tools interact with it.
-1. Each `Dandiset` has a unique persistent identifier that you can use to go directly
+* Each `Dandiset` has a unique persistent identifier that you can use to go directly
 to the `Dandiset` (e.g. [https://identifiers.org/DANDI:000004](https://identifiers.org/DANDI:000004)).
 You can use this identifier to cite the `Dandiset` in your publications or provide
 direct access to a `Dandiset`.
-
-### **Dandiset actions**
 
 Anyone on the Internet can view and download public `Dandisets`. Registered users can also create `Dandisets`, upload data, and publish the `Dandiset` to generate a DOI for it.
 
@@ -31,18 +62,7 @@ You can learn more about the `Dandiset` actions in separate sections:
 - [Publish](./14_publish.md)
 
 
-## DANDI Components
-
-The DANDI project can be represented schematically by the figure:
-
-<img
-src="../img/dandi_structure.svg"
-alt="dandi_structure"
-style="width: 70%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
-
-The Client side contains the DANDI Python CLI and DANDI Web application and the Server side contains a RESTful API and DANDI JupyterHub. The file organization to store data together with metadata is called `Dandiset`.
-
-### **The DANDI Web application**
+### **DANDI Web application**
 
 The [DANDI Web application](https://dandiarchive.org/) allows you to:
 
@@ -52,7 +72,7 @@ The [DANDI Web application](https://dandiarchive.org/) allows you to:
 * Publish your `Dandiset`
 
 
-### **The DANDI Python client**
+### **DANDI Python client**
 
 The [DANDI Python client](https://pypi.org/project/dandi/) allows you to:
 
@@ -65,11 +85,10 @@ environment.
 
 You should check the [Dandi Debugging section](./15_debugging.md) in case of any problems.
 
-### **The Dandihub analysis platform**
+### **Dandihub analysis platform**
 
 [Dandihub](https://hub.dandiarchive.org) provides a JupyterHub instance in the cloud to interact with the data stored in DANDI.
 
 To use the hub, you will need to register for an
 account using the [DANDI Web application](https://dandiarchive.org/). 
 Note that `Dandihub` is not intended for significant computation, but provides a place to introspect `Dandisets` and to perform some analysis and visualization of data.
-
