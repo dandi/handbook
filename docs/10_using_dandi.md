@@ -1,12 +1,29 @@
 # Using DANDI
 
+DANDI allows you to work with stored neurophysiology data in multiple ways. You can search, view, and download files,
+all without registering for a DANDI account. As a registered user, you can also create these collections of data 
+along with metadata and publish them to the DANDI platform. 
 
-If you are new to DANDI, all you need is a browser and an Internet connection to view and download part or all of a 
+## Dandisets
+DANDI stores cellular neurophysiology data in `Dandisets`.
+
+A `Dandiset` is a collection of assets (files and their metadata) and metadata about the collection.
+
+* A `Dandiset` is organized in a structured manner to help users and
+software tools interact with it.
+* Each `Dandiset` has a unique persistent identifier that you can use to go directly
+to the `Dandiset` (e.g. [https://identifiers.org/DANDI:000004](https://identifiers.org/DANDI:000004)).
+You can use this identifier to cite the `Dandiset` in your publications or provide
+direct access to a `Dandiset`.
+
+## Quick Start
+
+If you are new to DANDI, all you need is an Internet connection to use the DANDI Web application to view 
+and download files from a 
 public 
 `Dandiset`. 
 Registration is not required.
 
-## Getting Started
 
 To view a specific public `Dandiset` and download one of its files:
 
@@ -27,26 +44,17 @@ alt="download_file_icon"/> to download a
    [Download](./12_download.md) section to install and use the DANDI Python client tool.
 
 ### Next steps
+Although anyone on the Internet 
+can view and download public `Dandisets`, registered users can also create `Dandisets`, upload data, and publish 
+the `Dandiset` to generate a DOI for it.
 See the sections that follow for more detailed information about the DANDI project, as well as instructions on how 
-to work with public `Dandisets` or to create and publish you own as a registered user.
+to work with public `Dandisets` or to create and publish you own as a registered user. 
 
-## DANDI Project Components
+## Dandiset Actions
 
-The DANDI project contains the DANDI Web application, the DANDI Python client tool, and the DANDI JupyterHub instance. 
-DANDI stores cellular neurophysiology datasets in `Dandisets`.
+The DANDI project contains the DANDI Web application, the DANDI Python client tool, and the DANDI JupyterHub 
+instance. These tools can be used to perform actions on `Dandisets`. 
 
-### Dandisets
-
-A `Dandiset` is a collection of assets (files and their metadata) and metadata about the collection.
-
-* A `Dandiset` is organized in a structured manner to help users and
-software tools interact with it.
-* Each `Dandiset` has a unique persistent identifier that you can use to go directly
-to the `Dandiset` (e.g. [https://identifiers.org/DANDI:000004](https://identifiers.org/DANDI:000004)).
-You can use this identifier to cite the `Dandiset` in your publications or provide
-direct access to a `Dandiset`.
-
-Anyone on the Internet can view and download public `Dandisets`. Registered users can also create `Dandisets`, upload data, and publish the `Dandiset` to generate a DOI for it.
 
 <img
 src="../img/dandiset_activity.svg"
