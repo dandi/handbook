@@ -1,18 +1,18 @@
-# View Dandisets
+# Viewing Dandisets
 
-## Browse `Dandisets`
+## Browse Dandisets
 
 When you go to the [DANDI Web application](https://dandiarchive.org/), you can click
-on `PUBLIC DANDISET` to have access to all `Dandisets` currently available 
-in the archive and you can sort them by name, identifier, or date of modification.
+on `PUBLIC DANDISET` to access all `Dandisets` currently available 
+in the archive, and you can sort them by name, identifier, or date of modification.
 
 <img
 src="../img/web_browse.png"
 alt="web_browse"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
-## Search `Dandisets`
-In addition you can search across the `Dandisets` for any text part of the Dandiset metadata record. 
+## Search Dandisets
+In addition, you can search across the `Dandisets` for any text part of the `Dandiset` metadata record. 
 The text may be about contributor names, modalities, or species.  For example,  `"house mouse"` will
 return a subset of all `Dandisets`, while `"mouse house"` will likely not return any. When unquoted each
 word is used as an `OR`.
@@ -32,10 +32,11 @@ alt="web_search_dandiset"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
 
-## `Dandisets` metadata
+## Dandisets Metadata
 
 The landing page of each `Dandiset` contains important information including 
-metadata provided by the owners such as contact information, description, license, access information and keywords, or simple statistics for `Dandiset` such as size of the `Dandiset` and number of files.
+metadata provided by the owners such as contact information, description, license, access information and keywords, 
+or simple statistics for a `Dandiset` such as size of the `Dandiset` and number of files.
 
 <img
 src="../img/web_dandiset_lp.png"
@@ -48,7 +49,7 @@ If you scroll down, you will also find:
 - Related Resources
 
 While most of the metadata is summarized on the landing page, some additional information can be 
-found by clicking `Metadata` on the right side panel. For Dandiset owners, this button also allows 
+found by clicking `Metadata` on the right-side panel. For `Dandiset` owners, this button also allows 
 adding relevant metadata to populate the landing page.
 
 <img
@@ -56,10 +57,10 @@ src="../img/web_dandiset_metadata.png"
 alt="web_dandiset_metadata"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
-## File view
+## File View
 
 The right side panel allows you also to access a file browser to navigate the list of folders and files
-in a Dandiset.
+in a `Dandiset`.
 
 <img
 src="../img/web_dandiset_files.png"
@@ -70,11 +71,12 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 Any file in the `Dandiset` has a download icon
 You can click this icon to download a file to your device where you are browsing
 or right click to get the download URL of the file.
-In addition there is an info icon that leads to full asset metadata. Some files also have a link to external services that can open the file. *Note:* that these services often have size limits and hence are activated only for appropriately sized files.
+In addition, there is an info icon that leads to full asset metadata. Some files also have a link to external 
+services that can open the file. *Note:* that these services often have size limits and hence are activated only for appropriately sized files.
 
 
 ## My Dandisets
-If you are a registered user and you log in, you will also see `My Dandisets` tab:
+If you log in as a registered user, you will also see `My Dandisets` tab:
 
 <img
 src="../img/my_dandiset.png"
@@ -82,4 +84,5 @@ alt="my_dandiset"
 style="width: 7
 0%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
-By clicking the tab, you can access all the Dandisets you own. For these Dandisets, you can edit and update metadata through the Dandiset actions section, and add or remove other owners or data.
+By clicking the tab, you can access all the `Dandisets` you own. For these `Dandisets`, you can edit and update 
+metadata through the `Dandiset` actions section, and add or remove other owners or data.
