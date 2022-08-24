@@ -1,11 +1,9 @@
 # Debugging
 
-## Acquiring Debugging Information
 
-In the event that something goes wrong while using the `dandi` client, the
+If something goes wrong while using the Python CLI client, the
 first place to check for more information so that you can [file a quality bug
-report](https://github.com/dandi/dandi-cli/issues) is the logs.  Every dandi
-command records a copy of its logs in a logfile, the location of which is
+report](https://github.com/dandi/dandi-cli/issues) is the logs.  Every command records a copy of its logs in a logfile, the location of which is
 reported to the user when the command finishes running.  The location of the
 logs varies by platform, e.g.:
 
@@ -15,7 +13,7 @@ logs varies by platform, e.g.:
 Logs are named with a combination of the time at which the `dandi` command
 started running and the process ID of the command.
 
-Recent versions of `dandi` include all possible debugging information in the
+Recent versions of the client include all possible debugging information in the
 logs, but if you're using an older version, only log messages that were printed
 to the user when the command ran are recorded.  As a result, in order to get
 complete debugging information, you may have to rerun the problematic command,
@@ -43,7 +41,7 @@ option:
     dandi download -f debug
 
 More advanced users who are familiar with [the Python
-debugger](https://docs.python.org/3/library/pdb.html) can instruct `dandi` to
+debugger](https://docs.python.org/3/library/pdb.html) can instruct the client to
 automatically open the debugger if any errors occur by supplying the `--pdb`
 option to the command.  Like the `-l`/`--log-level` option, the `--pdb` option
 must be placed between `dandi` and the name of the subcommand.
