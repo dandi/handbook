@@ -4,7 +4,7 @@
 
 When you go to the [DANDI Web application](https://dandiarchive.org/), you can click
 on `PUBLIC DANDISET` to access all `Dandisets` currently available 
-in the archive, and you can sort them by name, identifier, or date of modification.
+in the archive, and you can sort them by name, identifier, size, or date of modification.
 
 <img
 src="../img/web_browse.png"
