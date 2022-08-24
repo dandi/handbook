@@ -36,7 +36,8 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 The landing page of each `Dandiset` contains important information including 
 metadata provided by the owners such as contact information, description, license, access information and keywords, 
-or simple statistics for a `Dandiset` such as size of the `Dandiset` and number of files.
+ simple statistics for a `Dandiset` such as size of the `Dandiset` and number of files, or
+ a summary of the `Dandiset` including information about species, techniques, and standards.
 
 <img
 src="../img/web_dandiset_lp.png"
