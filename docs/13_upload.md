@@ -2,7 +2,7 @@
 
 To create a new `Dandiset` and upload your data, you need to have a DANDI account.
 
-## Creating an Account on DANDI
+## Create an Account on DANDI
 
 To create a DANDI account:
 
@@ -13,7 +13,7 @@ You will receive an email acknowledging activation of your account within 24
 hours, after which you can log in to DANDI using GitHub by clicking the login
 button.
 
-## Creating a Dandiset and Adding Data
+## Create a Dandiset and Add Data
 
 You can create a new `Dandiset` at [http://dandiarchive.org](http://dandiarchive.org). This `Dandiset` can be fully 
 public or embargoed 

@@ -15,7 +15,7 @@ alt="web_dandiset_rsp_download"
 style="width: 30%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
 
-### Downloading specific files
+### Download specific files
 
 The right-side panel of the `Dandiset` landing page allows you also to access the list of folders and files.
 
