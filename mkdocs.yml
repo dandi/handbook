@@ -30,7 +30,7 @@ nav:
   - Developer Guide:
     - Project Structure: "20_project_structure.md"
     - Notes: "40_development.md"
-  - About:
+  - Terms and Policies:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
   - About This Doc: "100_about_this_doc.md"
