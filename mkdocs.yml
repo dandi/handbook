@@ -19,6 +19,7 @@ theme:
 nav:
   - Welcome: "index.md"
   - Introduction: "01_introduction.md"
+  - Data Standards: "30_data_standards.md"
   - User Guide:
     - Using DANDI: "10_using_dandi.md"
     - Viewing Dandisets: "11_view.md"
@@ -26,7 +27,6 @@ nav:
     - Creating Dandisets and Uploading Data: "13_upload.md"
     - Publishing Dandisets: "14_publish.md"
     - Debugging: "15_debugging.md"
-  - Data Standards: "30_data_standards.md"
   - Developer Guide:
     - Project Structure: "20_project_structure.md"
     - Notes: "40_development.md"

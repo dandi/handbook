@@ -16,7 +16,8 @@ DANDI provides significant benefits:
 - Rich metadata to support search across data.
 - Consistent and transparent data standards to simplify data reuse and software development. We use the [Neurodata Without Borders](https://nwb.org), 
 [Brain Imaging Data Structure](https://bids.neuroimaging.io/),
-[Neuroimaging Data Model (NIDM)](http://nidm.nidash.org/), and other [BRAIN Initiative](https://braininitiative.nih.gov/) standards to organize and search the data. 
+[Neuroimaging Data Model (NIDM)](http://nidm.nidash.org/), and other [BRAIN Initiative](https://braininitiative.nih.
+  gov/) standards to organize and search the data. See [Data Standards](./30_data_standards.md) for more information.
 - The data can be accessed programmatically allowing for software to work directly with data in the cloud.
 - The infrastructure is built on a software stack of open source products, thus enriching the ecosystem.
 
@@ -28,7 +29,8 @@ DANDI provides significant benefits:
 
 **Type of data** The archive accepts cellular neurophysiology data including electrophysiology, optophysiology, and behavioral time-series, and images from immunostaining experiments and other associated data (e.g. participant information, MRI or other modalities).
 
-**Accepted Standards and Data File Formats:** NWB (HDF5), BIDS (NIfTI, JSON, PNG, TIF, OME.TIF, OME.BTF, OME.ZARR)
+**Accepted Standards and Data File Formats:** NWB (HDF5), BIDS (NIfTI, JSON, PNG, TIF, OME.TIF, OME.BTF, OME.ZARR) 
+(see [Data Standards](./30_data_standards.md) for more details)
 
 ## Neurophysiology Informatics Challenges and DANDI Solutions
 
