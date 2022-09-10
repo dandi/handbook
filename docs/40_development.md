@@ -1,13 +1,14 @@
 # Developer Notes
 
-This page contains crucial information for anyone starting work on the DANDI
+This page contains important information for anyone starting development work on the DANDI
 project.
 
-# Overview
+## Overview
 
 The DANDI archive dev environment comprises three major pieces of software:
 `dandi-archive`, `dandi-cli`, and `dandi-schema`.
 
+### `dandi-archive`
 [`dandi-archive`](https://github.com/dandi/dandi-archive) is the web frontend
 application; it connects to `dandi-api` and provides a user interface to all the DANDI functionality. 
 `dandi-archive` is a standard web application built with
@@ -21,9 +22,9 @@ asynchronous compute tasks as needed to implement API semantics), and RabbitMQ
 (to act as a message broker between Celery and the rest of the application).
 
 The easiest way to run the API along with its services is through a Docker
-Compose setup, as detailed in the [Develop with Docker quickstart](https://github.
-com/dandi/dandi-archive/blob/master/DEVELOPMENT.
-md).
+Compose setup, as detailed in the [Develop with Docker quickstart](https://github.com/dandi/dandi-archive/blob/master/DEVELOPMENT.md).
+
+### `dandi-cli`
 
 [`dandi-cli`](https://github.com/dandi/dandi-cli) is a Python command line tool
 used to manage downloading and uploading of data with the archive. You may need
@@ -33,25 +34,21 @@ as well. You can install `dandi-cli` with a command like `pip install dandi`
 (then invoke `dandi` on the command line to run the tool), or build it locally
 following the instructions in the [`dandi-cli` README](https://github.com/dandi/dandi-cli#readme).
 
+### `dandi-schema`
+
 [`dandi-schema`](https://github.com/dandi/dandi-schema) is a Python library for 
 creating, maintaining, and validating the DANDI metadata models for dandisets 
 and assets. You may need to make use of this tool when improving models, or 
 migrating metadata. You can install `dandi-schema` with a command like 
 `pip install dandi-schema`. When releases are published through dandi-schema, 
-corresponding json-schemas are generated in the release folder of the [dandi schema repo](https://github.com/dandi/schema).
-# Important Things to Know
-
-This section gathers some important yet small bullet points of knowledge, useful
-to dive into development on the DANDI project.
+corresponding json-schemas are generated in the release folder of the [dandi schema repo](https://github.com/dandi/schema). See the `dandi-schema` [README](https://github.com/dandi/schema#readme) for instructions on 
+viewing the schemas.
 
 ## Technologies Used
 
-This section details some of the foundational technologies used in the DANDI
-codebases. Some basic understanding of these technologies is the bare minimum
+This section details some foundational technologies used in `dandi-archive`. Some basic understanding of these technologies is the bare minimum
 requirement for contributing meaningfully, but keep in mind that the DANDI team
 can help you get spun up as well.
-
-### `dandi-archive`
 
 **JavaScript/TypeScript.** The DANDI archive code is a standard JavaScript web
 application, but we try to implement new functionality using TypeScript.
