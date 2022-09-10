@@ -70,6 +70,8 @@ You can learn more about the `Dandiset` actions in separate sections:
 - [Publish](./14_publish.md)
 
 
+## Tools to interact with DANDI
+
 ### **DANDI Web application**
 
 The [DANDI Web application](https://dandiarchive.org/) allows you to:
