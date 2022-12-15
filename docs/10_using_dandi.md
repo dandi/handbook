@@ -5,55 +5,55 @@ all without registering for a DANDI account. As a registered user, you can also 
 along with metadata and publish them to the DANDI platform. 
 
 ## Dandisets
-DANDI stores cellular neurophysiology data in `Dandisets`.
+DANDI stores cellular neurophysiology data in Dandisets.
 
-A `Dandiset` is a collection of assets (files and their metadata) and metadata about the collection.
+A Dandiset is a collection of assets (files and their metadata) and metadata about the collection.
 
-* A `Dandiset` is organized in a structured manner to help users and
+* A Dandiset is organized in a structured manner to help users and
 software tools interact with it.
-* Each `Dandiset` has a unique persistent identifier that you can use to go directly
-to the `Dandiset` (e.g. [https://identifiers.org/DANDI:000004](https://identifiers.org/DANDI:000004)).
-You can use this identifier to cite the `Dandiset` in your publications or provide
-direct access to a `Dandiset`.
+* Each Dandiset has a unique persistent identifier that you can use to go directly
+to the Dandiset (e.g. [https://identifiers.org/DANDI:000004](https://identifiers.org/DANDI:000004)).
+You can use this identifier to cite the Dandiset in your publications or provide
+direct access to a Dandiset.
 
 ## Quick Start
 
 If you are new to DANDI, all you need is an Internet connection to use the DANDI Web application to view 
 and download files from a 
 public 
-`Dandiset`. 
+Dandiset. 
 Registration is not required.
 
 
-To view a specific public `Dandiset` and download one of its files:
+To view a specific public Dandiset and download one of its files:
 
-1. At the top of the DANDI Web application, click PUBLIC DANDISETS to see all `Dandisets` currently available in the 
+1. At the top of the DANDI Web application, click PUBLIC DANDISETS to see all Dandisets currently available in the 
    archive. You can sort them by name, identifier, or date of modification.
 
-2. Search for a specific `Dandiset` by contributor name, modality, or species.
+2. Search for a specific Dandiset by contributor name, modality, or species.
 
-3. Click a `Dandiset` to open its landing page and view important information such as contact information, 
+3. Click a Dandiset to open its landing page and view important information such as contact information, 
    description, license, access information and keywords, and simple statistics.
 
-4. From the right side of the `Dandiset` landing page, click FILES to see a list of all folders and files for that 
-   `Dandiset`. Click the download icon <img
+4. From the right side of the Dandiset landing page, click FILES to see a list of all folders and files for that 
+   Dandiset. Click the download icon <img
 src="../img/download_file_icon.png"
 alt="download_file_icon"/> to download a 
    specific file. 
-**Note:** To download an entire `Dandiset`, you will need to follow the instructions in the 
+**Note:** To download an entire Dandiset, you will need to follow the instructions in the 
    [Download](./12_download.md) section to install and use the DANDI Python client tool.
 
 ### Next steps
 Although anyone on the Internet 
-can view and download public `Dandisets`, registered users can also create `Dandisets`, upload data, and publish 
-the `Dandiset` to generate a DOI for it.
+can view and download public Dandisets, registered users can also create Dandisets, upload data, and publish 
+the Dandiset to generate a DOI for it.
 See the sections that follow for more detailed information about the DANDI project, as well as instructions on how 
-to work with public `Dandisets` or to create and publish you own as a registered user. 
+to work with public Dandisets or to create and publish you own as a registered user. 
 
 ## Dandiset Actions
 
 The DANDI project contains the DANDI Web application, the DANDI Python client tool, and the DANDI JupyterHub 
-instance. These tools can be used to perform actions on `Dandisets`. 
+instance. These tools can be used to perform actions on Dandisets. 
 
 
 <img
@@ -62,7 +62,7 @@ alt="dandiset_activity"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
 
-You can learn more about the `Dandiset` actions in separate sections:
+You can learn more about the Dandiset actions in separate sections:
 
 - [View](./11_view.md)
 - [Download](./12_download.md)
@@ -76,19 +76,19 @@ You can learn more about the `Dandiset` actions in separate sections:
 
 The [DANDI Web application](https://dandiarchive.org/) allows you to:
 
-* Search across all public `Dandisets`
-* Download data from public `Dandisets`
-* Create a new `Dandiset` and provide metadata
-* Publish your `Dandiset`
+* Search across all public Dandisets
+* Download data from public Dandisets
+* Create a new Dandiset and provide metadata
+* Publish your Dandiset
 
 
 ### **DANDI Python client**
 
 The [DANDI Python client](https://pypi.org/project/dandi/) allows you to:
 
-* Download `Danidsets` and individual subject folders or files
+* Download Dandisets and individual subject folders or files
 * Organize your data locally before upload
-* Upload `Dandisets`
+* Upload Dandisets
 
 Before you can use the DANDI Python client, you have to install the package with `pip install dandi` in a Python 3.7+
 environment.
@@ -101,7 +101,7 @@ You should check the [Dandi Debugging section](./15_debugging.md) in case of any
 
 To use the hub, you will need to register for an
 account using the [DANDI Web application](https://dandiarchive.org/). 
-Note that `Dandihub` is not intended for significant computation, but provides a place to introspect `Dandisets` and to perform some analysis and visualization of data.
+Note that `Dandihub` is not intended for significant computation, but provides a place to introspect Dandisets and to perform some analysis and visualization of data.
 
 ## Citing DANDI
 

@@ -1,6 +1,6 @@
 # Creating Dandisets and Uploading Data
 
-To create a new `Dandiset` and upload your data, you need to have a DANDI account.
+To create a new Dandiset and upload your data, you need to have a DANDI account.
 
 ## Create an Account on DANDI
 
@@ -15,11 +15,11 @@ button.
 
 ## Create a Dandiset and Add Data
 
-You can create a new `Dandiset` at [http://dandiarchive.org](http://dandiarchive.org). This `Dandiset` can be fully 
+You can create a new Dandiset at [http://dandiarchive.org](http://dandiarchive.org). This Dandiset can be fully 
 public or embargoed 
 according to NIH policy.
-When you create a `Dandiset`, a permanent ID is automatically assigned to it.
-To prevent the production server from being inundated with test `Dandisets`, we encourage developers to develop 
+When you create a Dandiset, a permanent ID is automatically assigned to it.
+To prevent the production server from being inundated with test Dandisets, we encourage developers to develop 
 against the development server ([https://gui-staging.dandiarchive.org/](https://gui-staging.dandiarchive.org/)). Note 
 that the development server
 should not be used to stage your data. All data are uploaded as draft and can be adjusted before publishing on
@@ -46,7 +46,7 @@ two different servers differ slightly.
 
 ### **Data upload/management workflow**
 
-1. Register a `Dandiset` to generate an identifier. You will be asked to enter
+1. Register a Dandiset to generate an identifier. You will be asked to enter
     basic metadata: a name (title) and description (abstract) for your dataset.
     Click `NEW DANDISET` in the Web application (top right corner) after logging in. 
     After you provide a name and description, the dataset identifier will be created; 
@@ -84,7 +84,7 @@ two different servers differ slightly.
             For upload to the development server, specify that explicitly via `-i` option, e.g.
             `dandi upload -i dandi-staging`.
 
-    6. Add metadata by visiting your `Dandiset` landing page: 
+    6. Add metadata by visiting your Dandiset landing page: 
        `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
 
 If you have an issue using the Python CLI, see the [Dandi Debugging section](./15_debugging.md).
