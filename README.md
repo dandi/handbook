@@ -7,7 +7,7 @@ Follow the guidelines below when creating and revising text in the DANDI Handboo
 
 *	**dandi-** repositories — hyphenate the names of DANDI GitHub repositories (e.g. **dandi-archive**); "Dandisets" is an exception because it is a
 complete word
-*	**Dandiset** (**not** dandiset)
+*	**Dandiset**  — use single, unformatted, capitalized word (**not** dandiset or `Dandiset`)
 *	file names — use lower case (e.g. **development.md**)
 *	headings — use Title Capitalization (for 1st and 2nd levels) and follow with an intro sentence
 *	**GitHub** — use camel case (**not** github or Github)

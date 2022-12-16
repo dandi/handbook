@@ -10,7 +10,7 @@ The **Client side** contains the DANDI Python CLI and DANDI Web application.
 
 The **Server side** contains a RESTful API and DANDI JupyterHub.
 
-The **`Dandiset`** is a file organization to store data together with metadata.
+The **Dandiset** is a file organization to store data together with metadata.
 
 The DANDI project is organized around several **GitHub** repositories:
 
