@@ -72,6 +72,7 @@ two different servers differ slightly.
             nwbinspector <source_folder> --config dandi --report-file-path <report_location>.txt
         
     4. Once your files are confirmed to adhere to the Best Practices, perform an official validation of the NWB files by running: `dandi validate <source_folder>`. 
+        **At this point please ignore `DANDI.NO_DANDISET_FOUND` error, `dandi organize` command you will use next will address that!**
         **If you are having trouble with validation, make sure the conversions were run with the most recent version of `PyNWB` and `MatNWB`.**
     5. Prepare a dataset folder for upload:
 
