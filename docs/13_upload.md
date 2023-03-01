@@ -70,21 +70,21 @@ two different servers differ slightly.
     If the report is too large to efficiently navigate in your console, you can save a report using
 
             nwbinspector <source_folder> --config dandi --report-file-path <report_location>.txt
-        
-    4. Once your files are confirmed to adhere to the Best Practices, perform an official validation of the NWB files by running: `dandi validate <source_folder>`. 
-        **At this point please ignore `DANDI.NO_DANDISET_FOUND` error, `dandi organize` command you will use next will address that!**
-        **If you are having trouble with validation, make sure the conversions were run with the most recent version of `PyNWB` and `MatNWB`.**
-    5. Prepare a dataset folder for upload:
+
+    4. Once your files are confirmed to adhere to the Best Practices, perform an official validation of the NWB files by running: `dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>`.
+        **If you are having trouble with validation, make sure the conversions were run with the most recent version of `dandi`, `PyNWB` and `MatNWB`.**
+    5. Prepare and fully validate now a dataset folder for upload:
 
             dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft
             cd <dataset_id>
             dandi organize <source_folder> -f dry
             dandi organize <source_folder>
+            dandi validate .
             dandi upload
 
-            For upload to the development server, specify that explicitly via `-i` option, e.g.
-            `dandi upload -i dandi-staging`.
-
+    For upload to the development server, specify that explicitly via `-i` option, e.g.
+    `dandi upload -i dandi-staging`.
+    Also note that validation is also done during `upload`, but ensuring compliance using `validate` prior upload helps to avoid errors during possibly lengthy upload process due to failing validation.
     6. Add metadata by visiting your Dandiset landing page: 
        `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
 
