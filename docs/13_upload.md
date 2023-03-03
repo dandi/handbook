@@ -73,7 +73,7 @@ two different servers differ slightly.
 
     4. Once your files are confirmed to adhere to the Best Practices, perform an official validation of the NWB files by running: `dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>`.
         **If you are having trouble with validation, make sure the conversions were run with the most recent version of `dandi`, `PyNWB` and `MatNWB`.**
-    5. Prepare and fully validate now a dataset folder for upload:
+    5. Now, prepare and fully validate again within the dandiset folder used for upload:
 
             dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft
             cd <dataset_id>
