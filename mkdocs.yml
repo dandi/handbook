@@ -9,7 +9,7 @@ site_url: https://www.dandiarchive.org/handbook/
 theme:
   name: "material"
   language: "en"
-  favicon: img/favicon.png
+  favicon: img/favicon.ico
   logo: img/dandi-logo-square_sw.png
   palette:
     primary: "dark blue"
