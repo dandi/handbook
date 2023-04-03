@@ -22,6 +22,7 @@ nav:
   - Welcome: "index.md"
   - Introduction: "01_introduction.md"
   - Data Standards: "30_data_standards.md"
+  - Data Licenses: "35_data_licenses.md"
   - User Guide:
     - Using DANDI: "10_using_dandi.md"
     - Viewing Dandisets: "11_view.md"
