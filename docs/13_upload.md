@@ -66,7 +66,7 @@ two different servers differ slightly.
     labeled as level 'CRITICAL' or above when using the `--config dandi` option.**
     We recommend regularly running the inspector early in the process to generate the best NWB files possible.
     Note that some autodetected violations, such as `check_data_orientation`, may be safely ignored in the event 
-       that the data is confirmed to be in the correct form; this can be done using either the `--ignore <name_of_check_to_suppress>` flag or a config file. See [the NWBInspector CLI documentation](https://nwbinspector.readthedocs.io/en/dev/user_guide/command_line_usage.html) for more details and other options, or type `nwbinspector --help`.
+       that the data is confirmed to be in the correct form; this can be done using either the `--ignore <name_of_check_to_suppress>` flag or a config file. See [the NWBInspector CLI documentation](https://nwbinspector.readthedocs.io/en/dev/user_guide/using_the_command_line_interface.html) for more details and other options, or type `nwbinspector --help`.
     If the report is too large to efficiently navigate in your console, you can save a report using
 
             nwbinspector <source_folder> --config dandi --report-file-path <report_location>.txt
