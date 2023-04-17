@@ -58,7 +58,7 @@ two different servers differ slightly.
     [NeuroConv](https://neuroconv.readthedocs.io/) automates conversion to NWB from a variety of popular formats.
     Feel free to [reach out to us for help](https://github.com/dandi/helpdesk/discussions).
     2. Check your files for [NWB Best Practices](https://nwbinspector.readthedocs.io/en/dev/best_practices/best_practices_index.html) by installing
-    the [NWBInspector](https://nwbinspector.readthedocs.io/en/dev/user_guide/user_guide.html) (`pip install -U nwbinspector`) and running
+    the [NWBInspector](https://nwbinspector.readthedocs.io/en/dev/user_guide/user_guide_index.html) (`pip install -U nwbinspector`) and running
 
                 nwbinspector <source_folder> --config dandi
                 
