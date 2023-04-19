@@ -64,7 +64,10 @@ two different servers differ slightly.
                 
     3. Thoroughly read the NWBInspector report and try to address as many issues as possible. **DANDI will prevent validation and upload of any issues
     labeled as level 'CRITICAL' or above when using the `--config dandi` option.**
-    We recommend regularly running the inspector early in the process to generate the best NWB files possible.
+    See 
+       ["Validation Levels for NWB Files"](./135_validation.md) for more information about validation criteria for 
+       uploading NWB 
+       files and which are deemed critical. We recommend regularly running the inspector early in the process to generate the best NWB files possible. 
     Note that some autodetected violations, such as `check_data_orientation`, may be safely ignored in the event 
        that the data is confirmed to be in the correct form; this can be done using either the `--ignore <name_of_check_to_suppress>` flag or a config file. See [the NWBInspector CLI documentation](https://nwbinspector.readthedocs.io/en/dev/user_guide/using_the_command_line_interface.html) for more details and other options, or type `nwbinspector --help`.
     If the report is too large to efficiently navigate in your console, you can save a report using
