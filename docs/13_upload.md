@@ -55,13 +55,18 @@ two different servers differ slightly.
     1. Convert your data to NWB 2.1+ in a local folder. Let's call this `<source_folder>`.
     We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
     This step can be complex depending on your data.
-    [NeuroConv](https://neuroconv.readthedocs.io/) automates conversion to NWB from a variety of popular formats.
+    [NeuroConv](https://neuroconv.readthedocs.io/) automates
+    conversion to NWB from a variety of popular formats.
+	[nwb-overview.readthedocs.io](https://nwb-overview.readthedocs.io)
+    points to more tools helpful for working with NWB files, and [BIDS
+    converters](https://bids.neuroimaging.io/benefits.html#converters)
+    if you are preparing a BIDS dataset containing NWB files.
     Feel free to [reach out to us for help](https://github.com/dandi/helpdesk/discussions).
     2. Check your files for [NWB Best Practices](https://nwbinspector.readthedocs.io/en/dev/best_practices/best_practices_index.html) by installing
     the [NWBInspector](https://nwbinspector.readthedocs.io/en/dev/user_guide/user_guide_index.html) (`pip install -U nwbinspector`) and running
 
                 nwbinspector <source_folder> --config dandi
-                
+
     3. Thoroughly read the NWBInspector report and try to address as many issues as possible. **DANDI will prevent validation and upload of any issues
     labeled as level 'CRITICAL' or above when using the `--config dandi` option.**
     See 
@@ -85,6 +90,8 @@ two different servers differ slightly.
             dandi validate .
             dandi upload
 
+    Note that `organize` steps should not be used if you preparing
+    BIDS dataset with the NWB files.
     For upload to the development server, specify that explicitly via `-i` option, e.g.
     `dandi upload -i dandi-staging`.
     Also note that validation is also done during `upload`, but ensuring compliance using `validate` prior upload helps to avoid errors during possibly lengthy upload process due to failing validation.
