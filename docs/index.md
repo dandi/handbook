@@ -1,8 +1,8 @@
 # Welcome to the DANDI Archive Documentation
 
 <img
-src="./img/dandi-banner.png"
-alt="dandi_banner"
+src="./img/dandi-banner-small.png"
+alt="dandi_banner_small"
 style="width: 75%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
 The Web interface to the DANDI archive is located at [https://dandiarchive.org](https://dandiarchive.org).
