@@ -1,4 +1,4 @@
-# General Policies v1.0
+# General Policies v1.0.1
 
 ## Content
 
@@ -82,7 +82,7 @@
   should be assumed to be in place.
 - **Retention period:** Versioned items will be retained for the lifetime of the repository.
   This is currently the lifetime of the NIH award, which currently expires in
-  April 2024.
+  April 2029.
 - **Functional preservation:** DANDI makes no promises of usability and
   understandability of deposited objects.
 - **File preservation:** Data files and metadata are backed up nightly and
