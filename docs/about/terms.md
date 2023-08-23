@@ -1,4 +1,4 @@
-# Terms of Use v1.0
+# Terms of Use v1.0.1
 
 The DANDI data archive ("DANDI") is offered by the DANDI project as part of its
 mission to make available the results of its work.
@@ -10,8 +10,9 @@ the following terms:
    and making available of research, educational and informational content. Access
    to DANDI’s content is open to all.
 
-1. Content may be uploaded free of charge by those without ready access to an
-   organized data center.
+1. Content may be uploaded free of charge by the US BRAIN Initiative and other
+   projects required to submit data to a public archive and those without ready
+   access to an organized data center.
 
 1. The uploader is exclusively responsible for the content that they upload to
    DANDI and shall indemnify and hold the DANDI team free and harmless in
