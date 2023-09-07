@@ -1,6 +1,20 @@
 # DANDI Handbook
 Handbook for interacting with the DANDI archive.
 
+## Build handbook locally
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run server:
+
+```bash
+mkdocs serve
+```
+
 ## DANDI Style Guidelines
 
 Follow the guidelines below when creating and revising text in the DANDI Handbook:
