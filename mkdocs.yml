@@ -37,6 +37,7 @@ nav:
     - Notes: "40_development.md"
     - REST API Swagger: https://api.dandiarchive.org/swagger
     - REST API Redoc: https://api.dandiarchive.org/redoc
+  - DANDI Hub: "50_hub.md"
   - Terms and Policies:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
