@@ -147,8 +147,8 @@ from the API server to users).
 
 ### Use a-sentence-per-line formatting in .md/.rst files
 
-One sentence per line should be entered instead of wrapped into paragraphs, or making one paragraph per line.
-Such convention is used by a number of projects, and advocated by others (see e.g. [nick.groenen post](https://nick.groenen.me/notes/one-sentence-per-line/#:~:text=It%20prevents%20reflows%20(meaning%20a,you%20swap%20sentences%20more%20easily.)) since it
+One sentence per line should be entered instead of wrapping into paragraphs or making one paragraph per line.
+Such a convention is used by a number of projects and advocated by others (see, e.g., [nick.groenen's post](https://nick.groenen.me/notes/one-sentence-per-line/)) since it:
 
 - lacks ambiguity on width in case of wrapping into paragraphs
 - does not require re-wrapping in case of changing width
