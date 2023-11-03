@@ -144,3 +144,15 @@ dev team sees them. However, these emails arrive with a long, spammy-looking
 From address with a Heroku DNS domain; this seems to be an artifact of how
 mit.edu processes emails, and does not occur in general (e.g. messages sent
 from the API server to users).
+
+### Use a-sentence-per-line formatting in .md/.rst files
+
+One sentence per line should be entered instead of wrapped into paragraphs, or making one paragraph per line.
+Such convention is used by a number of projects, and advocated by others (see e.g. [nick.groenen post](https://nick.groenen.me/notes/one-sentence-per-line/#:~:text=It%20prevents%20reflows%20(meaning%20a,you%20swap%20sentences%20more%20easily.)) since it
+
+- lacks ambiguity on width in case of wrapping into paragraphs
+- does not require re-wrapping in case of changing width
+- helps to easily identify run-on (too long) sentences
+- makes suggestions more to the point (sentence), instead of an entire paragraph if it is in one line
+
+But note, that mass re-formatting of the files which do not yet follow this convention should not be done in conjunction with some other targeted changes.
