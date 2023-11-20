@@ -39,7 +39,7 @@ nav:
       - Policies: "about/policies.md"
   - About This Doc: "100_about_this_doc.md"
   - Linc Development:
-      - Accounts to initialize: "40_accounts.md"
+      - Initialization: "40_initialization.md"
       - API Deployment: "41_api_deployment.md"
       - Frontend Deployment: "42_frontend_deployment.md"
       - Authentication: "43_authentication.md"
