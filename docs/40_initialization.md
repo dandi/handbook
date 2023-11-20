@@ -158,7 +158,7 @@ AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY
 
 ## GitHub
 
-
+You'll need to create a GitHub Organization with your DANDI fork. [See here for documentation to create a GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch)
 
 ## Terraform Cloud
 

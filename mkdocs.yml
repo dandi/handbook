@@ -43,7 +43,7 @@ nav:
       - API Deployment: "41_api_deployment.md"
       - Frontend Deployment: "42_frontend_deployment.md"
       - Authentication: "43_authentication.md"
-      - Terraform, AWS & Heroku: "44_other.md"
+      - Other: "44_other.md"
 
 # list of extension
 markdown_extensions:
