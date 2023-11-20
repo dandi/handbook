@@ -38,6 +38,12 @@ nav:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
   - About This Doc: "100_about_this_doc.md"
+  - Linc Development:
+      - Accounts to initialize: "40_accounts.md"
+      - API Deployment: "41_api_deployment.md"
+      - Frontend Deployment: "42_frontend_deployment.md"
+      - Authentication: "43_authentication.md"
+      - Terraform, AWS & Heroku: "44_other.md"
 
 # list of extension
 markdown_extensions:
