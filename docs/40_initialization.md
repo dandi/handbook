@@ -46,6 +46,30 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 Your app will be an empty template, but that is OK -- more to come here!
 
+##### Obtain Heroku API Key
+
+You'll need to provide access to Heroku for GitHub, Terraform, etc. -- thus, you'll need to generate an API Key
+
+First go to your `Account Settings`:
+
+<br/><br/>
+<img
+src="../img/heroku_settings.png"
+alt="heroku_app_name"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+Next, find the `API Key` section and generate a new key.
+
+<br/><br/>
+<img
+src="../img/heroku_key.png"
+alt="heroku_app_name"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+Keep this value for further steps.
+
 ## AWS
 
 ##### Create your organization's AWS account
@@ -158,8 +182,6 @@ alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY
-
 ## GitHub
 
 You'll need to create a GitHub Organization with your DANDI fork. [See here for documentation to create a GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch)
@@ -202,6 +224,8 @@ alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
+##### Obtaining your OAuth App Credentials
+
 After creating your OAuth App, you'll lastly want to obtain a client secret key and your client ID -- make sure to note these values for further steps when creating our API
 
 <br/><br/>
@@ -211,9 +235,40 @@ alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
+##### Connecting GitHub with Heroku
+
+**This step is contingent that you have forked [dandi-archive](https://github.com/dandi/dandi-archive)**
+
+Once you have the repository forked, you'll want to navigate to `Settings` in the repository page:
+
+<br/><br/>
+<img
+src="../img/linc_settings.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+Next, navigate to `Security > Secrets and variables > Actions`
+
+<br/><br/>
+<img
+src="../img/secrets_actions.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+And then lastly create two new secrets, `HEROKU_EMAIL` should be the email adress/account you used to generate your `HEROKU_API_KEY`
+
+<br/><br/>
+<img
+src="../img/heroku_secrets.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
 ## Terraform Cloud
 
-Terraform is configuration tool for managing "Infrastructure-as-code" -- meaning that we can programatically manage infrastructure in
+Terraform is configuration tool for managing "infrastructure-as-code" -- meaning that we can programatically manage infrastructure in
 a traceable, version-controlled form.
 
 The Terraform ecosystem provides a UI tool called **Terraform Cloud**
