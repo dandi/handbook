@@ -273,7 +273,18 @@ a traceable, version-controlled form.
 
 The Terraform ecosystem provides a UI tool called **Terraform Cloud**
 
-##### Create an Account
+Start by visiting `https://app.terraform.io/` and making an account.
+
+## Creating a Terraform Project and Workspace
+
+Once you have successfully made an account, you'll want to create a `Workspace` and a `Project` in that `Workspace`
+
+<br/><br/>
+<img
+src="../img/terraform_init.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
 
 - Create a new Project and a Workspace within that Project
 - Populate the 'Variables' in the Workspace with the following
@@ -286,6 +297,10 @@ The Terraform ecosystem provides a UI tool called **Terraform Cloud**
 
 ## Netlify
 
+
+
 ## Sentry
+
+
 
 ## PyPI
