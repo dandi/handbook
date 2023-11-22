@@ -12,6 +12,10 @@ The following accounts must be made to create LINC Brain in a production setting
 
 • **Netlify**
 
+• **Sentry**
+
+• **PyPI**
+
 ## Heroku
 
 ##### Create your own Heroku account
@@ -160,9 +164,56 @@ AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY
 
 You'll need to create a GitHub Organization with your DANDI fork. [See here for documentation to create a GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch)
 
+##### Initialize your OAuth App
+
+Once you create the Organization, navigate to the `Settings` tab:
+
+<br/><br/>
+<img
+src="../img/github_home.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+Under `Settings`, you'll want to initialize an `OAuth App` -- navigate to `Developer settings > OAuth Apps`
+
+<br/><br/>
+<img
+src="../img/oauth_app.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+Click on `New Org OAuth App` next
+
+<br/><br/>
+<img
+src="../img/new_app.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+You'll be prompted with the following form -- see the example values populated in this screenshot -- more to come in other sections for where these values might be populated:
+
+<br/><br/>
+<img
+src="../img/register_new.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+After creating your OAuth App, you'll lastly want to obtain a client secret key and your client ID -- make sure to note these values for further steps when creating our API
+
+<br/><br/>
+<img
+src="../img/client_values.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
 ## Terraform Cloud
 
-Terraform is configuration tool for managing "Infrastructe-as-code" -- meaning that we can programatically manage infrastructure in
+Terraform is configuration tool for managing "Infrastructure-as-code" -- meaning that we can programatically manage infrastructure in
 a traceable, version-controlled form.
 
 The Terraform ecosystem provides a UI tool called **Terraform Cloud**
@@ -179,3 +230,7 @@ The Terraform ecosystem provides a UI tool called **Terraform Cloud**
 - In your GitHub repository also populate GitHub Actions Secrets with the HEROKU_API_KEY, HEROKU_EMAIL
 
 ## Netlify
+
+## Sentry
+
+## PyPI
