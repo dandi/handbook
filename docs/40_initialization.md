@@ -257,7 +257,7 @@ alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-And then lastly create two new secrets, `HEROKU_EMAIL` should be the email adress/account you used to generate your `HEROKU_API_KEY`
+And then lastly create two new secrets, `HEROKU_EMAIL` should be the email address/account you used to generate your `HEROKU_API_KEY`
 
 <br/><br/>
 <img
@@ -286,14 +286,36 @@ alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-- Create a new Project and a Workspace within that Project
-- Populate the 'Variables' in the Workspace with the following
-- AWS_ACCESS_KEY_ID
-- AWS_SECRET_ACCESS_KEY
-- HEROKU_API_KEY
-- HEROKU_EMAIL
-- Link your GitHub repository -- ensure that Terraform Cloud can find your .tf templates (you may need to alter the subdirectory it looks for)
-- In your GitHub repository also populate GitHub Actions Secrets with the HEROKU_API_KEY, HEROKU_EMAIL
+After successful creation, you'll want to populate the following variables in the `Variables` section of the `Workspace`:
+
+You'll need to populate `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `HEROKU_API_KEY` and `HEROKU_EMAIL`
+
+<br/><br/>
+<img
+src="../img/terraform_vars.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+Next, link your appropriate GitHub repository, in this case, most likely your fork of [dandi-infrastructure](https://github.com/dandi/dandi-infrastructure).
+
+<br/><br/>
+<img
+src="../img/tf_vcs.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+Link your repository -- you may need to declare the appropriate subdirectory 
+
+<br/><br/>
+<img
+src="../img/tf_repo.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+You can now invoke Terraform `plan` and `apply` from the Terraform Cloud UI or via your GitHub repository Actions.
 
 ## Netlify
 
