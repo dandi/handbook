@@ -5,7 +5,7 @@
 This documentation is provided to organize the process of cloning the DANDI platform. [Get Started Here](.
 /40_initialization)
 
-[For more information on DANDI,see here](https://dandiarchive.org/)
+[For more information on DANDI, see here](https://dandiarchive.org/)
 
 [//]: # (<img)
 

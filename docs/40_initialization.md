@@ -16,6 +16,10 @@ The following accounts must be made to create LINC Brain in a production setting
 
 • **PyPI**
 
+• **Datalad (TBD)**
+
+• **git-annex (TBD)**
+
 ## Heroku
 
 ##### Create your own Heroku account
@@ -275,7 +279,7 @@ The Terraform ecosystem provides a UI tool called **Terraform Cloud**
 
 Start by visiting `https://app.terraform.io/` and making an account.
 
-## Creating a Terraform Project and Workspace
+##### Creating a Terraform Project and Workspace
 
 Once you have successfully made an account, you'll want to create a `Workspace` and a `Project` in that `Workspace`
 
@@ -285,6 +289,8 @@ src="../img/terraform_init.png"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
+
+##### Populate Environment Variables
 
 After successful creation, you'll want to populate the following variables in the `Variables` section of the `Workspace`:
 
@@ -296,6 +302,8 @@ src="../img/terraform_vars.png"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
+
+##### Link GitHub Repository
 
 Next, link your appropriate GitHub repository, in this case, most likely your fork of [dandi-infrastructure](https://github.com/dandi/dandi-infrastructure).
 
@@ -319,10 +327,57 @@ You can now invoke Terraform `plan` and `apply` from the Terraform Cloud UI or v
 
 ## Netlify
 
+The frontend for `dandi-archive` is served via [Netlify](https://www.netlify.com/)
 
+##### Create Account and Initialize Project
+
+First, create an account. After creating an account, you'll want to navigate to `Sites`, where you can `Add a new site`, and then `Import an existing project`
+
+<br/><br/>
+<img
+src="../img/start_netlify.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+You'll want to next connect `linc-archive` via `Deploy with GitHub`. Enable Netlify to be authorized as a GitHub app. Once you have
+enabled authorization, you'll need to specifically link your appropriate repositories:
+
+<br/><br/>
+<img
+src="../img/netlify_auth.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+Now once you see the appropriate repository, you'll want to navigate to configure where Netlify can find and build your site
+
+<br/><br/>
+<img
+src="../img/netlify_repo_search.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+For usage of Netlify, one could refer to declaring a `netlify.toml` configuration file [like the one referenced in DANDI Archive](https://github.com/dandi/dandi-archive/blob/master/web/netlify.toml)
+
+These values can also be replicated in the settings. 
+
+<br/><br/>
+<img
+src="../img/netlify_config.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+Your frontend should be able to deploy to a auto-generated URL via Netlify now! Steps for domain management and configuration are described further in the `Frontend Deployment` section of these docs.
 
 ## Sentry
 
 
 
 ## PyPI
+
+## Datalad (TBD)
+
+## git-annex (TBD)
