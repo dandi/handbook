@@ -385,6 +385,8 @@ alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
+##### Select Django as an App Type
+
 DANDI Archive API is built as a Django app -- so proceed to select `Django` on the following screen:
 
 <br/><br/>
@@ -393,6 +395,8 @@ src="../img/sentry_django.png"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
+
+##### Capture Sentry DSN value
 
 You'll be provided with a screen displaying how to initialize and install Sentry into your Django app. For now, just capture the DSN value.
 This value will be used later as an environment variables while deploying your API via Terraform
@@ -406,6 +410,34 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 ## PyPI
 
-## Datalad (TBD)
+A common way that users interact with the DANDI ecosystem is via its CLI and Python client tool: [dandi-cli](https://pypi.org/project/dandi/)
+
+##### Create a PyPI Account
+
+Versions of this tool are hosted, versioned and managed by PyPI -- therefor, you will need to create an account.
+
+##### Retrieve an API Token
+
+After creating an account, you'll want to create your own API key -- first go to `Account settings`
+
+<br/><br/>
+<img
+src="../img/pypi_account.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+Scroll down to `API tokens` and create a value -- keep track of this value for now. We will use it later
+
+<br/><br/>
+<img
+src="../img/pypi_api_token.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+##### Create a project with a unique name
+
+## datalad (TBD)
 
 ## git-annex (TBD)
