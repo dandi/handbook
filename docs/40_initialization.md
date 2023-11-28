@@ -374,7 +374,35 @@ Your frontend should be able to deploy to a auto-generated URL via Netlify now! 
 
 ## Sentry
 
+[Sentry](https://sentry.io/) is a monitoring tool used for the DANDI Archive API. It is integral in order to notify engineers if a system is down, experiencing poor performance, or may have unwanted users
 
+Begin by creating a Sentry account -- once successful, you'll start by creating a new Project:
+
+<br/><br/>
+<img
+src="../img/sentry_init.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+DANDI Archive API is built as a Django app -- so proceed to select `Django` on the following screen:
+
+<br/><br/>
+<img
+src="../img/sentry_django.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+You'll be provided with a screen displaying how to initialize and install Sentry into your Django app. For now, just capture the DSN value.
+This value will be used later as an environment variables while deploying your API via Terraform
+
+<br/><br/>
+<img
+src="../img/sentry_sdk_dsn.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
 
 ## PyPI
 

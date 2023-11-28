@@ -24,6 +24,7 @@ nav:
   - API Deployment: "41_api_deployment.md"
   - Frontend Deployment: "42_frontend_deployment.md"
   - Authentication: "43_authentication.md"
+  - CLI and Python Client: "47_cli_python.md"
   - Other: "44_other.md"
 #  - Welcome: "index.md"
 #  - Introduction: "01_introduction.md"
