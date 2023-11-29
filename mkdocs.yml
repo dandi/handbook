@@ -31,12 +31,12 @@ nav:
     - Validation Levels for NWB Files: "135_validation.md"
     - Publishing Dandisets: "14_publish.md"
     - Debugging: "15_debugging.md"
-    - DANDI CLI and Python API Docs: https://dandi.readthedocs.io
+    - DANDI CLI and Python API: https://dandi.readthedocs.io
   - Developer Guide:
     - Project Structure: "20_project_structure.md"
     - Notes: "40_development.md"
-    - REST API Swagger Docs: https://api.dandiarchive.org/swagger
-    - REST API Redoc Docs: https://api.dandiarchive.org/redoc
+    - REST API Swagger: https://api.dandiarchive.org/swagger
+    - REST API Redoc: https://api.dandiarchive.org/redoc
   - Terms and Policies:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
