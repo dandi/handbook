@@ -370,7 +370,8 @@ alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-Your frontend should be able to deploy to a auto-generated URL via Netlify now! Steps for domain management and configuration are described further in the `Frontend Deployment` section of these docs.
+Your frontend should be able to deploy to a auto-generated URL via Netlify now! Steps for domain management and configuration are described further in the [Frontend Deployment](.
+./42_frontend_deployment) section of these docs.
 
 ## Sentry
 
@@ -414,7 +415,7 @@ A common way that users interact with the DANDI ecosystem is via its CLI and Pyt
 
 ##### Create a PyPI Account
 
-Versions of this tool are hosted, versioned and managed by PyPI -- therefor, you will need to create an account.
+Versions of this tool are hosted, versioned and managed by PyPI -- therefore, you will need to create an account.
 
 ##### Retrieve an API Token
 
@@ -436,7 +437,9 @@ alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-##### Create a project with a unique name
+In terms of creating and publishing your first project, go to the [documentation for setting up a CLI and Python Client](.
+./47_cli_python)
+
 
 ## datalad (TBD)
 
