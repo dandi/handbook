@@ -5,7 +5,7 @@ copyright: "CC-BY 4.0"
 use_directory_urls: true
 site_url: https://www.dandiarchive.org/handbook/
 
-# This will use Material them
+# Material theme
 theme:
   name: "material"
   language: "en"
@@ -31,18 +31,25 @@ nav:
     - Validation Levels for NWB Files: "135_validation.md"
     - Publishing Dandisets: "14_publish.md"
     - Debugging: "15_debugging.md"
+    - DANDI CLI and Python API: https://dandi.readthedocs.io
   - Developer Guide:
     - Project Structure: "20_project_structure.md"
     - Notes: "40_development.md"
+    - REST API Swagger: https://api.dandiarchive.org/swagger
+    - REST API Redoc: https://api.dandiarchive.org/redoc
   - Terms and Policies:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
   - About This Doc: "100_about_this_doc.md"
 
-# list of extension
+# List of extensions
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.critic
   - toc:
       permalink: True
+
+# List of plugins
+plugins:
+  - open-in-new-tab
