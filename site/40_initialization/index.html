@@ -1,0 +1,1068 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://www.lincbrain.org/handbook/40_initialization/">
+      
+      
+        <link rel="prev" href="../46_local_dev/">
+      
+      
+        <link rel="next" href="../41_api_deployment/">
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
+    
+    
+      
+        <title>Initialization - LINC BRAIN Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="dark-blue" data-md-color-accent="light-blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#heroku" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LINC BRAIN Documentation" class="md-header__button md-logo" aria-label="LINC BRAIN Documentation" data-md-component="logo">
+      
+  <img src="../img/dandi-logo-square_sw.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LINC BRAIN Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Initialization
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lincbrain/handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lincbrain/handbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LINC BRAIN Documentation" class="md-nav__button md-logo" aria-label="LINC BRAIN Documentation" data-md-component="logo">
+      
+  <img src="../img/dandi-logo-square_sw.png" alt="logo">
+
+    </a>
+    LINC BRAIN Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lincbrain/handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lincbrain/handbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../46_local_dev/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local Development of These Docs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Initialization
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Initialization
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#heroku" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heroku
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Heroku">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-your-own-heroku-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your own Heroku account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a "Team"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create an "App"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtain-heroku-api-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtain Heroku API Key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-your-organizations-aws-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your organization's AWS account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-iam-user-group-with-administratoraccess" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create an IAM User Group with AdministratorAccess
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-iam-user-that-lives-in-the-user-group-you-made" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create an IAM user that lives in the User Group you made
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-security-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create security credentials
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialize-your-oauth-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialize your OAuth App
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-your-oauth-app-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtaining your OAuth App Credentials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-github-with-heroku" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting GitHub with Heroku
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terraform-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terraform Cloud
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terraform Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-terraform-project-and-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Terraform Project and Workspace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#populate-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Populate Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-github-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link GitHub Repository
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netlify" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netlify
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Netlify">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-account-and-initialize-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Account and Initialize Project
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sentry
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sentry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#select-django-as-an-app-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Select Django as an App Type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capture-sentry-dsn-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capture Sentry DSN value
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pypi" class="md-nav__link">
+    <span class="md-ellipsis">
+      PyPI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PyPI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-pypi-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a PyPI Account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-an-api-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieve an API Token
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datalad-tbd" class="md-nav__link">
+    <span class="md-ellipsis">
+      datalad (TBD)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-annex-tbd" class="md-nav__link">
+    <span class="md-ellipsis">
+      git-annex (TBD)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../41_api_deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../42_frontend_deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frontend Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../43_authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../47_cli_python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLI and Python Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../44_other/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Initialization</h1>
+
+<p>LINC Brain relies on a handful of vendor services to operate:</p>
+<p>The following accounts must be made to create LINC Brain in a production setting:</p>
+<p>• <strong>Heroku</strong></p>
+<p>• <strong>AWS</strong></p>
+<p>• <strong>GitHub</strong></p>
+<p>• <strong>Terraform Cloud</strong></p>
+<p>• <strong>Netlify</strong></p>
+<p>• <strong>Sentry</strong></p>
+<p>• <strong>PyPI</strong></p>
+<p>• <strong>Datalad (TBD)</strong></p>
+<p>• <strong>git-annex (TBD)</strong></p>
+<h2 id="heroku">Heroku<a class="headerlink" href="#heroku" title="Permanent link">&para;</a></h2>
+<h5 id="create-your-own-heroku-account">Create your own Heroku account<a class="headerlink" href="#create-your-own-heroku-account" title="Permanent link">&para;</a></h5>
+<p>No special steps here, just create!</p>
+<h5 id="create-a-team">Create a "Team"<a class="headerlink" href="#create-a-team" title="Permanent link">&para;</a></h5>
+<p>Send invites to the appropriate e-mail addresses to onboard your team</p>
+<h5 id="create-an-app">Create an "App"<a class="headerlink" href="#create-an-app" title="Permanent link">&para;</a></h5>
+<p><br/><br/>
+<img
+src="../img/heroku_create_app.png"
+alt="heroku_create_app"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>You can name whatever you wish -- no need to add a pipeline, etc. <strong>Be sure to note the app name</strong></p>
+<p><br/><br/>
+<img
+src="../img/heroku_app_name.png"
+alt="heroku_app_name"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>Your app will be an empty template, but that is OK -- more to come here!</p>
+<h5 id="obtain-heroku-api-key">Obtain Heroku API Key<a class="headerlink" href="#obtain-heroku-api-key" title="Permanent link">&para;</a></h5>
+<p>You'll need to provide access to Heroku for GitHub, Terraform, etc. -- thus, you'll need to generate an API Key</p>
+<p>First go to your <code>Account Settings</code>:</p>
+<p><br/><br/>
+<img
+src="../img/heroku_settings.png"
+alt="heroku_app_name"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>Next, find the <code>API Key</code> section and generate a new key.</p>
+<p><br/><br/>
+<img
+src="../img/heroku_key.png"
+alt="heroku_app_name"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>Keep this value for further steps.</p>
+<h2 id="aws">AWS<a class="headerlink" href="#aws" title="Permanent link">&para;</a></h2>
+<h5 id="create-your-organizations-aws-account">Create your organization's AWS account<a class="headerlink" href="#create-your-organizations-aws-account" title="Permanent link">&para;</a></h5>
+<p>No special steps here, just create!</p>
+<h5 id="create-an-iam-user-group-with-administratoraccess">Create an IAM User Group with <code>AdministratorAccess</code><a class="headerlink" href="#create-an-iam-user-group-with-administratoraccess" title="Permanent link">&para;</a></h5>
+<p><br/><br/>
+<img
+src="../img/user_group.png"
+alt="user_group"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>Ensure that you click the right policy in the <code>Attach permissions policies</code> section.</p>
+<p><br/><br/>
+<img
+src="../img/permissions.png"
+alt="permissions"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p><strong>Note: If you know more refined permissions to give the IAM Group, that is preferred, as those with access
+to the credentials of <code>AdministratorAccess</code> in AWS can be an extreme security hazard if not managed appropriately</strong></p>
+<p><br/><br/>
+<img
+src="../img/create_group.png"
+alt="create_group"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<h5 id="create-an-iam-user-that-lives-in-the-user-group-you-made">Create an IAM user that lives in the User Group you made<a class="headerlink" href="#create-an-iam-user-that-lives-in-the-user-group-you-made" title="Permanent link">&para;</a></h5>
+<p><br/><br/>
+<img
+src="../img/create_user.png"
+alt="create_user"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>Next, give a unique name -- no need to enable Console Access</p>
+<p><br/><br/>
+<img
+src="../img/specify_user.png"
+alt="specify_user"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>Lastly, add them to the Group you made in the step above:</p>
+<p><br/><br/>
+<img
+src="../img/add_perms.png"
+alt="add_perms"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<h5 id="create-security-credentials">Create security credentials<a class="headerlink" href="#create-security-credentials" title="Permanent link">&para;</a></h5>
+<p>You'll need to create <code>Security Credentials</code> for your User -- these credentials will be specifically used
+in your <code>Terraform Cloud</code> setup</p>
+<p>Firstly, go to your User and click the <code>Security Credentials</code> tab:</p>
+<p><br/><br/>
+<img
+src="../img/creds.png"
+alt="creds"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/></p>
+<p>Navigate to <code>Create access key</code></p>
+<p><br/><br/>
+<img
+src="../img/access_key.png"
+alt="access_key"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>You'll be prompted to provide a reason for the access key creation. It doesn't matter much, so <code>Other</code> is a completely acceptable choice</p>
+<p><br/><br/>
+<img
+src="../img/creds_purpose.png"
+alt="creds_purpose"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>Time to create the key!</p>
+<p><br/><br/>
+<img
+src="../img/create_tag.png"
+alt="create_tag"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>You'll be provided with the values of your <code>Access key</code> and <code>Secret access key</code> -- store these values somewhere secure and accessible</p>
+<p><br/><br/>
+<img
+src="../img/retrieve.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<h2 id="github">GitHub<a class="headerlink" href="#github" title="Permanent link">&para;</a></h2>
+<p>You'll need to create a GitHub Organization with your DANDI fork. <a href="https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch">See here for documentation to create a GitHub organization</a></p>
+<h5 id="initialize-your-oauth-app">Initialize your OAuth App<a class="headerlink" href="#initialize-your-oauth-app" title="Permanent link">&para;</a></h5>
+<p>Once you create the Organization, navigate to the <code>Settings</code> tab:</p>
+<p><br/><br/>
+<img
+src="../img/github_home.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>Under <code>Settings</code>, you'll want to initialize an <code>OAuth App</code> -- navigate to <code>Developer settings &gt; OAuth Apps</code></p>
+<p><br/><br/>
+<img
+src="../img/oauth_app.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>Click on <code>New Org OAuth App</code> next</p>
+<p><br/><br/>
+<img
+src="../img/new_app.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>You'll be prompted with the following form -- see the example values populated in this screenshot -- more to come in other sections for where these values might be populated:</p>
+<p><br/><br/>
+<img
+src="../img/register_new.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<h5 id="obtaining-your-oauth-app-credentials">Obtaining your OAuth App Credentials<a class="headerlink" href="#obtaining-your-oauth-app-credentials" title="Permanent link">&para;</a></h5>
+<p>After creating your OAuth App, you'll lastly want to obtain a client secret key and your client ID -- make sure to note these values for further steps when creating our API</p>
+<p><br/><br/>
+<img
+src="../img/client_values.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<h5 id="connecting-github-with-heroku">Connecting GitHub with Heroku<a class="headerlink" href="#connecting-github-with-heroku" title="Permanent link">&para;</a></h5>
+<p><strong>This step is contingent that you have forked <a href="https://github.com/dandi/dandi-archive">dandi-archive</a></strong></p>
+<p>Once you have the repository forked, you'll want to navigate to <code>Settings</code> in the repository page:</p>
+<p><br/><br/>
+<img
+src="../img/linc_settings.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>Next, navigate to <code>Security &gt; Secrets and variables &gt; Actions</code></p>
+<p><br/><br/>
+<img
+src="../img/secrets_actions.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>And then lastly create two new secrets, <code>HEROKU_EMAIL</code> should be the email address/account you used to generate your <code>HEROKU_API_KEY</code></p>
+<p><br/><br/>
+<img
+src="../img/heroku_secrets.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<h2 id="terraform-cloud">Terraform Cloud<a class="headerlink" href="#terraform-cloud" title="Permanent link">&para;</a></h2>
+<p>Terraform is configuration tool for managing "infrastructure-as-code" -- meaning that we can programatically manage infrastructure in
+a traceable, version-controlled form.</p>
+<p>The Terraform ecosystem provides a UI tool called <strong>Terraform Cloud</strong></p>
+<p>Start by visiting <code>https://app.terraform.io/</code> and making an account.</p>
+<h5 id="creating-a-terraform-project-and-workspace">Creating a Terraform Project and Workspace<a class="headerlink" href="#creating-a-terraform-project-and-workspace" title="Permanent link">&para;</a></h5>
+<p>Once you have successfully made an account, you'll want to create a <code>Workspace</code> and a <code>Project</code> in that <code>Workspace</code></p>
+<p><br/><br/>
+<img
+src="../img/terraform_init.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<h5 id="populate-environment-variables">Populate Environment Variables<a class="headerlink" href="#populate-environment-variables" title="Permanent link">&para;</a></h5>
+<p>After successful creation, you'll want to populate the following variables in the <code>Variables</code> section of the <code>Workspace</code>:</p>
+<p>You'll need to populate <code>AWS_ACCESS_KEY_ID</code>, <code>AWS_SECRET_ACCESS_KEY</code>, <code>HEROKU_API_KEY</code> and <code>HEROKU_EMAIL</code></p>
+<p><br/><br/>
+<img
+src="../img/terraform_vars.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<h5 id="link-github-repository">Link GitHub Repository<a class="headerlink" href="#link-github-repository" title="Permanent link">&para;</a></h5>
+<p>Next, link your appropriate GitHub repository, in this case, most likely your fork of <a href="https://github.com/dandi/dandi-infrastructure">dandi-infrastructure</a>.</p>
+<p><br/><br/>
+<img
+src="../img/tf_vcs.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>Link your repository -- you may need to declare the appropriate subdirectory </p>
+<p><br/><br/>
+<img
+src="../img/tf_repo.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>You can now invoke Terraform <code>plan</code> and <code>apply</code> from the Terraform Cloud UI or via your GitHub repository Actions.</p>
+<h2 id="netlify">Netlify<a class="headerlink" href="#netlify" title="Permanent link">&para;</a></h2>
+<p>The frontend for <code>dandi-archive</code> is served via <a href="https://www.netlify.com/">Netlify</a></p>
+<h5 id="create-account-and-initialize-project">Create Account and Initialize Project<a class="headerlink" href="#create-account-and-initialize-project" title="Permanent link">&para;</a></h5>
+<p>First, create an account. After creating an account, you'll want to navigate to <code>Sites</code>, where you can <code>Add a new site</code>, and then <code>Import an existing project</code></p>
+<p><br/><br/>
+<img
+src="../img/start_netlify.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>You'll want to next connect <code>linc-archive</code> via <code>Deploy with GitHub</code>. Enable Netlify to be authorized as a GitHub app. Once you have
+enabled authorization, you'll need to specifically link your appropriate repositories:</p>
+<p><br/><br/>
+<img
+src="../img/netlify_auth.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>Now once you see the appropriate repository, you'll want to navigate to configure where Netlify can find and build your site</p>
+<p><br/><br/>
+<img
+src="../img/netlify_repo_search.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>For usage of Netlify, one could refer to declaring a <code>netlify.toml</code> configuration file <a href="https://github.com/dandi/dandi-archive/blob/master/web/netlify.toml">like the one referenced in DANDI Archive</a></p>
+<p>These values can also be replicated in the settings. </p>
+<p><br/><br/>
+<img
+src="../img/netlify_config.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>Your frontend should be able to deploy to a auto-generated URL via Netlify now! Steps for domain management and configuration are described further in the <a href=".
+./42_frontend_deployment">Frontend Deployment</a> section of these docs.</p>
+<h2 id="sentry">Sentry<a class="headerlink" href="#sentry" title="Permanent link">&para;</a></h2>
+<p><a href="https://sentry.io/">Sentry</a> is a monitoring tool used for the DANDI Archive API. It is integral in order to notify engineers if a system is down, experiencing poor performance, or may have unwanted users</p>
+<p>Begin by creating a Sentry account -- once successful, you'll start by creating a new Project:</p>
+<p><br/><br/>
+<img
+src="../img/sentry_init.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<h5 id="select-django-as-an-app-type">Select Django as an App Type<a class="headerlink" href="#select-django-as-an-app-type" title="Permanent link">&para;</a></h5>
+<p>DANDI Archive API is built as a Django app -- so proceed to select <code>Django</code> on the following screen:</p>
+<p><br/><br/>
+<img
+src="../img/sentry_django.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<h5 id="capture-sentry-dsn-value">Capture Sentry DSN value<a class="headerlink" href="#capture-sentry-dsn-value" title="Permanent link">&para;</a></h5>
+<p>You'll be provided with a screen displaying how to initialize and install Sentry into your Django app. For now, just capture the DSN value.
+This value will be used later as an environment variables while deploying your API via Terraform</p>
+<p><br/><br/>
+<img
+src="../img/sentry_sdk_dsn.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<h2 id="pypi">PyPI<a class="headerlink" href="#pypi" title="Permanent link">&para;</a></h2>
+<p>A common way that users interact with the DANDI ecosystem is via its CLI and Python client tool: <a href="https://pypi.org/project/dandi/">dandi-cli</a></p>
+<h5 id="create-a-pypi-account">Create a PyPI Account<a class="headerlink" href="#create-a-pypi-account" title="Permanent link">&para;</a></h5>
+<p>Versions of this tool are hosted, versioned and managed by PyPI -- therefore, you will need to create an account.</p>
+<h5 id="retrieve-an-api-token">Retrieve an API Token<a class="headerlink" href="#retrieve-an-api-token" title="Permanent link">&para;</a></h5>
+<p>After creating an account, you'll want to create your own API key -- first go to <code>Account settings</code></p>
+<p><br/><br/>
+<img
+src="../img/pypi_account.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>Scroll down to <code>API tokens</code> and create a value -- keep track of this value for now. We will use it later</p>
+<p><br/><br/>
+<img
+src="../img/pypi_api_token.png"
+alt="retrieve"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/></p>
+<p>In terms of creating and publishing your first project, go to the <a href=".
+./47_cli_python">documentation for setting up a CLI and Python Client</a></p>
+<h2 id="datalad-tbd">datalad (TBD)<a class="headerlink" href="#datalad-tbd" title="Permanent link">&para;</a></h2>
+<h2 id="git-annex-tbd">git-annex (TBD)<a class="headerlink" href="#git-annex-tbd" title="Permanent link">&para;</a></h2>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC-BY 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      
+    
+  </body>
+</html>

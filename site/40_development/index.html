@@ -1,0 +1,525 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://www.lincbrain.org/handbook/40_development/">
+      
+      
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
+    
+    
+      
+        <title>Developer Notes - LINC BRAIN Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="dark-blue" data-md-color-accent="light-blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#developer-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LINC BRAIN Documentation" class="md-header__button md-logo" aria-label="LINC BRAIN Documentation" data-md-component="logo">
+      
+  <img src="../img/dandi-logo-square_sw.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LINC BRAIN Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Developer Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lincbrain/handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lincbrain/handbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LINC BRAIN Documentation" class="md-nav__button md-logo" aria-label="LINC BRAIN Documentation" data-md-component="logo">
+      
+  <img src="../img/dandi-logo-square_sw.png" alt="logo">
+
+    </a>
+    LINC BRAIN Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lincbrain/handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lincbrain/handbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../46_local_dev/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local Development of These Docs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../40_initialization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Initialization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../41_api_deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../42_frontend_deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frontend Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../43_authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../47_cli_python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLI and Python Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../44_other/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="developer-notes">Developer Notes<a class="headerlink" href="#developer-notes" title="Permanent link">&para;</a></h1>
+<p>This page contains important information for anyone starting development work on the DANDI
+project.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The DANDI archive dev environment comprises three major pieces of software:
+<code>dandi-archive</code>, <code>dandi-cli</code>, and <code>dandi-schema</code>.</p>
+<h3 id="dandi-archive"><code>dandi-archive</code><a class="headerlink" href="#dandi-archive" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/dandi/dandi-archive"><code>dandi-archive</code></a> is the web frontend
+application; it connects to <code>dandi-api</code> and provides a user interface to all the DANDI functionality. 
+<code>dandi-archive</code> is a standard web application built with
+<code>yarn</code>. See the <a href="https://github.com/dandi/dandi-archive#readme"><code>dandi-archive</code> README</a>
+for instructions on how to build it locally.</p>
+<p>The Django application makes use of several services
+to provide essential function for the DANDI REST API, including Postgres (to hold
+administrative data about the web application itself), Celery (to run
+asynchronous compute tasks as needed to implement API semantics), and RabbitMQ
+(to act as a message broker between Celery and the rest of the application).</p>
+<p>The easiest way to run the API along with its services is through a Docker
+Compose setup, as detailed in the <a href="https://github.com/dandi/dandi-archive/blob/master/DEVELOPMENT.md">Develop with Docker quickstart</a>.</p>
+<h3 id="dandi-cli"><code>dandi-cli</code><a class="headerlink" href="#dandi-cli" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/dandi/dandi-cli"><code>dandi-cli</code></a> is a Python command line tool
+used to manage downloading and uploading of data with the archive. You may need
+to use this tool when developing new features for the frontend and
+backend, but there are other methods of faking data in the system to work with
+as well. You can install <code>dandi-cli</code> with a command like <code>pip install dandi</code>
+(then invoke <code>dandi</code> on the command line to run the tool), or build it locally
+following the instructions in the <a href="https://github.com/dandi/dandi-cli#readme"><code>dandi-cli</code> README</a>.</p>
+<h3 id="dandi-schema"><code>dandi-schema</code><a class="headerlink" href="#dandi-schema" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/dandi/dandi-schema"><code>dandi-schema</code></a> is a Python library for 
+creating, maintaining, and validating the DANDI metadata models for dandisets 
+and assets. You may need to make use of this tool when improving models, or 
+migrating metadata. You can install <code>dandi-schema</code> with a command like 
+<code>pip install dandi-schema</code>. When releases are published through dandi-schema, 
+corresponding json-schemas are generated in the release folder of the <a href="https://github.com/dandi/schema">dandi schema repo</a>. See the <code>dandi-schema</code> <a href="https://github.com/dandi/schema#readme">README</a> for instructions on 
+viewing the schemas.</p>
+<h2 id="technologies-used">Technologies Used<a class="headerlink" href="#technologies-used" title="Permanent link">&para;</a></h2>
+<p>This section details some foundational technologies used in <code>dandi-archive</code>. Some basic understanding of these technologies is the bare minimum
+requirement for contributing meaningfully, but keep in mind that the DANDI team
+can help you get spun up as well.</p>
+<p><strong>JavaScript/TypeScript.</strong> The DANDI archive code is a standard JavaScript web
+application, but we try to implement new functionality using TypeScript.</p>
+<p><strong>Vue/VueX.</strong> The application's components are written in Vue, and global
+application state is managed through VueX.</p>
+<p><strong>Vuetify.</strong> The components make heavy use of the Vuetify component library.</p>
+<p><strong>Python3.</strong> The backend code is written in Python 3.</p>
+<p><strong>Django/drf/drf-yasg.</strong> The API infrastructure is implemented through a Django application.
+This means that application resources must be mapped to Django models, while
+Django views mediate API responses. The REST endpoints are implemented via
+Django Rest Framework (DRF), while DRF-YASG is used to generate Swagger
+documentation.</p>
+<p>For general help with <code>dandi-archive</code>, contact @waxlamp.</p>
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<p>The DANDI project uses automated services to continuously deploy both the
+<code>dandi-api</code> backend and the <code>dandi-archive</code> frontend.</p>
+<p>Heroku manages backend deployment automatically from the <code>master</code> branch of the
+<code>dandi-api</code> repository. For this reason it is important that pull requests pass
+all CI tests before they are merged. Heroku configuration is in turn managed by
+Terraform code stored in the <code>dandi-infrastructure</code> repository. If you need
+access to the Heroku DANDI organization, talk to @satra.</p>
+<p>Netlify manages the frontend deployment process. Similarly to <code>dandi-api</code>, these
+deployments are based on the <code>master</code> branch of <code>dandi-archive</code>. The
+<a href="https://github.com/dandi/dandi-archive/blob/master/web/netlify.toml"><code>netlify.toml</code> file</a>
+controls Netlify settings. The @dandibot GitHub account is the "owner" of the
+Netlify account used for this purpose; in order to get access to that account,
+speak to @satra.</p>
+<h2 id="code-hosting">Code Hosting<a class="headerlink" href="#code-hosting" title="Permanent link">&para;</a></h2>
+<p>All code repositories are hosted on GitHub. The easiest way to contribute is to
+gain push access to the repositories by talking to @waxlamp; this way, you can
+create pull requests based on branches within the origin repositories, which in
+turn allows for Netlify deploy previews and Heroku staging previews to be built.</p>
+<p>However, this is not strictly required. You can contribute using the standard
+fork-and-pull-request model, but under this workflow we will lose the benefit of
+those previews.</p>
+<h2 id="email-lists">Email Lists<a class="headerlink" href="#email-lists" title="Permanent link">&para;</a></h2>
+<p>The project's email domain name services are managed via Terraform as AWS Route
+53 entries. This allows the API server to send emails to users, etc. It also
+means we need a way to forward incoming emails to the proper mailing list--this
+is accomplished with a service called <a href="https://improvmx.com/">ImprovMX</a>.</p>
+<p>The email addresses info@dandiarchive.org and help@dandiarchive.org are
+advertised to users as general email addresses to use to ask for information or
+help; both of them are forwarded to dandi@mit.edu, a mailing list containing the
+leaders and developers of the project. The forwarding is done by the ImprovMX
+service, and more such email addresses can be created as needed within that
+service.</p>
+<p>If you need the credentials for logging into ImprovMX, speak to Roni
+Choudhury (<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#111;&#110;&#105;&#46;&#99;&#104;&#111;&#117;&#100;&#104;&#117;&#114;&#121;&#64;&#107;&#105;&#116;&#119;&#97;&#114;&#101;&#46;&#99;&#111;&#109;">&#114;&#111;&#110;&#105;&#46;&#99;&#104;&#111;&#117;&#100;&#104;&#117;&#114;&#121;&#64;&#107;&#105;&#116;&#119;&#97;&#114;&#101;&#46;&#99;&#111;&#109;</a>).</p>
+<h2 id="miscellaneous-tips-and-information">Miscellaneous Tips and Information<a class="headerlink" href="#miscellaneous-tips-and-information" title="Permanent link">&para;</a></h2>
+<h3 id="use-email-address-to-log-into-dev-django-admin-panel">Use email address to log into dev Django admin panel<a class="headerlink" href="#use-email-address-to-log-into-dev-django-admin-panel" title="Permanent link">&para;</a></h3>
+<p>Once <code>dandi-api</code> is up and running, you can access the Django admin panel at
+http://localhost:8000/admin. The login page asks for a "username" but really it
+is expecting the email address associated with the username.</p>
+<p>One easy trick here is to supply the username again as the email address when
+you are setting up the superuser during initial setup.</p>
+<h3 id="refresh-github-login-to-log-into-prod-django-admin-panel">Refresh GitHub login to log into prod Django admin panel<a class="headerlink" href="#refresh-github-login-to-log-into-prod-django-admin-panel" title="Permanent link">&para;</a></h3>
+<p>To log into the production Django admin panel, you must simply be logged into
+the DANDI Archive production instance using an admin account.</p>
+<p>However, at times the Django admin panel login seems to expire while the login
+to DANDI Archive proper is still live. In this case, simply log out of DANDI,
+log back in, and then go to the Django admin panel URL
+(e.g. https://api.dandiarchive.org/admin) and you should be logged back in
+there.</p>
+<h3 id="why-do-incoming-emails-to-dandiarchiveorg-look-crazy">Why do incoming emails to dandiarchive.org look crazy?<a class="headerlink" href="#why-do-incoming-emails-to-dandiarchiveorg-look-crazy" title="Permanent link">&para;</a></h3>
+<p>When a user emails help@dandiarchive.org or info@dandiarchive.org, those
+messages are forwarded to dandi@mit.edu (see <a href="#email-lists">above</a>) so that the
+dev team sees them. However, these emails arrive with a long, spammy-looking
+From address with a Heroku DNS domain; this seems to be an artifact of how
+mit.edu processes emails, and does not occur in general (e.g. messages sent
+from the API server to users).</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC-BY 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      
+    
+  </body>
+</html>
