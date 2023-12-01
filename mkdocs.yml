@@ -52,4 +52,5 @@ markdown_extensions:
 
 # List of plugins
 plugins:
+  - search
   - open-in-new-tab
