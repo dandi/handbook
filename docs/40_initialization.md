@@ -1,6 +1,6 @@
-LINC Brain relies on a handful of vendor services to operate:
+The Dandi ecosystem relies on a handful of vendor services to operate:
 
-The following accounts must be made to create LINC Brain in a production setting:
+The following accounts must be made to create Dandi in a production setting:
 
 • **Heroku**
 
@@ -340,7 +340,7 @@ alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-You'll want to next connect `linc-archive` via `Deploy with GitHub`. Enable Netlify to be authorized as a GitHub app. Once you have
+You'll want to next connect `dandi-archive` via `Deploy with GitHub`. Enable Netlify to be authorized as a GitHub app. Once you have
 enabled authorization, you'll need to specifically link your appropriate repositories:
 
 <br/><br/>

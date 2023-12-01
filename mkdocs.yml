@@ -19,32 +19,26 @@ theme:
 
 # Pages
 nav:
-  - Local Development of These Docs: "46_local_dev.md"
-  - Initialization: "40_initialization.md"
-  - API Deployment: "41_api_deployment.md"
-  - Frontend Deployment: "42_frontend_deployment.md"
-  - Authentication: "43_authentication.md"
-  - CLI and Python Client: "47_cli_python.md"
-  - Other: "44_other.md"
-#  - Welcome: "index.md"
-#  - Introduction: "01_introduction.md"
-#  - Data Standards: "30_data_standards.md"
-#  - Data Licenses: "35_data_licenses.md"
-#  - User Guide:
-#    - Using DANDI: "10_using_dandi.md"
-#    - Viewing Dandisets: "11_view.md"
-#    - Downloading Data and Dandisets: "12_download.md"
-#    - Creating Dandisets and Uploading Data: "13_upload.md"
-#    - Validation Levels for NWB Files: "135_validation.md"
-#    - Publishing Dandisets: "14_publish.md"
-#    - Debugging: "15_debugging.md"
-#  - Developer Guide:
-#    - Project Structure: "20_project_structure.md"
-#    - Notes: "40_development.md"
-#  - Terms and Policies:
-#      - Terms: "about/terms.md"
-#      - Policies: "about/policies.md"
-#  - About This Doc: "100_about_this_doc.md"
+  - Welcome: "index.md"
+  - Introduction: "01_introduction.md"
+  - Data Standards: "30_data_standards.md"
+  - Data Licenses: "35_data_licenses.md"
+  - User Guide:
+    - Using DANDI: "10_using_dandi.md"
+    - Viewing Dandisets: "11_view.md"
+    - Downloading Data and Dandisets: "12_download.md"
+    - Creating Dandisets and Uploading Data: "13_upload.md"
+    - Validation Levels for NWB Files: "135_validation.md"
+    - Publishing Dandisets: "14_publish.md"
+    - Debugging: "15_debugging.md"
+  - Developer Guide:
+    - Project Structure: "20_project_structure.md"
+    - Notes: "40_development.md"
+  - Terms and Policies:
+      - Terms: "about/terms.md"
+      - Policies: "about/policies.md"
+  - About This Doc: "100_about_this_doc.md"
+  - Replicating Dandi: "40_initialization.md"
 
 # list of extension
 markdown_extensions:
