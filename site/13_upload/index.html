@@ -1,0 +1,565 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://www.lincbrain.org/handbook/13_upload/">
+      
+      
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
+    
+    
+      
+        <title>Creating Dandisets and Uploading Data - LINC BRAIN Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="dark-blue" data-md-color-accent="light-blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creating-dandisets-and-uploading-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LINC BRAIN Documentation" class="md-header__button md-logo" aria-label="LINC BRAIN Documentation" data-md-component="logo">
+      
+  <img src="../img/dandi-logo-square_sw.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LINC BRAIN Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Creating Dandisets and Uploading Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lincbrain/handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lincbrain/handbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LINC BRAIN Documentation" class="md-nav__button md-logo" aria-label="LINC BRAIN Documentation" data-md-component="logo">
+      
+  <img src="../img/dandi-logo-square_sw.png" alt="logo">
+
+    </a>
+    LINC BRAIN Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lincbrain/handbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lincbrain/handbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../46_local_dev/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local Development of These Docs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../40_initialization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Initialization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../41_api_deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../42_frontend_deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frontend Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../43_authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../47_cli_python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLI and Python Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../44_other/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="creating-dandisets-and-uploading-data">Creating Dandisets and Uploading Data<a class="headerlink" href="#creating-dandisets-and-uploading-data" title="Permanent link">&para;</a></h1>
+<p>To create a new Dandiset and upload your data, you need to have a DANDI account.</p>
+<h2 id="create-an-account-on-dandi">Create an Account on DANDI<a class="headerlink" href="#create-an-account-on-dandi" title="Permanent link">&para;</a></h2>
+<p>To create a DANDI account:</p>
+<ol>
+<li><a href="https://github.com/">Create a GitHub account</a> if you don't have one.</li>
+<li>Using your GitHub account, <a href="https://gui.dandiarchive.org/#/user/register">register a DANDI account</a>.</li>
+</ol>
+<p>You will receive an email acknowledging activation of your account within 24
+hours, after which you can log in to DANDI using GitHub by clicking the login
+button.</p>
+<h2 id="create-a-dandiset-and-add-data">Create a Dandiset and Add Data<a class="headerlink" href="#create-a-dandiset-and-add-data" title="Permanent link">&para;</a></h2>
+<p>You can create a new Dandiset at <a href="http://dandiarchive.org">http://dandiarchive.org</a>. This Dandiset can be fully 
+public or embargoed 
+according to NIH policy.
+When you create a Dandiset, a permanent ID is automatically assigned to it.
+To prevent the production server from being inundated with test Dandisets, we encourage developers to develop 
+against the development server (<a href="https://gui-staging.dandiarchive.org/">https://gui-staging.dandiarchive.org/</a>). Note 
+that the development server
+should not be used to stage your data. All data are uploaded as draft and can be adjusted before publishing on
+the production server. The development server is primarily used by users learning to use DANDI or by developers.</p>
+<p>The below instructions will alert you to where the commands for interacting with these 
+two different servers differ slightly. </p>
+<h3 id="setup"><strong>Setup</strong><a class="headerlink" href="#setup" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Log in to DANDI and copy your API key. Click on your user initials in the
+    top-right corner after logging in. Production (dandiarchive.org) and staging (gui-staging.dandiarchive.org) servers 
+      have different API keys and different logins.</li>
+<li>
+<p>Locally:</p>
+<ol>
+<li>Create a Python environment. This is not required, but strongly recommended; e.g. <a href="https://conda.
+      io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands">miniconda</a>,
+     <a href="https://docs.python.org/3/library/venv.html">virtualenv</a>.</li>
+<li>
+<p>Install the DANDI CLI into your Python environment:</p>
+<pre><code>pip install -U dandi
+</code></pre>
+</li>
+<li>
+<p>Store your API key somewhere that the CLI can find it; see <a href="#storing-access-credentials">"Storing
+      Access Credentials"</a> below.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="data-uploadmanagement-workflow"><strong>Data upload/management workflow</strong><a class="headerlink" href="#data-uploadmanagement-workflow" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Register a Dandiset to generate an identifier. You will be asked to enter
+    basic metadata: a name (title) and description (abstract) for your dataset.
+    Click <code>NEW DANDISET</code> in the Web application (top right corner) after logging in. 
+    After you provide a name and description, the dataset identifier will be created; 
+    we will call this <code>&lt;dataset_id&gt;</code>.</li>
+<li>
+<p>NWB format:</p>
+<ol>
+<li>Convert your data to NWB 2.1+ in a local folder. Let's call this <code>&lt;source_folder&gt;</code>.
+We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
+This step can be complex depending on your data.
+<a href="https://neuroconv.readthedocs.io/">NeuroConv</a> automates
+conversion to NWB from a variety of popular formats.
+<a href="https://nwb-overview.readthedocs.io">nwb-overview.readthedocs.io</a>
+points to more tools helpful for working with NWB files, and <a href="https://bids.neuroimaging.io/benefits.html#converters">BIDS
+converters</a>
+if you are preparing a BIDS dataset containing NWB files.
+Feel free to <a href="https://github.com/dandi/helpdesk/discussions">reach out to us for help</a>.</li>
+<li>
+<p>Check your files for <a href="https://nwbinspector.readthedocs.io/en/dev/best_practices/best_practices_index.html">NWB Best Practices</a> by installing
+the <a href="https://nwbinspector.readthedocs.io/en/dev/user_guide/user_guide_index.html">NWBInspector</a> (<code>pip install -U nwbinspector</code>) and running</p>
+<pre><code>    nwbinspector &lt;source_folder&gt; --config dandi
+</code></pre>
+</li>
+<li>
+<p>Thoroughly read the NWBInspector report and try to address as many issues as possible. <strong>DANDI will prevent validation and upload of any issues
+labeled as level 'CRITICAL' or above when using the <code>--config dandi</code> option.</strong>
+See 
+   <a href="../135_validation/">"Validation Levels for NWB Files"</a> for more information about validation criteria for 
+   uploading NWB 
+   files and which are deemed critical. We recommend regularly running the inspector early in the process to generate the best NWB files possible. 
+Note that some autodetected violations, such as <code>check_data_orientation</code>, may be safely ignored in the event 
+   that the data is confirmed to be in the correct form; this can be done using either the <code>--ignore &lt;name_of_check_to_suppress&gt;</code> flag or a config file. See <a href="https://nwbinspector.readthedocs.io/en/dev/user_guide/using_the_command_line_interface.html">the NWBInspector CLI documentation</a> for more details and other options, or type <code>nwbinspector --help</code>.
+If the report is too large to efficiently navigate in your console, you can save a report using</p>
+<pre><code>nwbinspector &lt;source_folder&gt; --config dandi --report-file-path &lt;report_location&gt;.txt
+</code></pre>
+</li>
+<li>
+<p>Once your files are confirmed to adhere to the Best Practices, perform an official validation of the NWB files by running: <code>dandi validate --ignore DANDI.NO_DANDISET_FOUND &lt;source_folder&gt;</code>.
+    <strong>If you are having trouble with validation, make sure the conversions were run with the most recent version of <code>dandi</code>, <code>PyNWB</code> and <code>MatNWB</code>.</strong></p>
+</li>
+<li>Now, prepare and fully validate again within the dandiset folder used for upload:<pre><code>dandi download https://dandiarchive.org/dandiset/&lt;dataset_id&gt;/draft
+cd &lt;dataset_id&gt;
+dandi organize &lt;source_folder&gt; -f dry
+dandi organize &lt;source_folder&gt;
+dandi validate .
+dandi upload
+</code></pre>
+</li>
+</ol>
+<p>Note that the <code>organize</code> steps should not be used if you are preparing a BIDS dataset with the NWB files.
+Uploading to the development server is controlled via <code>-i</code> option, e.g.
+<code>dandi upload -i dandi-staging</code>.
+Note that validation is also done during <code>upload</code>, but ensuring compliance using <code>validate</code> prior upload helps avoid interruptions of the lengthier upload process due to validation failures.
+6. Add metadata by visiting your Dandiset landing page:
+   <code>https://dandiarchive.org/dandiset/&lt;dataset_id&gt;/draft</code> and clicking on the <code>METADATA</code> link.</p>
+</li>
+</ol>
+<p>If you have an issue using the Python CLI, see the <a href="../15_debugging/">Dandi Debugging section</a>.</p>
+<h2 id="storing-access-credentials">Storing Access Credentials<a class="headerlink" href="#storing-access-credentials" title="Permanent link">&para;</a></h2>
+<p>By default, the DANDI CLI looks for an API key in the <code>DANDI_API_KEY</code>
+environment variable.  To set this on Linux or macOS, run</p>
+<pre><code class="language-bash">export DANDI_API_KEY=personal-key-value
+</code></pre>
+<p>*Note that there are no spaces around the "=".</p>
+<p>If this is not set, the CLI will look up the API
+key using the <a href="https://github.com/jaraco/keyring">keyring</a> library, which
+supports numerous backends, including the system keyring, an encrypted keyfile,
+and a plaintext (unencrypted) keyfile.</p>
+<ul>
+<li>
+<p>You can store your API key where the <code>keyring</code> library can find it by using
+  the <code>keyring</code> program: Run <code>keyring set dandi-api-dandi key</code> and enter the
+  API key when asked for the password for <code>key</code> in <code>dandi-api-dandi</code>.</p>
+</li>
+<li>
+<p>You can set the backend the <code>keyring</code> library uses either by setting the
+  <code>PYTHON_KEYRING_BACKEND</code> environment variable or by filling in <a href="https://github.com/jaraco/keyring#configuring">the <code>keyring</code>
+  library's configuration file</a>.
+  IDs for the available backends can be listed by running <code>keyring --list</code>.  If
+  no backend is specified in this way, the library will use the available
+  backend with the highest priority.</p>
+</li>
+</ul>
+<p>If the API key isn't stored in either the <code>DANDI_API_KEY</code> environment variable
+or in the keyring, the CLI will prompt you to enter the API key, and then it
+will store it in the keyring.  This may cause you to be prompted further; you
+may be asked to enter a password to encrypt/decrypt the keyring, or you may be
+asked by your OS to confirm whether to give the DANDI CLI access to the
+keyring.</p>
+<ul>
+<li>If the DANDI CLI encounters an error while attempting to fetch the API key
+  from the default keyring backend, it will fall back to using an encrypted
+  keyfile (the <code>keyrings.alt.file.EncryptedKeyring</code> backend).  If the keyfile
+  does not already exist, the CLI will ask you for confirmation; if you answer
+  "yes," the <code>keyring</code> configuration file (if it does not already exist; see
+  above) will be configured to use <code>EncryptedKeyring</code> as the default backend.
+  If you answer "no," the CLI will exit with an error, and you must store the
+  API key somewhere accessible to the CLI on your own.</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC-BY 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      
+    
+  </body>
+</html>
