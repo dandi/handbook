@@ -19,6 +19,8 @@ A "Base (MATLAB)" server is also available, which provides a MATLAB cloud instal
 
 ## Example notebooks
 
-The best way to share analyses on DANDI data is through the DANDI example notebooks. These notebooks are organized by `<DANDI id>/<group>/<analysis>/<notebook.ipynb>`. Dandiset contributors are encouraged to use these notebooks to demonstrate how to read, analyze, and visualize the data, and how to produce figures from associated scientific publications.
+The best way to share analyses on DANDI data is through the DANDI example notebooks.
+These notebooks are maintained in https://github.com/dandi/example-notebooks repository which provides more information about their organization.
+Dandiset contributors are encouraged to use these notebooks to demonstrate how to read, analyze, and visualize the data, and how to produce figures from associated scientific publications.
 
 Once this Pull Requests is accepted, your contributed notebook will be available to all DANDI Hub users.
