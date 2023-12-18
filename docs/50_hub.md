@@ -9,7 +9,13 @@ To use the [DANDI Hub](http://hub.dandiarchive.org), you must first register for
 
 ## Choosing a server option
 
-When you start up the DANDI Hub, you will be asked to select across a number of server options. For basic exploration, Tiny or Base would most likely be appropriate. The DANDI Hub also currently offers Medium and Large options, which have more available memory and compute power. The "T4 GPU inference" server comes with an associated T4 GPU, and is intended to be used for applications that require GPU for inference. We request that users of this server be considerate of their usage of the DANDI Hub as a free community resource. Training large deep neural networks is not appropriate. A "Base (MATLAB)" server is also available, which provides a MATLAB cloud installation.
+When you start up the DANDI Hub, you will be asked to select across a number of server options.
+For basic exploration, Tiny or Base would most likely be appropriate.
+The DANDI Hub also currently offers Medium and Large options, which have more available memory and compute power.
+The "T4 GPU inference" server comes with an associated T4 GPU, and is intended to be used for applications that require GPU for inference.
+We request that users of this server be considerate of their usage of the DANDI Hub as a free community resource.
+Training large deep neural networks is not appropriate.
+A "Base (MATLAB)" server is also available, which provides a MATLAB cloud installation but you would be required to provide your own license.
 
 ## Example notebooks
 
