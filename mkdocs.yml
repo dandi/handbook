@@ -54,3 +54,7 @@ markdown_extensions:
 plugins:
   - search
   - open-in-new-tab
+
+# Customize theme
+extra:
+  - homepage: https://dandiarchive.org
