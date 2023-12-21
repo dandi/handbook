@@ -105,8 +105,8 @@ two different servers differ slightly.
     1. Add metadata by visiting your Dandiset landing page:
        `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
 
-1. BIDS format
-    1. Convert your data to BIDS format in a local folder. Let's call this `<source_folder>`.
+1. BIDS standard
+    1. Convert your data to BIDS standard in a local folder. Let's call this `<source_folder>`.
     We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
     This step can be complex depending on your data.
     [BIDS converters](https://bids.neuroimaging.io/benefits.html#converters)
