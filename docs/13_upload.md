@@ -51,6 +51,7 @@ two different servers differ slightly.
     Click `NEW DANDISET` in the Web application (top right corner) after logging in. 
     After you provide a name and description, the dataset identifier will be created; 
     we will call this `<dataset_id>`.
+
 1. NWB format
     1. Convert your data to NWB 2.1+ in a local folder. Let's call this `<source_folder>`.
     We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
@@ -80,8 +81,11 @@ two different servers differ slightly.
 
             nwbinspector <source_folder> --config dandi --report-file-path <report_location>.txt
 
-    1. Once your files are confirmed to adhere to the Best Practices, perform an official validation of the NWB files by running: `dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>`.
-        **If you are having trouble with validation, make sure the conversions were run with the most recent version of `dandi`, `PyNWB` and `MatNWB`.**
+    1. Once your files are confirmed to adhere to the Best Practices, perform an official validation of the NWB files by running:
+
+            dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>
+        
+        - If you are having trouble with validation, make sure the conversions were run with the most recent version of `dandi`, `PyNWB` and `MatNWB`.**
 
     1. Now, prepare and fully validate again within the Dandiset folder used for upload:
 
@@ -102,8 +106,23 @@ two different servers differ slightly.
        `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
 
 1. BIDS format
-    1. Once your files are confirmed to adhere to the best practices, perform an official validation of the BIDS files by running: `dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>`.
+    1. Convert your data to BIDS format in a local folder. Let's call this `<source_folder>`.
+    We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
+    This step can be complex depending on your data.
+    [BIDS converters](https://bids.neuroimaging.io/benefits.html#converters)
+    automates conversion to BIDS from a variety of popular formats and the [BIDS Specification](https://bids-specification.readthedocs.io/) provides more information on the BIDS standard.
+    Feel free to [reach out to us for help](https://github.com/dandi/helpdesk/discussions).
 
+    1. Once your files are confirmed to adhere to the best practices, perform an official validation of the BIDS files by running:
+
+            dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>
+
+    1. Download the Dandiset folder used for upload:
+
+            dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft
+            cd <dataset_id>
+
+    1. Move your `<source_folder>` (i.e. BIDS organized files) into the Dandiset folder.
 
     1. Fully validate again within the Dandiset folder used for upload:
             dandi validate .
