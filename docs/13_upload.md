@@ -96,10 +96,11 @@ two different servers differ slightly.
             dandi validate .
             dandi upload
 
-        - Note that the `organize` steps should not be used if you are preparing a BIDS dataset with the NWB files.
+        - The `dandi organize` steps should not be used if you are preparing a BIDS dataset with the NWB files.
+        - Renaming files with `dandi organize` can be customized with the [--required-field](https://dandi.readthedocs.io/en/latest/cmdline/organize.html#cmdoption-required-field) option.
         - Uploading to the development server is controlled via `-i` option, e.g.
         `dandi upload -i dandi-staging`.
-        - Note that validation is also done during `upload`, but ensuring compliance using `validate` prior upload helps avoid interruptions of the lengthier upload process due to validation failures.
+        - Validation is also done during `upload`, but ensuring compliance using `validate` prior upload helps avoid interruptions of the lengthier upload process due to validation failures.
         - If you have an issue using the `dandi` CLI, see the [Dandi Debugging section](./15_debugging.md).
     
     1. Add metadata by visiting your Dandiset landing page:
