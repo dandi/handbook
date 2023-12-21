@@ -110,7 +110,7 @@ two different servers differ slightly.
     We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
     This step can be complex depending on your data.
     [BIDS converters](https://bids.neuroimaging.io/benefits.html#converters)
-    automates conversion to BIDS from a variety of popular formats and the [BIDS Specification](https://bids-specification.readthedocs.io/) provides more information on the BIDS standard.
+    automate conversion to BIDS from a variety of popular formats and the [BIDS Specification](https://bids-specification.readthedocs.io/) provides more information on the BIDS standard.
     Feel free to [reach out to us for help](https://github.com/dandi/helpdesk/discussions).
 
     1. Once your files are confirmed to adhere to the best practices, perform an official validation of the BIDS files by running:
