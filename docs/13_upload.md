@@ -51,7 +51,7 @@ two different servers differ slightly.
     Click `NEW DANDISET` in the Web application (top right corner) after logging in. 
     After you provide a name and description, the dataset identifier will be created; 
     we will call this `<dataset_id>`.
-1. NWB format:
+1. NWB format
     1. Convert your data to NWB 2.1+ in a local folder. Let's call this `<source_folder>`.
     We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
     This step can be complex depending on your data.
@@ -62,12 +62,13 @@ two different servers differ slightly.
     converters](https://bids.neuroimaging.io/benefits.html#converters)
     if you are preparing a BIDS dataset containing NWB files.
     Feel free to [reach out to us for help](https://github.com/dandi/helpdesk/discussions).
-    2. Check your files for [NWB Best Practices](https://nwbinspector.readthedocs.io/en/dev/best_practices/best_practices_index.html) by installing
+
+    1. Check your files for [NWB Best Practices](https://nwbinspector.readthedocs.io/en/dev/best_practices/best_practices_index.html) by installing
     the [NWBInspector](https://nwbinspector.readthedocs.io/en/dev/user_guide/user_guide_index.html) (`pip install -U nwbinspector`) and running
 
                 nwbinspector <source_folder> --config dandi
 
-    3. Thoroughly read the NWBInspector report and try to address as many issues as possible. **DANDI will prevent validation and upload of any issues
+    1. Thoroughly read the NWBInspector report and try to address as many issues as possible. **DANDI will prevent validation and upload of any issues
     labeled as level 'CRITICAL' or above when using the `--config dandi` option.**
     See 
        ["Validation Levels for NWB Files"](./135_validation.md) for more information about validation criteria for 
@@ -79,9 +80,10 @@ two different servers differ slightly.
 
             nwbinspector <source_folder> --config dandi --report-file-path <report_location>.txt
 
-    4. Once your files are confirmed to adhere to the Best Practices, perform an official validation of the NWB files by running: `dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>`.
+    1. Once your files are confirmed to adhere to the Best Practices, perform an official validation of the NWB files by running: `dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>`.
         **If you are having trouble with validation, make sure the conversions were run with the most recent version of `dandi`, `PyNWB` and `MatNWB`.**
-    5. Now, prepare and fully validate again within the dandiset folder used for upload:
+
+    1. Now, prepare and fully validate again within the Dandiset folder used for upload:
 
             dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft
             cd <dataset_id>
@@ -94,11 +96,26 @@ two different servers differ slightly.
         - Uploading to the development server is controlled via `-i` option, e.g.
         `dandi upload -i dandi-staging`.
         - Note that validation is also done during `upload`, but ensuring compliance using `validate` prior upload helps avoid interruptions of the lengthier upload process due to validation failures.
+        - If you have an issue using the `dandi` CLI, see the [Dandi Debugging section](./15_debugging.md).
     
-    6. Add metadata by visiting your Dandiset landing page:
+    1. Add metadata by visiting your Dandiset landing page:
        `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
 
-If you have an issue using the Python CLI, see the [Dandi Debugging section](./15_debugging.md).
+1. BIDS format
+    1. Once your files are confirmed to adhere to the best practices, perform an official validation of the BIDS files by running: `dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>`.
+
+
+    1. Fully validate again within the Dandiset folder used for upload:
+            dandi validate .
+            dandi upload
+
+        - Uploading to the development server is controlled via `-i` option, e.g.
+        `dandi upload -i dandi-staging`.
+        - Note that validation is also done during `upload`, but ensuring compliance using `validate` prior upload helps avoid interruptions of the lengthier upload process due to validation failures.
+        - If you have an issue using the `dandi` CLI, see the [Dandi Debugging section](./15_debugging.md).
+
+    1. Add metadata by visiting your Dandiset landing page:
+       `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
 
 ## Storing Access Credentials
 
