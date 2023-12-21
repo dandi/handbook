@@ -44,7 +44,7 @@ two different servers differ slightly.
     3. Store your API key somewhere that the CLI can find it; see ["Storing
           Access Credentials"](#storing-access-credentials) below.
 
-### **Data upload/management workflow**
+### **Data upload**
 
 1. Register a Dandiset to generate an identifier. You will be asked to enter
     basic metadata: a name (title) and description (abstract) for your dataset.
