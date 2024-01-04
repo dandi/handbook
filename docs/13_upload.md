@@ -114,7 +114,7 @@ two different servers differ slightly.
     automate conversion to BIDS from a variety of popular formats and the [BIDS Specification](https://bids-specification.readthedocs.io/) provides more information on the BIDS standard.
     Feel free to [reach out to us for help](https://github.com/dandi/helpdesk/discussions).
 
-    1. Once your files are confirmed to adhere to the best practices, perform an official validation of the BIDS files by running:
+    1. Once your files are confirmed to adhere to the BIDS standard, perform an official validation of the BIDS files by running:
 
             dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>
 
