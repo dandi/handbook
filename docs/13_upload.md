@@ -111,12 +111,10 @@ two different servers differ slightly.
     We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
     This step can be complex depending on your data.
     [BIDS converters](https://bids.neuroimaging.io/benefits.html#converters)
-    automate conversion to BIDS from a variety of popular formats and the [BIDS Specification](https://bids-specification.readthedocs.io/) provides more information on the BIDS standard.
+    automate conversion to BIDS from a variety of popular formats and the [BIDS specification](https://bids-specification.readthedocs.io/) provides more information on the BIDS standard.
     Feel free to [reach out to us for help](https://github.com/dandi/helpdesk/discussions).
 
-    1. Once your files are confirmed to adhere to the BIDS standard, perform an official validation of the BIDS files by running:
-
-            dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>
+    1. Once your files are confirmed to adhere to the BIDS standard, perform an official validation of the BIDS files using the [BIDS validator](https://github.com/bids-standard/bids-validator).
 
     1. Download the Dandiset folder used for upload:
 
