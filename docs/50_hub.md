@@ -1,6 +1,7 @@
 # Using the DANDI Hub
 
 [DANDI Hub](http://hub.dandiarchive.org) is a [JupyterHub](https://jupyterhub.readthedocs.io) instance in the cloud to interact with the data stored in DANDI, and is free to use for exploratory analysis of data on DANDI.
+For instructions on how to navigate JupyterHub see this [YouTube tutorial](https://www.youtube.com/watch?v=5pf0_bpNbkw&t=09m20s).
 Note that DANDI Hub is not intended for significant computation, but provides a place to introspect Dandisets and to perform some analysis and visualization of data.
 
 ## Registration
