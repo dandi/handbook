@@ -23,4 +23,5 @@ The best way to share analyses on DANDI data is through the DANDI example notebo
 These notebooks are maintained in the [dandi/example-notebooks](https://github.com/dandi/example-notebooks) repository which provides more information about their organization.
 Dandiset contributors are encouraged to use these notebooks to demonstrate how to read, analyze, and visualize the data, and how to produce figures from associated scientific publications.
 
-Notebooks can be added and updated through a pull request to the [dandi/example-notebooks](https://github.com/dandi/example-notebooks) repository.  Once the pull request is merged, your contributed notebook will be available to all DANDI Hub users.
+Notebooks can be added and updated through a pull request to the [dandi/example-notebooks](https://github.com/dandi/example-notebooks) repository.
+Once the pull request is merged, your contributed notebook will be available to all DANDI Hub users.
