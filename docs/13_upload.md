@@ -162,6 +162,9 @@ Below are instructions on how to organize your data into these standards, and cr
 
             dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>
 
+    1. Dandisets with Zarr assets currently cannot be versioned and published.  We are 
+actively working on enabling this feature. 
+
 ## Upload data
 
 1. Validate the Dandiset folder, and begin upload:
