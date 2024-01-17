@@ -23,17 +23,17 @@ nav:
   - Introduction: "01_introduction.md"
   - Data Standards: "30_data_standards.md"
   - Data Licenses: "35_data_licenses.md"
-  - User Guide:
-    - Using DANDI: "10_using_dandi.md"
-    - Viewing Dandisets: "11_view.md"
-    - Downloading Data and Dandisets: "12_download.md"
-    - Creating Dandisets and Uploading Data: "13_upload.md"
-    - Validation Levels for NWB Files: "135_validation.md"
-    - Publishing Dandisets: "14_publish.md"
-    - Debugging: "15_debugging.md"
+  - User Guide: 
+    - "10_user_guide.md"
+    - View Dandisets: "11_view.md"
+    - Download Dandisets: "12_download.md"
+    - Create Dandisets: "13_upload.md"
+    - Validate NWB Files: "135_validate.md"
+    - Publish Dandisets: "14_publish.md"
+    - Debug: "15_debug.md"
     - DANDI CLI and Python API: https://dandi.readthedocs.io
   - Developer Guide:
-    - Project Structure: "20_project_structure.md"
+    - "20_developer_guide.md"
     - Notes: "40_development.md"
     - REST API Swagger: https://api.dandiarchive.org/swagger
     - REST API Redoc: https://api.dandiarchive.org/redoc
@@ -54,6 +54,7 @@ markdown_extensions:
 plugins:
   - search
   - open-in-new-tab
+  - section-index
 
 # Customize theme
 extra:
