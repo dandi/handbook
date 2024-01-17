@@ -1,4 +1,4 @@
-# Validation Levels for NWB Files
+# Validate NWB Files
 To be accepted by DANDI, NWB files must conform to criteria that are enforced via three levels of validation:
 
 ## NWB File Validation
@@ -18,6 +18,7 @@ Inspector software as opposed to the NWB file.
 ## Missing DANDI Metadata
 DANDI has requirements for metadata beyond what is strictly required for NWB validation. The following metadata must 
 be present in the NWB file for a successful upload to DANDI:
+
 - You must define a `Subject` object.
 - The `Subject` object must have a `subject_id` attribute.
 - The `Subject` object must have a `species` attribute. This can either be the Latin binomial, e.g. "Mus musculus", or 

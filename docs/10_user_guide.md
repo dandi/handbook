@@ -1,10 +1,11 @@
-# Using DANDI
+# User Guide Overview
 
 DANDI allows you to work with stored neurophysiology data in multiple ways. You can search, view, and download files,
 all without registering for a DANDI account. As a registered user, you can also create these collections of data 
 along with metadata and publish them to the DANDI platform. 
 
 ## Dandisets
+
 DANDI stores cellular neurophysiology data in Dandisets.
 
 A Dandiset is a collection of assets (files and their metadata) and metadata about the collection.
@@ -44,6 +45,7 @@ alt="download_file_icon"/> to download a
    [Download](./12_download.md) section to install and use the DANDI Python client tool.
 
 ### Next steps
+
 Although anyone on the Internet 
 can view and download public Dandisets, registered users can also create Dandisets, upload data, and publish 
 the Dandiset to generate a DOI for it.

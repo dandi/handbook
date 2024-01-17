@@ -1,4 +1,4 @@
-# Viewing Dandisets
+# View Dandisets
 
 ## Browse Dandisets
 
