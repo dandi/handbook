@@ -59,3 +59,19 @@ plugins:
 # Customize theme
 extra:
   homepage: https://dandiarchive.org
+  generator: false # Disable watermark
+  social:
+    - icon: fontawesome/brands/slack
+      link: https://dandiarchive.slack.com
+      name: Slack
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:info@dandiarchive.org
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/dandiarchive
+      name: X-Twitter
+    - icon: fontawesome/brands/github
+      link: https://github.com/dandi
+      name: GitHub
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@dandiarchive
+      name: YouTube
