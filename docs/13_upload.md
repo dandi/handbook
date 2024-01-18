@@ -1,13 +1,9 @@
-# Create Dandisets
+# Create Dandisets and Upload Data
 
-To create a new Dandiset and upload your data, you need to have a DANDI account.  See [Create a DANDI Account](./16_account.md).
-
-## Create a Dandiset and Add Data
-
-You can create a new Dandiset at [http://dandiarchive.org](http://dandiarchive.org). This Dandiset can be fully 
-public or embargoed 
-according to NIH policy.
+You can create a new Dandiset at [http://dandiarchive.org](http://dandiarchive.org). 
+This Dandiset can be fully public or embargoed according to NIH policy.
 When you create a Dandiset, a permanent ID is automatically assigned to it.
+
 To prevent the production server from being inundated with test Dandisets, we encourage developers to develop 
 against the development server ([https://gui-staging.dandiarchive.org/](https://gui-staging.dandiarchive.org/)). Note 
 that the development server
@@ -17,8 +13,9 @@ the production server. The development server is primarily used by users learnin
 The below instructions will alert you to where the commands for interacting with these 
 two different servers differ slightly. 
 
-### **Install DANDI Client**
+## Install DANDI Client
 
+1. To create a new Dandiset and upload your data, you need to have a DANDI account.  See [Create a DANDI Account](./16_account.md).
 1. Log in to DANDI and copy your API key. Click on your user initials in the
     top-right corner after logging in. Production (dandiarchive.org) and staging (gui-staging.dandiarchive.org) servers 
       have different API keys and different logins.
@@ -33,7 +30,7 @@ two different servers differ slightly.
     3. Store your API key somewhere that the CLI can find it; see ["Storing
           Access Credentials"](#store-access-credentials) below.
 
-### **Store Access Credentials**
+## Store Access Credentials
 
 There are three options for storing your DANDI access credentials.
 
@@ -80,7 +77,7 @@ There are three options for storing your DANDI access credentials.
       If you answer "no," the CLI will exit with an error, and you must store the
       API key somewhere accessible to the CLI on your own.
 
-### **Register a Dandiset**
+## Register a Dandiset
 
 Register a Dandiset to generate an identifier. 
 
@@ -91,7 +88,7 @@ Register a Dandiset to generate an identifier.
     1. License
 1. The dataset identifier will be created; we will call this `<dataset_id>`.
 
-### **Standardize data**
+## Standardize data
 
 1. Standardize your dataset
 
@@ -164,7 +161,7 @@ Register a Dandiset to generate an identifier.
 
             dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>
 
-### **Upload data**
+## Upload data
 
 1. Validate the Dandiset folder, and begin upload:
 
@@ -177,7 +174,7 @@ Register a Dandiset to generate an identifier.
     1. Validation is also done during `upload`, but ensuring compliance using `validate` prior to upload helps avoid interruptions of the lengthier upload process due to validation failures.
     1. If you have an issue using the `dandi` CLI, see the [Debug section](./15_debug.md).
 
-### **Add Dandiset metadata**
+## Add Dandiset metadata
 
 1. Add metadata by visiting your Dandiset landing page at
   `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
