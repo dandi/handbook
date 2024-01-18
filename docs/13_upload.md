@@ -88,9 +88,11 @@ Register a Dandiset to generate an identifier.
     1. License
 1. The dataset identifier will be created; we will call this `<dataset_id>`.
 
-## Standardize data
+## Standardize your dataset
 
-The data within Dandisets should be standardized with the NWB, NWB + BIDS, or BIDS data standards.
+The data within Dandisets should be standardized to the NWB, and/or BIDS data standards.
+Standardize with NWB files (and optionally with the BIDS standard), if your dataset includes electrophysiology, optical physiology, tracking, or stimlus data.
+Standardize with the BIDS standard, if your dataset includes MRI or microscopy data.
 Below are instructions on how to organize your data into these standards, and create your Dandiset.
 
 1. NWB dataset or BIDS dataset with NWB files
@@ -154,8 +156,6 @@ Below are instructions on how to organize your data into these standards, and cr
             dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft
             cd <dataset_id>
 
-            dandi://…/dandiset.yaml
-            dandi download dandi://{text_dandiset.api.instance_id}/{dandiset_id}/dandiset.yaml
     1. Move your `<source_folder>/` content (i.e. BIDS dataset) into the Dandiset folder.
 
     1. Check your files with the BIDS Validator and try to address as many issues as possible.
