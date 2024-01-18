@@ -101,8 +101,9 @@ Register a Dandiset to generate an identifier.
 
 ### **Standardize data**
 
+1. Standardize your dataset
 
-1. NWB format
+1. NWB format or BIDS with NWB files
     1. Convert your data to NWB 2.1+ in a local folder. Let's call this `<source_folder>`.
     We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
     This step can be complex depending on your data.
@@ -163,8 +164,13 @@ Register a Dandiset to generate an identifier.
             dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft
             cd <dataset_id>
 
+            dandi://…/dandiset.yaml
+            dandi download dandi://{text_dandiset.api.instance_id}/{dandiset_id}/dandiset.yaml
     1. Move your `<source_folder>` (i.e. BIDS organized files) into the Dandiset folder.
 
+    1. Check your files with the BIDS Validator and try to address as many issues as possible.
+
+            dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>
 
 ### **Upload data**
 
