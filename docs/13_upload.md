@@ -90,9 +90,10 @@ Register a Dandiset to generate an identifier.
 
 ## Standardize data
 
-1. Standardize your dataset
+The data within Dandisets should be standardized with the NWB, NWB + BIDS, or BIDS data standards.
+Below are instructions on how to organize your data into these standards, and create your Dandiset.
 
-1. NWB format or BIDS with NWB files
+1. NWB dataset or BIDS dataset with NWB files
     1. Convert your data to NWB 2.1+ in a local folder. Let's call this `<source_folder>`.
     We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
     This step can be complex depending on your data.
@@ -127,7 +128,7 @@ Register a Dandiset to generate an identifier.
         
         - If you are having trouble with validation, make sure the conversions were run with the most recent version of `dandi`, `PyNWB` and `MatNWB`.**
 
-    1. Now, prepare and fully validate again within the Dandiset folder used for upload:
+    1. Now, prepare the Dandiset folder used for upload:
 
             dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft
             cd <dataset_id>
@@ -138,7 +139,7 @@ Register a Dandiset to generate an identifier.
         - Renaming files with `dandi organize` can be customized with the [--required-field](https://dandi.readthedocs.io/en/latest/cmdline/organize.html#cmdoption-required-field) option.
         - If you have an issue using the `dandi` CLI, see the [Dandi Debugging section](./15_debug.md).
 
-1. BIDS standard
+1. BIDS dataset
     1. Convert your data to BIDS standard in a local folder. Let's call this `<source_folder>`.
     We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
     This step can be complex depending on your data.
@@ -155,7 +156,7 @@ Register a Dandiset to generate an identifier.
 
             dandi://…/dandiset.yaml
             dandi download dandi://{text_dandiset.api.instance_id}/{dandiset_id}/dandiset.yaml
-    1. Move your `<source_folder>/` content (i.e. BIDS organized files) into the Dandiset folder.
+    1. Move your `<source_folder>/` content (i.e. BIDS dataset) into the Dandiset folder.
 
     1. Check your files with the BIDS Validator and try to address as many issues as possible.
 
