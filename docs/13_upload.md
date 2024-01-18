@@ -1,15 +1,12 @@
-# Creating Dandisets and Uploading Data
+# Create Dandisets
 
 To create a new Dandiset and upload your data, you need to have a DANDI account.
 
-## Create an Account on DANDI
+## Create a DANDI Account
 
-To create a DANDI account:
-
-1. [Create a GitHub account](https://github.com/) if you don't have one.
-2. Using your GitHub account, [register a DANDI account](https://gui.dandiarchive.org/#/user/register).
-
-You will receive an email acknowledging activation of your account within 24
+1. To create a DANDI account, first [create a GitHub account](https://github.com/) if you don't have one.
+1. Using your GitHub account, [register a DANDI account](https://gui.dandiarchive.org/#/user/register).
+1. You will receive an email acknowledging activation of your account within 24
 hours, after which you can log in to DANDI using GitHub by clicking the login
 button.
 
@@ -28,7 +25,7 @@ the production server. The development server is primarily used by users learnin
 The below instructions will alert you to where the commands for interacting with these 
 two different servers differ slightly. 
 
-### **Setup**
+### **Install DANDI Client**
 
 1. Log in to DANDI and copy your API key. Click on your user initials in the
     top-right corner after logging in. Production (dandiarchive.org) and staging (gui-staging.dandiarchive.org) servers 
@@ -91,12 +88,19 @@ There are three options for storing your DANDI access credentials.
       If you answer "no," the CLI will exit with an error, and you must store the
       API key somewhere accessible to the CLI on your own.
 
+### **Register a Dandiset**
 
-1. Register a Dandiset to generate an identifier. You will be asked to enter
-    basic metadata: a name (title) and description (abstract) for your dataset.
-    Click `NEW DANDISET` in the Web application (top right corner) after logging in. 
-    After you provide a name and description, the dataset identifier will be created; 
-    we will call this `<dataset_id>`.
+Register a Dandiset to generate an identifier. 
+
+1. After logging in on https://dandiarchive.org, click the `NEW DANDISET` button in the top right corner. 
+1. You will be asked to enter basic metadata for your dataset:
+    1. Title (i.e. name)
+    1. Description (i.e. abstract)
+    1. License
+1. The dataset identifier will be created; we will call this `<dataset_id>`.
+
+### **Standardize data**
+
 
 1. NWB format
     1. Convert your data to NWB 2.1+ in a local folder. Let's call this `<source_folder>`.
@@ -139,18 +143,10 @@ There are three options for storing your DANDI access credentials.
             cd <dataset_id>
             dandi organize <source_folder> -f dry
             dandi organize <source_folder>
-            dandi validate .
-            dandi upload
 
         - The `dandi organize` steps should not be used if you are preparing a BIDS dataset with the NWB files.
         - Renaming files with `dandi organize` can be customized with the [--required-field](https://dandi.readthedocs.io/en/latest/cmdline/organize.html#cmdoption-required-field) option.
-        - Uploading to the development server is controlled via `-i` option, e.g.
-        `dandi upload -i dandi-staging`.
-        - Validation is also done during `upload`, but ensuring compliance using `validate` prior upload helps avoid interruptions of the lengthier upload process due to validation failures.
-        - If you have an issue using the `dandi` CLI, see the [Dandi Debugging section](./15_debugging.md).
-    
-    1. Add metadata by visiting your Dandiset landing page:
-       `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
+        - If you have an issue using the `dandi` CLI, see the [Dandi Debugging section](./15_debug.md).
 
 1. BIDS standard
     1. Convert your data to BIDS standard in a local folder. Let's call this `<source_folder>`.
@@ -169,17 +165,21 @@ There are three options for storing your DANDI access credentials.
 
     1. Move your `<source_folder>` (i.e. BIDS organized files) into the Dandiset folder.
 
-    1. Fully validate again within the Dandiset folder used for upload:
-            dandi validate .
-            dandi upload
-
-        - Uploading to the development server is controlled via `-i` option, e.g.
-        `dandi upload -i dandi-staging`.
-        - Note that validation is also done during `upload`, but ensuring compliance using `validate` prior upload helps avoid interruptions of the lengthier upload process due to validation failures.
-        - If you have an issue using the `dandi` CLI, see the [Dandi Debugging section](./15_debugging.md).
-
-    1. Add metadata by visiting your Dandiset landing page:
-       `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
 
 ### **Upload data**
 
+1. Validate the Dandiset folder, and begin upload:
+
+        dandi validate .
+        dandi upload
+
+1. Note:
+    1. Upload to the development server with the `-i` option, e.g.
+    `dandi upload -i dandi-staging`.
+    1. Validation is also done during `upload`, but ensuring compliance using `validate` prior to upload helps avoid interruptions of the lengthier upload process due to validation failures.
+    1. If you have an issue using the `dandi` CLI, see the [Debug section](./15_debug.md).
+
+### **Add Dandiset metadata**
+
+1. Add metadata by visiting your Dandiset landing page at
+  `https://dandiarchive.org/dandiset/<dataset_id>/draft` and clicking on the `METADATA` link.
