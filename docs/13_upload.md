@@ -155,7 +155,7 @@ Register a Dandiset to generate an identifier.
 
             dandi://…/dandiset.yaml
             dandi download dandi://{text_dandiset.api.instance_id}/{dandiset_id}/dandiset.yaml
-    1. Move your `<source_folder>` (i.e. BIDS organized files) into the Dandiset folder.
+    1. Move your `<source_folder>/` content (i.e. BIDS organized files) into the Dandiset folder.
 
     1. Check your files with the BIDS Validator and try to address as many issues as possible.
 
