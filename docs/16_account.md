@@ -4,7 +4,7 @@ A DANDI account is only required for specific features.
 Without a DANDI account, you can search, view, and download files.
 With a DANDI account, you can additionally create Dandisets and access the DANDI Hub to analyze existing data.
 
-## Create an account
+## Instructions
 
 1. To create a DANDI account, first [create a GitHub account](https://github.com/) if you don't have one.
 1. Using your GitHub account, [register for a DANDI account](https://gui.dandiarchive.org/#/user/register).
