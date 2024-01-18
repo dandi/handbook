@@ -115,7 +115,7 @@ Below are instructions on how to organize your data into these standards, and cr
     1. Thoroughly read the NWBInspector report and try to address as many issues as possible. **DANDI will prevent validation and upload of any issues
     labeled as level 'CRITICAL' or above when using the `--config dandi` option.**
     See 
-       ["Validation Levels for NWB Files"](./135_validation.md) for more information about validation criteria for 
+       ["Validation Levels for NWB Files"](./135_validate.md) for more information about validation criteria for 
        uploading NWB 
        files and which are deemed critical. We recommend regularly running the inspector early in the process to generate the best NWB files possible. 
     Note that some autodetected violations, such as `check_data_orientation`, may be safely ignored in the event 

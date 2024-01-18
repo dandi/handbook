@@ -35,7 +35,7 @@ The [DANDI Python client](https://pypi.org/project/dandi/) gives you more option
 Dandisets.
 
 **Before You Begin**: You need to have Python 3.7+ and install the DANDI Python Client using `pip install dandi`.
-If you have an issue using the Python CLI, see the [Dandi Debugging section](./15_debugging.md).
+If you have an issue using the Python CLI, see the [Dandi Debugging section](./15_debug.md).
 
 ### Download a Dandiset
 To download an entire Dandiset, you can use the same command as suggested by DANDI web application, e.g.: 

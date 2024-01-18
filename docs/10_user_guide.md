@@ -95,7 +95,7 @@ The [DANDI Python client](https://pypi.org/project/dandi/) allows you to:
 Before you can use the DANDI Python client, you have to install the package with `pip install dandi` in a Python 3.7+
 environment.
 
-You should check the [Dandi Debugging section](./15_debugging.md) in case of any problems.
+You should check the [Dandi Debugging section](./15_debug.md) in case of any problems.
 
 ### **Dandihub analysis platform**
 
