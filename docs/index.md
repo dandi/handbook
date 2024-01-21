@@ -13,11 +13,10 @@ This documentation explains how to interact with the archive.
 If you want to know more about the DANDI project, its goals, and the problems
 it tries to solve, check out the [Introduction](./01_introduction.md).
 
-To start using the archive, head over to [Using DANDI](./10_using_dandi.md) in the User Guide section.
+To start using the archive, head over to the [User Guide](./10_user_guide.md).
 
-If are a developer and want to know how the project is organized, check out the [Project Structure](.
-/20_project_structure)
-page in the Developer Guide section.
+If are a developer and want to know how the project is organized, check out the 
+[Developer Guide](./20_developer_guide).
 
 
 ## Where to Get Help
