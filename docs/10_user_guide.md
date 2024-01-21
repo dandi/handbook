@@ -1,10 +1,11 @@
-# Using DANDI
+# User Guide Overview
 
 DANDI allows you to work with stored neurophysiology data in multiple ways. You can search, view, and download files,
 all without registering for a DANDI account. As a registered user, you can also create these collections of data 
 along with metadata and publish them to the DANDI platform. 
 
 ## Dandisets
+
 DANDI stores cellular neurophysiology data in Dandisets.
 
 A Dandiset is a collection of assets (files and their metadata) and metadata about the collection.
@@ -44,6 +45,7 @@ alt="download_file_icon"/> to download a
    [Download](./12_download.md) section to install and use the DANDI Python client tool.
 
 ### Next steps
+
 Although anyone on the Internet 
 can view and download public Dandisets, registered users can also create Dandisets, upload data, and publish 
 the Dandiset to generate a DOI for it.
@@ -93,7 +95,7 @@ The [DANDI Python client](https://pypi.org/project/dandi/) allows you to:
 Before you can use the DANDI Python client, you have to install the package with `pip install dandi` in a Python 3.7+
 environment.
 
-You should check the [Dandi Debugging section](./15_debugging.md) in case of any problems.
+You should check the [Dandi Debugging section](./15_debug.md) in case of any problems.
 
 ### **Dandihub analysis platform**
 
@@ -108,7 +110,7 @@ Note that `Dandihub` is not intended for significant computation, but provides a
 You can add the following statement to the methods section of your manuscript.
 
 > Data and associated metadata were uploaded to the DANDI archive [RRID:SCR_017571] using 
-  the Python command line tool (https://doi.org/10.5281/zenodo.7041535). The data were first 
+  the Python command line tool (https://doi.org/10.5281/zenodo.3692138) . The data were first 
   converted into the NWB format (https://doi.org/10.1101/2021.03.13.435173) and  organized 
   into a BIDS-like (https://doi.org/10.1038/sdata.2016.44) structure.
 
@@ -116,4 +118,4 @@ You can refer to DANDI using any of the following options:
 
 * Using an RRID [RRID:SCR_017571](https://scicrunch.org/scicrunch/Resources/record/nlx_144509-1/SCR_017571/resolver). 
 
-* Using the DANDI CLI reference: https://doi.org/10.5281/zenodo.7041535
+* Using the DANDI CLI reference: https://doi.org/10.5281/zenodo.3692138
