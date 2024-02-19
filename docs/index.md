@@ -15,7 +15,7 @@ it tries to solve, check out the [Introduction](./01_introduction.md).
 
 To start using the archive, head over to the [User Guide](./10_user_guide.md).
 
-If are a developer and want to know how the project is organized, check out the 
+If you are a developer and want to know how the project is organized, check out the 
 [Developer Guide](./20_developer_guide).
 
 
