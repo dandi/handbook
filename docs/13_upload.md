@@ -15,12 +15,12 @@ button.
 
 ## Create a Dandiset and Add Data
 
-You can create a new Dandiset at [http://dandiarchive.org](http://dandiarchive.org). This Dandiset can be fully 
+You can create a new Dandiset at https://dandiarchive.org. This Dandiset can be fully 
 public or embargoed 
 according to NIH policy.
 When you create a Dandiset, a permanent ID is automatically assigned to it.
 To prevent the production server from being inundated with test Dandisets, we encourage developers to develop 
-against the development server ([https://gui-staging.dandiarchive.org/](https://gui-staging.dandiarchive.org/)). Note 
+against the development server (https://gui-staging.dandiarchive.org/). Note 
 that the development server
 should not be used to stage your data. All data are uploaded as draft and can be adjusted before publishing on
 the production server. The development server is primarily used by users learning to use DANDI or by developers.
