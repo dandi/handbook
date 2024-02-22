@@ -26,8 +26,8 @@ two different servers differ slightly.
 
             pip install -U dandi
 
-    3. Store your API key somewhere that the CLI can find it; see ["Storing
-          Access Credentials"](#store-access-credentials) below.
+    3. Store your API key somewhere that the CLI can find it; see [Storing
+          Access Credentials](#store-access-credentials).
 
 ## Store Access Credentials
 
@@ -114,11 +114,11 @@ Below are instructions on how to organize your data into these standards, and cr
     1. Thoroughly read the NWBInspector report and try to address as many issues as possible. **DANDI will prevent validation and upload of any issues
     labeled as level 'CRITICAL' or above when using the `--config dandi` option.**
     See 
-       ["Validation Levels for NWB Files"](./135_validate.md) for more information about validation criteria for 
+       [Validate NWB Files](./135_validate.md) for more information about validation criteria for 
        uploading NWB 
        files and which are deemed critical. We recommend regularly running the inspector early in the process to generate the best NWB files possible. 
     Note that some autodetected violations, such as `check_data_orientation`, may be safely ignored in the event 
-       that the data is confirmed to be in the correct form; this can be done using either the `--ignore <name_of_check_to_suppress>` flag or a config file. See [the NWBInspector CLI documentation](https://nwbinspector.readthedocs.io/en/dev/user_guide/using_the_command_line_interface.html) for more details and other options, or type `nwbinspector --help`.
+       that the data is confirmed to be in the correct form; this can be done using either the `--ignore <name_of_check_to_suppress>` flag or a config file. See the [NWB Inspector CLI documentation](https://nwbinspector.readthedocs.io/en/dev/user_guide/using_the_command_line_interface.html) for more details and other options, or type `nwbinspector --help`.
     If the report is too large to efficiently navigate in your console, you can save a report using
 
             nwbinspector <source_folder> --config dandi --report-file-path <report_location>.txt
@@ -138,7 +138,7 @@ Below are instructions on how to organize your data into these standards, and cr
 
         - The `dandi organize` steps should not be used if you are preparing a BIDS dataset with the NWB files.
         - Renaming files with `dandi organize` can be customized with the [--required-field](https://dandi.readthedocs.io/en/latest/cmdline/organize.html#cmdoption-required-field) option.
-        - If you have an issue using the `dandi` CLI, see the [Dandi Debugging section](./15_debug.md).
+        - If you have an issue using the `dandi` CLI, see the [Debug page](./15_debug.md).
 
 1. BIDS dataset
     1. Convert your data to BIDS standard in a local folder. Let's call this `<source_folder>`.
@@ -175,7 +175,7 @@ actively working on enabling this feature.
     1. Upload to the development server with the `-i` option, e.g.
     `dandi upload -i dandi-staging`.
     1. Validation is also done during `upload`, but ensuring compliance using `validate` prior to upload helps avoid interruptions of the lengthier upload process due to validation failures.
-    1. If you have an issue using the `dandi` CLI, see the [Debug section](./15_debug.md).
+    1. If you have an issue using the `dandi` CLI, see the [Debug page](./15_debug.md).
 
 ## Add Dandiset metadata
 
