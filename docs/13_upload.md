@@ -20,8 +20,7 @@ two different servers differ slightly.
     top-right corner after logging in. Production (dandiarchive.org) and staging (gui-staging.dandiarchive.org) servers 
       have different API keys and different logins.
 1. Locally:
-    1. Create a Python environment. This is not required, but strongly recommended; e.g. [miniconda](https://conda.
-          io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands),
+    1. Create a Python environment. This is not required, but strongly recommended; e.g. [miniconda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html),
          [virtualenv](https://docs.python.org/3/library/venv.html).
     2. Install the DANDI CLI into your Python environment:
 
