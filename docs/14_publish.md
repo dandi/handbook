@@ -1,25 +1,35 @@
 # Publishing Dandisets
 
-1. Once you create a Dandiset, DANDI will automatically create a `draft` version
- of the Dandiset that can be changed as many times as needed by editing the 
- metadata or uploading new files.
+Once you create a Dandiset, DANDI will automatically create a `draft` version
+of the Dandiset that can be changed as many times as needed by editing the 
+metadata or uploading new files.
 
-1. Prior to publishing, edit the Dandiset metadata.  For example, update the 
-following fields:
-    1. People and funding contributors
-    1. Protocol information
-    1. Keywords
-    1. Related resources such as publications and code repositories
+When the draft version is ready, you can *publish* your Dandiset. This results
+in an immutable snapshot of your Dandiset with its own unique version number
+that others can cite. If you need to change the data or metadata, you can do
+so by continuing to modify the draft version and publishing a new version
+when you are ready.
 
-1. When all the metadata and asset errors are fixed, the `Publish` button (on 
-the right panel of the Dandiset landing page) will be enabled and turn green.
+Follow these steps to publish your Dandiset:
 
-1. Note, Dandisets with Zarr assets currently cannot be published.  We are 
+1. Edit the Dandiset metadata, aiming to fix all Dandiset metadata validation
+   errors, and include any other useful information. For example, you may want
+   to edit the following fields:
+    - People and funding contributors
+    - Protocol information
+    - Keywords
+    - Related resources such as publications and code repositories
+
+1. Fix all asset metadata errors by modifying the asset files to eliminate
+   the errors and re-uploading them.
+
+1. When all the Dandiset metadata and asset metadata errors are fixed, the
+   `Publish` button (on the right panel of the Dandiset landing page) will
+   be enabled and turn green. Click the button to publish your Dandiset.
+
+1. In the lower right section of the Dandiset landing page, you should see
+   the new, published version of your Dandiset listed. Click on that link
+   to view this version.
+
+**NOTE:** Dandisets with Zarr assets currently cannot be published. We are 
 actively working on enabling this feature.
-
-1. Publishing your Dandiset will create a unique version and the content of the 
-specific published version of the Dandiset cannot be changed.  If you need to 
-change the data or metadata in the future, you will need to create 
-another version of your Dandiset. 
-
-1. When you are ready to publish your Dandiset, click the `Publish` button. 
