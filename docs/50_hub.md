@@ -7,6 +7,7 @@ Note that DANDI Hub is not intended for significant computation, but provides a 
 ## Registration
 
 To use the [DANDI Hub](http://hub.dandiarchive.org), you must first register for an account using the [DANDI website](http://dandiarchive.org).
+See [Create a DANDI Account](./16_account.md).
 
 ## Choosing a server option
 
