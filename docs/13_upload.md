@@ -19,7 +19,7 @@ two different servers differ slightly.
 
 ### **Setup**
 
-1. To create a new Dandiset and upload your data, you need to have a DANDI account. See [Create a DANDI Account](./16_account.md).
+1. To create a new Dandiset and upload your data, you need to have a DANDI account. See the [Create a DANDI Account](./16_account.md) page.
 1. Log in to DANDI and copy your API key. Click on your user initials in the
     top-right corner after logging in. Production (dandiarchive.org) and staging (gui-staging.dandiarchive.org) servers 
       have different API keys and different logins.
