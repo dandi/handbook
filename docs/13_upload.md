@@ -99,7 +99,7 @@ two different servers differ slightly.
 
 If you have an issue using the Python CLI, see the [Dandi Debugging section](./15_debugging.md).
 
-## Store Access Credentials
+## Storing Access Credentials
 
 There are three options for storing your DANDI access credentials.
 
