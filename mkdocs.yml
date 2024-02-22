@@ -59,6 +59,7 @@ plugins:
 
 # Customize theme
 extra:
+  homepage: https://dandiarchive.org
   social:
     - icon: fontawesome/brands/slack
       link: https://dandiarchive.slack.com
