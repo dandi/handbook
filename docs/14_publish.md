@@ -23,7 +23,7 @@ Follow these steps to publish your Dandiset:
 1. Fix all asset metadata errors by modifying the asset files to eliminate
    the errors and re-uploading them.
 
-1. When all the Dandiset metadata and asset metadata errors are fixed, the
+1. When all the Dandiset metadata and asset metadata errors are fixed, and the dandiset made public if it was initially embargoed, the
    `Publish` button (on the right panel of the Dandiset landing page) will
    be enabled and turn green. Click the button to publish your Dandiset.
 
