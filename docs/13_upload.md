@@ -112,7 +112,7 @@ There are two options for storing your DANDI access credentials.
 
     - Note that there are no spaces around the "=".
 
-1. `keyring` Library
+2. `keyring` Library
     - If the `DANDI_API_KEY` environment variable is not set, the CLI will look up the API
         key using the [keyring](https://github.com/jaraco/keyring) library, which
         supports numerous backends, including the system keyring, an encrypted keyfile,
