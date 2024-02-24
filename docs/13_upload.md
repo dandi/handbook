@@ -101,7 +101,7 @@ If you have an issue using the Python CLI, see the [Dandi Debugging section](./1
 
 ## Storing Access Credentials
 
-There are three options for storing your DANDI access credentials.
+There are two options for storing your DANDI access credentials.
 
 1. `DANDI_API_KEY` Environment Variable
 
@@ -113,30 +113,30 @@ There are three options for storing your DANDI access credentials.
     - Note that there are no spaces around the "=".
 
 1. `keyring` Library
-    - If the `DANDI_API_KEY` environment variable is not set, the CLI will look up the API
+  1. If the `DANDI_API_KEY` environment variable is not set, the CLI will look up the API
       key using the [keyring](https://github.com/jaraco/keyring) library, which
       supports numerous backends, including the system keyring, an encrypted keyfile,
       and a plaintext (unencrypted) keyfile.
 
-    - You can store your API key where the `keyring` library can find it by using
+  2. Methods to store the API key with `keyring`
+    1. You can store your API key where the `keyring` library can find it by using
       the `keyring` program: Run `keyring set dandi-api-dandi key` and enter the
       API key when asked for the password for `key` in `dandi-api-dandi`.
 
-    - You can set the backend the `keyring` library uses either by setting the
-      `PYTHON_KEYRING_BACKEND` environment variable or by filling in [the `keyring`
-      library's configuration file](https://github.com/jaraco/keyring#configuring).
-      IDs for the available backends can be listed by running `keyring --list`.  If
-      no backend is specified in this way, the library will use the available
-      backend with the highest priority.
-
-1. Manual Password Entry
-    - If the API key isn't stored in either the `DANDI_API_KEY` environment variable
+    2. If the API key isn't stored in either the `DANDI_API_KEY` environment variable
       or in the keyring, the CLI will prompt you to enter the API key, and then it
       will store it in the keyring.  This may cause you to be prompted further; you
       may be asked to enter a password to encrypt/decrypt the keyring, or you may be
       asked by your OS to confirm whether to give the DANDI CLI access to the
       keyring.
 
+  3. `keyring` Backend
+    - You can set the backend the `keyring` library uses either by setting the
+      `PYTHON_KEYRING_BACKEND` environment variable or by filling in [the `keyring`
+      library's configuration file](https://github.com/jaraco/keyring#configuring).
+    - IDs for the available backends can be listed by running `keyring --list`.
+    - If no backend is specified in this way, the library will use the available
+      backend with the highest priority.
     - If the DANDI CLI encounters an error while attempting to fetch the API key
       from the default keyring backend, it will fall back to using an encrypted
       keyfile (the `keyrings.alt.file.EncryptedKeyring` backend).  If the keyfile
