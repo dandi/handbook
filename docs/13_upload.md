@@ -134,7 +134,7 @@ There are two options for storing your DANDI access credentials.
           If you answer "no," the CLI will exit with an error, and you must store the
           API key somewhere accessible to the CLI on your own.
 
-    - Methods to store the API key with `keyring`
+    - Storing the API key with `keyring`
         1. You can store your API key where the `keyring` library can find it by using
           the `keyring` program: Run `keyring set dandi-api-dandi key` and enter the
           API key when asked for the password for `key` in `dandi-api-dandi`.
