@@ -41,17 +41,52 @@ two different servers differ slightly.
 
             pip install -U dandi
 
-    3. Store your API key somewhere that the CLI can find it; see ["Storing
-          Access Credentials"](#storing-access-credentials) below.
+## Storing Access Credentials
 
-### **Data upload/management workflow**
+There are two options for storing your DANDI access credentials.
 
-1. Register a Dandiset to generate an identifier. You will be asked to enter
-    basic metadata: a name (title) and description (abstract) for your dataset.
-    Click `NEW DANDISET` in the Web application (top right corner) after logging in. 
-    After you provide a name and description, the dataset identifier will be created; 
-    we will call this `<dataset_id>`.
-1. NWB format:
+1. `DANDI_API_KEY` Environment Variable
+
+    - By default, the DANDI CLI looks for an API key in the `DANDI_API_KEY`
+      environment variable.  To set this on Linux or macOS, run:
+
+            export DANDI_API_KEY=personal-key-value
+
+    - Note that there are no spaces around the "=".
+
+2. `keyring` Library
+    - If the `DANDI_API_KEY` environment variable is not set, the CLI will look up the API
+        key using the [keyring](https://github.com/jaraco/keyring) library, which
+        supports numerous backends, including the system keyring, an encrypted keyfile,
+        and a plaintext (unencrypted) keyfile.
+
+    - Specifying the `keyring` backend
+        - You can set the backend the `keyring` library uses either by setting the
+          `PYTHON_KEYRING_BACKEND` environment variable or by filling in the `keyring`
+          library's [configuration file](https://github.com/jaraco/keyring#configuring).
+        - IDs for the available backends can be listed by running `keyring --list`.
+        - If no backend is specified in this way, the library will use the available
+          backend with the highest priority.
+        - If the DANDI CLI encounters an error while attempting to fetch the API key
+          from the default keyring backend, it will fall back to using an encrypted
+          keyfile (the `keyrings.alt.file.EncryptedKeyring` backend).  If the keyfile
+          does not already exist, the CLI will ask you for confirmation; if you answer
+          "yes," the `keyring` configuration file (if it does not already exist; see
+          above) will be configured to use `EncryptedKeyring` as the default backend.
+          If you answer "no," the CLI will exit with an error, and you must store the
+          API key somewhere accessible to the CLI on your own.
+
+    - Storing the API key with `keyring`
+        1. You can store your API key where the `keyring` library can find it by using
+          the `keyring` program: Run `keyring set dandi-api-dandi key` and enter the
+          API key when asked for the password for `key` in `dandi-api-dandi`.
+
+        2. If the API key isn't stored in either the `DANDI_API_KEY` environment variable
+          or in the keyring, the CLI will prompt you to enter the API key, and then it
+          will store it in the keyring.  This may cause you to be prompted further; you
+          may be asked to enter a password to encrypt/decrypt the keyring, or you may be
+          asked by your operating system to confirm whether to give the DANDI CLI access to the
+          keyring.
     1. Convert your data to NWB 2.1+ in a local folder. Let's call this `<source_folder>`.
     We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
     This step can be complex depending on your data.
