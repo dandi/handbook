@@ -88,6 +88,18 @@ There are two options for storing your DANDI access credentials.
           may be asked to enter a password to encrypt/decrypt the keyring, or you may be
           asked by your operating system to confirm whether to give the DANDI CLI access to the
           keyring.
+
+## Register a Dandiset
+
+Register a Dandiset to generate an identifier. 
+
+1. After logging in to https://dandiarchive.org, click the `NEW DANDISET` button in the top right corner.
+1. You will be asked to enter basic metadata for your dataset:
+    1. Title (i.e. name)
+    1. Description (i.e. abstract)
+    1. License
+1. The dataset identifier will be created; we will call this `<dataset_id>`.
+
     1. Convert your data to NWB 2.1+ in a local folder. Let's call this `<source_folder>`.
     We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
     This step can be complex depending on your data.
