@@ -1,4 +1,4 @@
-# General Policies v1.0.1
+# General Policies v1.1.0
 
 ## Content
 
@@ -19,10 +19,6 @@
   [Neuroimaging Data Model](NIDM), and other [BRAIN Initiative](https://braininitiative.nih.gov/)
   standards. We are working with the community to improve these standards and to
   make DANDI archive FAIR.
-- **File name/path limitations:** There is a limit of 512 characters for the full path length within a dandiset.
-- **Volume and size limitations:** There is a limit of 5TB per file. We currently
-  accept any size of standardized datasets, as long as you can upload them over
-  an HTTPS connection. However, we ask you contact us if you plan to upload more than 10TB of data.
 - **Data quality:** All data are provided “as-is”, and the user shall hold
   DANDI and data providers supplying data to the DANDI Archive free and harmless in
   connection with the use of such data.

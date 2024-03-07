@@ -103,6 +103,13 @@ To use the hub, you will need to register for an
 account using the [DANDI Web application](https://dandiarchive.org/). 
 Note that `Dandihub` is not intended for significant computation, but provides a place to introspect Dandisets and to perform some analysis and visualization of data.
 
+## Technical limitations
+
+- **File name/path:** There is a limit of 512 characters for the full path length within a dandiset.
+- **Volume and size:** There is a limit of 5TB per file. We currently
+  accept any size of standardized datasets, as long as you can upload them over
+  an HTTPS connection. However, we ask you contact us if you plan to upload more than 10TB of data.
+
 ## Citing DANDI
 
 You can add the following statement to the methods section of your manuscript.
