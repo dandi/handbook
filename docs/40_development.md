@@ -86,6 +86,21 @@ controls Netlify settings. The @dandibot GitHub account is the "owner" of the
 Netlify account used for this purpose; in order to get access to that account,
 speak to @satra.
 
+## Logging
+
+### Sentry
+
+Sentry is used for error tracking main deployment.
+To access Sentry, login to https://dandiarchive.sentry.io .
+
+### Heroku & Papertrail
+
+`dandi-api` and `dandi-api-staging` apps have Papertrail add-on configured to capture logs.
+To access papertrail login to [Heroku dashboard](https://dashboard.heroku.com), proceed to the corresponding app and click on "Papertrail" add-on.
+
+CRON job on `drogon` server backups Papertrail logs as .csv files hourly at `/mnt/backup/dandi/papertrail-logs/{app}`.
+Moreover, `heroku logs` processes per app dump logs to `/mnt/backup/dandi/heroku-logs/{app}` directory.
+
 ## Code Hosting
 
 All code repositories are hosted on GitHub. The easiest way to contribute is to
