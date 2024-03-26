@@ -86,6 +86,15 @@ controls Netlify settings. The @dandibot GitHub account is the "owner" of the
 Netlify account used for this purpose; in order to get access to that account,
 speak to @satra.
 
+## Monitoring
+
+### Service(s) status
+
+The DANDI project uses [upptime](https://upptime.js.org/) to monitor the status of DANDI provided and third-party services.
+The configuration is available in [.upptimerc.yml](https://github.com/dandi/upptime/blob/master/.upptimerc.yml) of the https://github.com/dandi/upptime repository, which is automatically updated by the upptime project pipelines.
+Upptime automatically opens new issues if any service becomes unresponsive, and closes issues whenever service comes back online.
+https://www.dandiarchive.org/upptime/ is the public dashboard for the status of DANDI services.
+
 ## Logging
 
 ### Sentry
@@ -100,6 +109,11 @@ To access papertrail login to [Heroku dashboard](https://dashboard.heroku.com), 
 
 CRON job on `drogon` server backups Papertrail logs as .csv files hourly at `/mnt/backup/dandi/papertrail-logs/{app}`.
 Moreover, `heroku logs` processes per app dump logs to `/mnt/backup/dandi/heroku-logs/{app}` directory.
+
+### Continuous Integration (CI) Jobs
+
+The DANDI project uses GitHub Actions for continuous integration.
+Logs for many of the repositories are archived on `drogon` server at `/mnt/backup/dandi/tinuous-logs/`.
 
 ## Code Hosting
 
