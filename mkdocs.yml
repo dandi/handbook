@@ -25,6 +25,7 @@ nav:
   - Data Licenses: "35_data_licenses.md"
   - User Guide:
     - Using DANDI: "10_using_dandi.md"
+    - Create DANDI Account: "16_account.md"
     - Viewing Dandisets: "11_view.md"
     - Downloading Data and Dandisets: "12_download.md"
     - Creating Dandisets and Uploading Data: "13_upload.md"

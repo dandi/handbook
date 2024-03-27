@@ -2,17 +2,6 @@
 
 To create a new Dandiset and upload your data, you need to have a DANDI account.
 
-## Create an Account on DANDI
-
-To create a DANDI account:
-
-1. [Create a GitHub account](https://github.com/) if you don't have one.
-2. Using your GitHub account, [register a DANDI account](https://gui.dandiarchive.org/#/user/register).
-
-You will receive an email acknowledging activation of your account within 24
-hours, after which you can log in to DANDI using GitHub by clicking the login
-button.
-
 ## Create a Dandiset and Add Data
 
 You can create a new Dandiset at https://dandiarchive.org. This Dandiset can be fully 
@@ -30,6 +19,7 @@ two different servers differ slightly.
 
 ### **Setup**
 
+1. To create a new Dandiset and upload your data, you need to have a DANDI account. See the [Create a DANDI Account](./16_account.md) page.
 1. Log in to DANDI and copy your API key. Click on your user initials in the
     top-right corner after logging in. Production (dandiarchive.org) and staging (gui-staging.dandiarchive.org) servers 
       have different API keys and different logins.
