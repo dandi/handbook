@@ -19,6 +19,10 @@ We request that users of this server be considerate of their usage of the DANDI 
 Training large deep neural networks is not appropriate.
 A "Base (MATLAB)" server is also available, which provides a MATLAB cloud installation but you would be required to provide your own license.
 
+## Custom server image
+
+If you need additional software installed in the image, you can add a server image that will be made available for all users in the `Server Options` menu.  Add a server image by updating the `profileList` in the [JupyterHub config file](https://github.com/dandi/dandi-hub/blob/do-eks/helm/jupyterhub/dandihub.yaml) and submitting a pull request to the [dandi-hub repository](https://github.com/dandi/dandi-hub).  Once the pull request is merged, the DANDI team will redeploy JupyterHub and the image will be available.
+
 ## Example notebooks
 
 The best way to share analyses on DANDI data is through the DANDI example notebooks.
