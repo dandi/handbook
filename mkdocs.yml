@@ -38,17 +38,17 @@ nav:
     - Notes: "40_development.md"
     - REST API Swagger: https://api.dandiarchive.org/swagger
     - REST API Redoc: https://api.dandiarchive.org/redoc
-  - DANDI Hub: "50_hub.md"
-  - Terms and Policies:
-      - Terms: "about/terms.md"
-      - Policies: "about/policies.md"
-  - About This Doc: "100_about_this_doc.md"
-  - Replicating Dandi:
+    - Replicating Dandi:
       - Getting Started: "60_initialize_vendors.md"
       - Dandi Authentication: "61_dandi_authentication.md"
       - Dandi CLI: "62_dandi_cli.md"
       - Dandi Infrastructure: "63_dandi_infrastructure.md"
       - Dandi Archive: "64_dandi_archive.md"
+  - DANDI Hub: "50_hub.md"
+  - Terms and Policies:
+      - Terms: "about/terms.md"
+      - Policies: "about/policies.md"
+  - About This Doc: "100_about_this_doc.md"
 
 # List of extensions
 markdown_extensions:
