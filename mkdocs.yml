@@ -41,7 +41,12 @@ nav:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
   - About This Doc: "100_about_this_doc.md"
-  - Replicating Dandi: "40_initialization.md"
+  - Replicating Dandi:
+      - Getting Started: "40_initialization.md"
+      - Dandi Authentication: "40_dandi_authentication.md"
+      - Dandi CLI: "40_dandi_cli.md"
+      - Dandi Infrastructure: "40_dandi_infrastructure.md"
+      - Dandi Archive: "40_dandi_archive.md"
 
 # List of extensions
 markdown_extensions:
