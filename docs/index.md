@@ -5,7 +5,7 @@ src="./img/dandi-banner.png"
 alt="dandi_banner"
 style="width: 75%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
-The Web interface to the DANDI archive is located at [https://dandiarchive.org](https://dandiarchive.org).
+The Web interface to the DANDI archive is located at https://dandiarchive.org.
 This documentation explains how to interact with the archive.
 
 ## How to Use This Documentation
@@ -24,14 +24,14 @@ page in the Developer Guide section.
 
 You can communicate with the DANDI team in a variety of ways, depending on your needs:
 
-- You can ask questions, report bugs, or
-  request features [at our helpdesk](https://github.com/dandi/helpdesk/issues/new/choose).
-- For interacting with the global neuroscience community, post on [https://neurostars.org](https://neurostars.org)
-  and use the tag [dandi](https://neurostars.org/tag/dandi).
-- You can use the DANDI Slack workspace, which we will invite you to after approving your [registration on
-  DANDI using GitHub](https://dandiarchive.org/) (this registration is required to upload data or to use the DANDI
+- You can ask questions, report bugs, or 
+request features [at our helpdesk](https://github.com/dandi/helpdesk/issues/new/choose).
+- For interacting with the global neuroscience community, post on https://neurostars.org
+and use the tag [dandi](https://neurostars.org/tag/dandi).
+- You can use the DANDI Slack workspace, which we will invite you to after approving your [registration on 
+  DANDI using GitHub](https://dandiarchive.org/) (this registration is required to upload data or to use the DANDI 
   JupyterHub). See [here for details on how to
-  register](./13_upload.md).
+  [register](./13_upload.md).
 - Email us: [info@dandiarchive.org](mailto: info@dandiarchive.org)
 
 ## Contributing and Feedback

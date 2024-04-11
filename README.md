@@ -1,5 +1,5 @@
 # DANDI Handbook
-Handbook for interacting with the DANDI archive.
+Handbook for interacting with the DANDI Archive.
 
 ## DANDI Style Guidelines
 
@@ -16,6 +16,7 @@ Follow the guidelines below when creating and revising text in the DANDI Handboo
 *	**license** (**not** licence); in general, prefer American spelling
 *	limited use of "please"
 *	steps should start with 1, not 0
+*	**DANDI Archive** - capitalize "archive" if it follows DANDI (**not** DANDI archive)
 
 ## HOWTO
 
