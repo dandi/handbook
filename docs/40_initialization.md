@@ -295,9 +295,12 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 ##### Populate Environment Variables
 
-After successful creation, you'll want to populate the following variables in the `Variables` section of the `Workspace`:
+Populate the following variables in the `Variables` section of the `Workspace`:
 
-You'll need to populate `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `HEROKU_API_KEY` and `HEROKU_EMAIL`
+1. `AWS_ACCESS_KEY_ID`
+2. `AWS_SECRET_ACCESS_KEY`
+3. `HEROKU_API_KEY`
+4. `HEROKU_EMAIL`
 
 <br/><br/>
 <img
