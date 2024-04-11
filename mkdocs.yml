@@ -40,10 +40,12 @@ nav:
     - REST API Redoc: https://api.dandiarchive.org/redoc
     - Replicating Dandi:
       - Getting Started: "60_initialize_vendors.md"
-      - Dandi Authentication: "61_dandi_authentication.md"
-      - Dandi CLI: "62_dandi_cli.md"
-      - Dandi Infrastructure: "63_dandi_infrastructure.md"
-      - Dandi Archive: "64_dandi_archive.md"
+      - DANDI Authentication: "61_dandi_authentication.md"
+      - DANDI CLI: "62_dandi_cli.md"
+      - DANDI Infrastructure: "63_dandi_infrastructure.md"
+      - DANDI Archive: "64_dandi_archive.md"
+      - DANDI Hub: "65_dandi_hub.md"
+      - Handling Neuroglancer in DANDI: "66_dandi_neuroglancer.md"
   - DANDI Hub: "50_hub.md"
   - Terms and Policies:
       - Terms: "about/terms.md"
