@@ -376,7 +376,7 @@ alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-Your frontend should be able to deploy to a auto-generated URL via Netlify now! Steps for domain management and configuration are described further in the [Frontend Deployment](.
+Your frontend should be able to deploy to an auto-generated URL via Netlify now! Steps for domain management and configuration are described further in the [Frontend Deployment](.
 ./42_frontend_deployment) section of these docs.
 
 ## Sentry
