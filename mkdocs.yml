@@ -44,11 +44,11 @@ nav:
       - Policies: "about/policies.md"
   - About This Doc: "100_about_this_doc.md"
   - Replicating Dandi:
-      - Getting Started: "40_initialization.md"
-      - Dandi Authentication: "40_dandi_authentication.md"
-      - Dandi CLI: "40_dandi_cli.md"
-      - Dandi Infrastructure: "40_dandi_infrastructure.md"
-      - Dandi Archive: "40_dandi_archive.md"
+      - Getting Started: "60_initialize_vendors.md"
+      - Dandi Authentication: "61_dandi_authentication.md"
+      - Dandi CLI: "62_dandi_cli.md"
+      - Dandi Infrastructure: "63_dandi_infrastructure.md"
+      - Dandi Archive: "64_dandi_archive.md"
 
 # List of extensions
 markdown_extensions:
