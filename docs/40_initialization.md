@@ -191,7 +191,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 ## GitHub
 
-You'll need to create a GitHub Organization with your DANDI fork. [See here for documentation to create a GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch)
+You'll need to create a GitHub Organization where you can fork the DANDI repositories. [See here for documentation to create a GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch)
 
 ##### Initialize your OAuth App
 
