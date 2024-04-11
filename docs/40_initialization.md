@@ -1,6 +1,6 @@
-# Getting Started
+# Initialize Vendor Accounts
 
-This series of docs displays how to create a clone of DANDI. It is suggested that you briefly read through each of the
+This series of documents explains how to create a new instance of the DANDI project (i.e. a clone of the DANDI Archive). It is suggested that you briefly read through each of the
 documents in this guide before starting.
 
 Other than cloning repositories and writing code, you'll first need to set up a handful of accounts. These accounts help facilitate
