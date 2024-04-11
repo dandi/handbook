@@ -3,12 +3,7 @@
 This series of documents explains how to create a new instance of the DANDI project (i.e. a clone of the DANDI Archive). It is suggested that you briefly read through each of the
 documents in this guide before starting.
 
-Other than cloning repositories and writing code, you'll first need to set up a handful of accounts. These accounts help facilitate
-the creation of services and libraries that eventually can be available to the public.
-
-The Dandi ecosystem relies on a handful of vendor services to operate:
-
-The following accounts must be made to create your Dandi clone in a production setting:
+The DANDI ecosystem relies on vendor services to operate.  So first you will need to set up accounts with the following vendors:
 
 • **Heroku**
 
