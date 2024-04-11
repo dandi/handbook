@@ -406,7 +406,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 ##### Capture Sentry DSN value
 
 You'll be provided with a screen displaying how to initialize and install Sentry into your Django app. For now, just capture the DSN value.
-This value will be used later as an environment variables while deploying your API via Terraform
+This value will be used later as an environment variable while deploying your API via Terraform.
 
 <br/><br/>
 <img
