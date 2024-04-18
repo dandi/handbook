@@ -2,7 +2,7 @@
 
 ## Setting up your GitHub OAuth Account
 
-Please follow the steps in [Initialize Vendors - Github](../60_initialize_vendors/#github) to get started.
+Please follow the steps in [Initialize Vendors - GitHub](../60_initialize_vendors/#github) to get started.
 
 For the next steps in setting up authentication, you'll want to record the values
 created during [Obtaining your Oauth App creds](..60_initialize_vendors/#obtaining-your-oauth-app-credentials).
@@ -52,6 +52,9 @@ After creating this object, you are all set in the Django Admin panel for now.
 
 ## Populating appropriate values for the frontend to handle authentication
 
+
+
 ## Configuring Migrations for Initial Auth Setup
 
-## Session Management
+
+

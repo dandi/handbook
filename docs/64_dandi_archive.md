@@ -1,12 +1,34 @@
 # Work In Progress
 
+## Understanding the concept of the Procfile for Heroku
+
+This step assumes that you have completed all steps in: 
+• [Initialize Vendors](../60_initialize_vendors)
+• [DANDI Infrastructure](../63_dandi_infrastructure)
+
+Heroku initializes compute on servers (known as `dynos` in Heroku land). Each `dyno` that you have runs a process.
+Which process, the resources allocated to that process, and how that process is run, is defined in a `Procfile`
+
+DANDI Archive defines a [Procfile](https://github.com/dandi/dandi-archive/blob/master/Procfile). In this `Procfile`,
+you'll see several entries:
+
+• `release`: a command that is run each time a new version of DANDI API is pushed to Heroku
+• `web`: runs `gunicorn`, a persistent server that handles HTTP requests for the DANDI API
+• `worker`: a worker process that runs `celery` behind-the-scenes. `celery` handles tasks that would otherwise cause the API to timeout
+• `checksum-worker`: another worker, also using `celery`, that specifically calculates if a new file pushed to DANDI Archive is new/updated, and determines what exactly has been changed
+• `analytics-worker`: another `celery` worker that handles all tasks related to processing of S3-related logs
+
+This `Procfile` shouldn't need to be changed or reconfigured much for a DANDI-clone; however, it is important to note so that one may understand how the Archive is working
+
+## Understanding metrics and logging via Heroku
+
+## Configuring email alerts via Heroku
+
 ## Creating a Django "superuser" (Admin) Account
 
 ## Updating Allowed Hosts
 
 ## Referencing Authentication credentials from migrations
-
-## Setting up a "Superuser" (Admin) Account
 
 ## Deployment Strategy via Heroku's Procfile
 
