@@ -7,7 +7,9 @@ Please follow the steps in [Initialize Vendors - GitHub](../60_initialize_vendor
 For the next steps in setting up authentication, you'll want to record the values
 created during [Obtaining your Oauth App creds](..60_initialize_vendors/#obtaining-your-oauth-app-credentials).
 
-## Creating "Sites" and "Social App" in DANDI Archive Admin Panel
+## Creating and Updating Objects in the DANDI Archive Admin Panel
+
+### Creating "Sites" and "Social App" Objects
 
 *In order to complete this step, you will need to have deployed an initial DANDI Archive API -- see here for more details [Creating the DANDI Archive API](../64_dandi_archive)
 
@@ -48,15 +50,38 @@ Once in this panel, you'll want to create a `Social Application` object with:
 • The client secret as your GitHub OAuth client secret
 • Two `Sites` objects -- these objects you should have created a few steps prior
 
+### Updating (or creating) the "Application" Object
+
+Stay signed in the Django Admin panel. You'll next want to update (or create if not present) an `Application` object. Similar to the steps above,
+you'll need to populate the client ID with your Github OAuth client ID -- see the screenshot below for the configuration that would be appropriate.
+
+If this object exists (it can if you ran migrations first/deployed to Heroku), you can simply update the values to your appropriate redirect URLs and client ID.
+
+<br/><br/>
+<img
+src="../img/django_app.png"
+alt="django_app"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
 After creating this object, you are all set in the Django Admin panel for now.
 
 ## Populating appropriate values for the frontend to handle authentication
 
-This step assumes that you have successfully set up your Netlify account:
+This step assumes that you have [successfully set up your Netlify account](../60_initialize_vendors/#netlify).
+
+There are two places that you'll want to update values relevant to your frontend.
+
+- `netlify.toml`
+- `.env.production`
+
+For `netlify.toml`: This should be located in the `web/` sub-directory -- [see DANDI Archive web/netlify.toml](https://github.com/dandi/dandi-archive/blob/master/web/netlify.toml). This is a file in which you can configure different settings for different environments in Netlify
+
+For `.env.production`: This should also be located in the `web/` sub-directory --  [see DANDI Archive web/.env.production](https://github.com/dandi/dandi-archive/blob/master/web/.env.production). This is a file that will inject environment variables into the frontend upon build (e.g. `vite build`)
+
+You'll need to update the relevant values that reflect what was in your `Social Application` object for both files. You will also notice an environment variable related to `Sentry` -- this value can be obtained from your Sentry account.
 
 
-
-## Referencing Authentication credentials from migrations in DANDI Archive
 
 
 

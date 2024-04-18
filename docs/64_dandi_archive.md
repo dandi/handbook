@@ -92,10 +92,14 @@ To do one final test, try using your credentials to log into the Django Admin pa
 
 You are all set here!
 
+## Frontend Deployment
+
+A majority of the necessary setup steps here are defined already [during the vendor account setup for Netlify](../60_initialize_vendors/#netlify).
+
+The only other major initial setup step for the DANDI Archive frontend is regarding authentication -- [see here for more details](../61_dandi_authentication/#populating-appropriate-values-for-the-frontend-to-handle-authentication)
+
 ## Updating Allowed Hosts
 
 ## Approval of Users
-
-## Frontend Deployment
 
 ## Setting up Staging Environments
