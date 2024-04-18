@@ -81,7 +81,3 @@ For `.env.production`: This should also be located in the `web/` sub-directory -
 
 You'll need to update the relevant values that reflect what was in your `Social Application` object for both files. You will also notice an environment variable related to `Sentry` -- this value can be obtained from your Sentry account.
 
-
-
-
-

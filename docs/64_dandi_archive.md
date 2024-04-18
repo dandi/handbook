@@ -100,6 +100,26 @@ The only other major initial setup step for the DANDI Archive frontend is regard
 
 ## Updating Allowed Hosts
 
+For the Django-based DANDI Archive API to receive and send HTTP requests without CORS errors, you'll need to update `ALLOWED_HOSTS` within the `dandiapi/settings.py` file.
+
+The `settings.py` file, in general, can be understood as the configuration file for the Django app -- [see the Django docs for more info here](https://docs.djangoproject.com/en/5.0/topics/settings/)
+
+For the `ALLOWED_HOSTS` value to work, the following code snippet can be added, for example:
+
+```python
+class HerokuProductionConfiguration(DandiMixin, HerokuProductionBaseConfiguration):
+    ...other configurations...
+
+    if 'ALLOWED_HOSTS' not in globals():
+        ALLOWED_HOSTS = []
+
+    ALLOWED_HOSTS += [
+        '<your-api-url>'
+    ]
+```
+
 ## Approval of Users
+
+
 
 ## Setting up Staging Environments
