@@ -52,9 +52,11 @@ After creating this object, you are all set in the Django Admin panel for now.
 
 ## Populating appropriate values for the frontend to handle authentication
 
+This step assumes that you have successfully set up your Netlify account:
 
 
-## Configuring Migrations for Initial Auth Setup
+
+## Referencing Authentication credentials from migrations in DANDI Archive
 
 
 
