@@ -1,10 +1,20 @@
 # Work In Progress
 
-## Understanding the concept of the Procfile for Heroku
-
 This step assumes that you have completed all steps in: 
 • [Initialize Vendors](../60_initialize_vendors)
 • [DANDI Infrastructure](../63_dandi_infrastructure)
+
+## Initial Steps
+
+### Running terraform apply upon dandi-infrastructure for the first time
+
+Resources (e.g. the servers and environment ) for DANDI Archive are provisioned upon applying the Terraform definitions in
+`dandi-infrastructure`, specifically in the [api.tf definition](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/api.tf)
+The resources won't be running anything until your first Heroku `release` upon the Heroku app
+
+To see how your code would translate into a new `Heroku` release, [see the GitHub actions workflow used by DANDI Archive here](https://github.com/dandi/dandi-archive/blob/master/.github/workflows/backend-production-deploy.yml)
+
+## Understanding the concept of the Procfile for Heroku
 
 Heroku initializes compute on servers (known as `dynos` in Heroku land). Each `dyno` that you have runs a process.
 Which process, the resources allocated to that process, and how that process is run, is defined in a `Procfile`
@@ -18,11 +28,13 @@ you'll see several entries:
 • `checksum-worker`: another worker, also using `celery`, that specifically calculates if a new file pushed to DANDI Archive is new/updated, and determines what exactly has been changed
 • `analytics-worker`: another `celery` worker that handles all tasks related to processing of S3-related logs
 
-This `Procfile` shouldn't need to be changed or reconfigured much for a DANDI-clone; however, it is important to note so that one may understand how the Archive is working
+This `Procfile` shouldn't need to be changed or reconfigured much for a DANDI-clone; however, it is important to note so that one may understand how DANDI Archive is working.
 
 ## Understanding metrics and logging via Heroku
 
-## Configuring email alerts via Heroku
+
+
+### Configuring email alerts via Heroku
 
 ## Creating a Django "superuser" (Admin) Account
 
