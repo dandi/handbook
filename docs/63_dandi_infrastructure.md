@@ -3,3 +3,5 @@
 ## Configuring Terraform
 
 ## Manual Steps in the AWS Console and Netlify
+
+## Setting up Email

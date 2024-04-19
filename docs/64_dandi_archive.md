@@ -120,6 +120,28 @@ class HerokuProductionConfiguration(DandiMixin, HerokuProductionBaseConfiguratio
 
 ## Approval of Users
 
+By default in DANDI, only users whose emails end in `.edu` are automatically approved -- [for code reference, see here](https://github.com/dandi/dandi-archive/blob/6e72653688a6b45066c04b94a44f830b734887dd/dandiapi/api/views/auth.py#L127).
 
+For all other users, proceed into the Django Admin panel.
+
+Click on the `Users` tab -- in the tab, find the appropriate user and click on their e-mail
+
+<br/><br/>
+<img
+src="../img/user_approval.png"
+alt="user_approval"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+Scroll down to the `User Metadata` section, where you will see a `Status` option.
+
+Click `Approved` and then `Save` on the bottom of the screen -- the user will now have access to a valid API Key, in which they can interact with relevant assets within your Archive
+
+<br/><br/>
+<img
+src="../img/user_metadata.png"
+alt="user_metadata"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
 
 ## Setting up Staging Environments
