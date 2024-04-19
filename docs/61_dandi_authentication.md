@@ -24,7 +24,7 @@ alt="admin_panel"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-Next, you'll want to proceed to the `Sites' tab -- create 2 sites, one for your UI, and another for your API domain
+Proceed to the `Sites` tab. Create 2 sites: one for your UI, and another for your API domain.
 
 <br/><br/>
 <img
