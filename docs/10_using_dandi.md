@@ -90,7 +90,7 @@ The [DANDI Python client](https://pypi.org/project/dandi/) allows you to:
 * Organize your data locally before upload
 * Upload Dandisets
 
-Before you can use the DANDI Python client, you have to install the package with `pip install dandi` in a Python 3.7+
+Before you can use the DANDI Python client, you have to install the package with `pip install dandi` in a Python 3.8+
 environment.
 
 You should check the [Dandi Debugging section](./15_debugging.md) in case of any problems.
