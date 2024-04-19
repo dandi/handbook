@@ -79,5 +79,5 @@ For `netlify.toml`: This should be located in the `web/` sub-directory -- [see D
 
 For `.env.production`: This should also be located in the `web/` sub-directory --  [see DANDI Archive web/.env.production](https://github.com/dandi/dandi-archive/blob/master/web/.env.production). This is a file that will inject environment variables into the frontend upon build (e.g. `vite build`)
 
-You'll need to update the relevant values that reflect what was in your `Social Application` object for both files. You will also notice an environment variable related to `Sentry` -- this value can be obtained from your Sentry account.
+Update the relevant values that reflect what was in your `Social Application` object for both files. You will also notice an environment variable related to `Sentry` -- this value can be obtained from your Sentry account.
 
