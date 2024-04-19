@@ -43,7 +43,7 @@ alt="social_app_panel"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-Once in this panel, you'll want to create a `Social Application` object with:
+Create a `Social Application` object with:
 
 • The Provider as `GitHub`
 • The client ID as your GitHub OAuth client ID
