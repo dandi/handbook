@@ -52,8 +52,8 @@ Create a `Social Application` object with:
 
 ### Updating (or creating) the "Application" Object
 
-Stay signed in the Django Admin panel. You'll next want to update (or create if not present) an `Application` object. Similar to the steps above,
-you'll need to populate the client ID with your Github OAuth client ID -- see the screenshot below for the configuration that would be appropriate.
+Stay signed in the Django Admin panel. Update (or create, if not present) an `Application` object. Similar to the steps above,
+populate the client ID with your Github OAuth client ID. See the screenshot below for the configuration that would be appropriate.
 
 If this object exists (it can if you ran migrations first/deployed to Heroku), you can simply update the values to your appropriate redirect URLs and client ID.
 
