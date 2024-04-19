@@ -1,4 +1,5 @@
 mkdocs-material>=9.5.10
 pymdown-extensions
 mkdocs-open-in-new-tab
-mkdocs-jupyter==0.24.6
+mkdocs-jupyter
+psutil=5.9.7
