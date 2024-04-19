@@ -39,6 +39,8 @@ nav:
     - REST API Swagger: https://api.dandiarchive.org/swagger
     - REST API Redoc: https://api.dandiarchive.org/redoc
   - DANDI Hub: "50_hub.md"
+  - Tutorials:
+    - Streaming and interacting with NWB data: "example-notebooks/tutorials/bcm_2024/analysis-demo.ipynb"
   - Terms and Policies:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
@@ -57,6 +59,8 @@ markdown_extensions:
 plugins:
   - search
   - open-in-new-tab
+  - mkdocs-jupyter:
+      include: ["*.ipynb"]
 
 # Customize theme
 extra:

@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   build:
@@ -11,6 +12,9 @@ jobs:
     steps:
       - name: Checkout master
         uses: actions/checkout@v1
+
+      - name: Copy example-notebooks repository
+        run: git clone https://github.com/dandi/example-notebooks
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
