@@ -33,8 +33,8 @@ alt="site_admin"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-Next, you'll want to proceed to the `Social applications` tab, located on the left side panel. Once in this panel, you'll need to click
-`Add Social Application` in the top right corner
+Proceed to the `Social applications` tab, located on the left side panel. 
+Click `Add Social Application` in the top right corner.
 
 <br/><br/>
 <img
