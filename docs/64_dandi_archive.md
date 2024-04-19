@@ -143,5 +143,3 @@ src="../img/user_metadata.png"
 alt="user_metadata"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
-
-## Setting up Staging Environments
