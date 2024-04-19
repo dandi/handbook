@@ -70,7 +70,7 @@ After creating this object, you are all set in the Django Admin panel for now.
 
 This step assumes that you have [successfully set up your Netlify account](../60_initialize_vendors/#netlify).
 
-There are two places that you'll want to update values relevant to your frontend.
+There are two places to update values relevant to the frontend.
 
 - `netlify.toml`
 - `.env.production`
