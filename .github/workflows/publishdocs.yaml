@@ -24,11 +24,7 @@ jobs:
       - name: Install requirements
         run: pip install -r requirements.txt
 
-      # - name: Correct gcc error
-      #   run: sudo apt-get install gcc python3-dev
-
       - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
-        run: apk add linux-headers
+        uses: kabilar/mkdocs-deploy-gh-pages@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
