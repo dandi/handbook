@@ -40,7 +40,7 @@ nav:
     - REST API Redoc: https://api.dandiarchive.org/redoc
   - DANDI Hub: "50_hub.md"
   - Tutorials:
-    - Streaming and interacting with NWB data: "../example-notebooks/tutorials/bcm_2024/analysis-demo.ipynb"
+    - Streaming and interacting with NWB data: "example-notebooks/tutorials/bcm_2024/analysis-demo.ipynb"
   - Terms and Policies:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
