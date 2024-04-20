@@ -29,5 +29,6 @@ jobs:
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        run: apk add linux-headers
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
