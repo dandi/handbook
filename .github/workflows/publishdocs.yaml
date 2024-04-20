@@ -16,6 +16,9 @@ jobs:
       - name: Copy example-notebooks repository
         run: git clone https://github.com/dandi/example-notebooks
 
+      - name: Correct gcc error
+        run: sudo apt-get install python3-dev
+
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
         env:
