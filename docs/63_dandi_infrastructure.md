@@ -174,7 +174,9 @@ Populate the value in the [appropriate account ID reference](https://github.com/
 ### Staging vs. Production
 
 For staging, you can modify and apply the [staging_bucket.tf](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/staging_bucket.tf) 
-and [staging_pipeline.tf](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/staging_pipeline.tf)
+and [staging_pipeline.tf](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/staging_pipeline.tf).
+
+Setting up staging will require unique AWS Route 53 Domains, as well a different Heroku app with different compute.
 
 ### Email Setup
 
