@@ -65,9 +65,12 @@ A `sponsored bucket` is also declared in the `main.tf`, with downstream, related
 
 ## Domain Management
 
-DANDI Infrastructure manages domains for two different vendors:
+**DANDI Infrastructure assumes that you 1. own a domain, and 2. have purchased that domain (or have that domain managed) via AWS Route 53**
+
+DANDI Infrastructure connects domains from three different vendors:
 - `Netlify`: Manages load balancer IPs, as well as custom domains, specifically for the UI
-- `AWS Route 53`: Manages all API-based endpoints, as well as email and SSL certificate domains
+- `AWS Route 53`: Manages all CNAME records for SSL certificates, as well as linkage of Heroku API URLs to domain
+- `Heroku`: Issues domains for API services that are given aliases via AWS Route 53
 
 ### Netlify
 
@@ -86,7 +89,70 @@ resource "aws_route53_record" "gui" {
 
 Note the code blob above, as referenced from [DANDI Infrastructure domain.tf Terraform template](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/domain.tf#L13).
 
-### AWS Route 53
+### AWS Route 53 and ACM
+
+A manual step is necessary to set up an SSL Certificate for your DNS records throughout your DANDI clone. 
+
+Proceed to AWS `Certificate Manager`. Begin by requesting a certificate -- **Note: Ensure you are in the same region as the default you have provided in your Terraform `main.tf` template.
+
+<br/><br/>
+<img
+src="../img/aws_acm_dashboard.png"
+alt="aws_acm_dashboard"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+Next, request a `Public Certificate`
+
+<br/><br/>
+<img
+src="../img/public_cert.png"
+alt="public_cert"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+When setting up the certificate, provide a value of `*.<your_domain_name>` -- the goal being that the `*` will serve as a wildcard for both your API and UI DNS records
+
+<br/><br/>
+<img
+src="../img/valid_domain_acm.png"
+alt="valid_domain_acm"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+### Heroku API Domain
+
+Heroku will provision an API endpoint for your DANDI Archive. In order to properly map and configure that domain, first proceed to the 
+`Settings` tab in Heroku.
+
+<br/><br/>
+<img
+src="../img/heroku_settings.png"
+alt="heroku_settings"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+Scroll down and find configuration options for SSL and Domains. Heroku will give you random DNS target for 
+the API (in the case of the screenshot below `sleepy-jellyfish-0e1p913yo2bgizl1808pss2p.herokudns.com`)
+
+<br/><br/>
+<img
+src="../img/heroku_domain_config.png"
+alt="heroku_domain_config"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+Proceed to AWS Route 53. Create a corresponding CNAME that maps to the DNS target provided by Heroku.
+
+<br/><br/>
+<img
+src="../img/heroku_cname.png"
+alt="heroku_cname"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+As long as the CNAME is covered by a valid SSL certificate, should be fully set up now.
+
 
 ## AWS Buckets
 
@@ -108,5 +174,3 @@ Populate the value in the [appropriate account ID reference](https://github.com/
 ### Email Setup
 
 TBD
-
-## Manual Steps in the AWS Console and Netlify
