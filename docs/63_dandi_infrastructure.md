@@ -120,6 +120,9 @@ alt="valid_domain_acm"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
+Lastly, validate your certificate via DNS Records. This can be done by using the CNAME values 
+expressed by the certificate and linking them as records in your DNS Hosted Zone.
+
 ### Heroku API Domain
 
 Heroku will provision an API endpoint for your DANDI Archive. In order to properly map and configure that domain, first proceed to the 
@@ -153,7 +156,6 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 As long as the CNAME is covered by a valid SSL certificate, should be fully set up now.
 
-
 ## AWS Buckets
 
 While [Girder](https://github.com/girder/terraform-heroku-girder4) does declare S3-based resources, configuration is still needed within DANDI Infrastructure.
@@ -170,6 +172,9 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 Populate the value in the [appropriate account ID reference](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/main.tf#L14) in the `main.tf` template.
 
 ### Staging vs. Production
+
+For staging, you can modify and apply the [staging_bucket.tf](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/staging_bucket.tf) 
+and [staging_pipeline.tf](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/staging_pipeline.tf)
 
 ### Email Setup
 
