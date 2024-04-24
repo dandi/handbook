@@ -178,6 +178,8 @@ and [staging_pipeline.tf](https://github.com/dandi/dandi-infrastructure/blob/mas
 
 Setting up staging will require unique AWS Route 53 Domains, as well a different Heroku app with different compute.
 
+**Note -- ensure you review your `web/netlify.toml` file -- this will define different environment variables that correspond with staging vs. production**
+
 ### Email Setup
 
 TBD
