@@ -4,7 +4,7 @@ This step assumes that you have completed all steps in: [Initialize Vendors](../
 
 ## Initial Steps
 
-### Running terraform apply upon dandi-infrastructure for the first time
+### Running "terraform apply" upon dandi-infrastructure for the first time
 
 Resources (e.g. the servers and environment ) for DANDI Archive are provisioned upon applying the Terraform definitions in
 `dandi-infrastructure`, specifically in the [api.tf definition](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/api.tf)
@@ -97,6 +97,45 @@ You are all set here!
 A majority of the necessary setup steps here are defined already [during the vendor account setup for Netlify](../60_initialize_vendors/#netlify).
 
 The only other major initial setup step for the DANDI Archive frontend is regarding authentication -- [see here for more details](../61_dandi_authentication/#populating-appropriate-values-for-the-frontend-to-handle-authentication)
+
+## API Deployment
+
+### Via GitHub CI/CD
+
+Within the DANDI Archive repository, GitHub actions workflows exist for deployments to [production](https://github.com/dandi/dandi-archive/blob/master/.github/workflows/backend-production-deploy.yml) and [staging](https://github.com/dandi/dandi-archive/blob/master/.github/workflows/backend-staging-deploy.yml) environments
+
+- **Staging**: by default, releases are manual via the `workflow_dispatch` clause in the workflow
+
+To invoke the pipeline, proceed to the `Actions` tab in GitHub and find the pipeline name in the column on the left
+
+<br/><br/>
+<img
+src="../img/github_actions_workflow.png"
+alt="github_actions_workflow"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+Proceed to click the `Run Workflow` option.
+
+<br/><br/>
+<img
+src="../img/github_run_workflow.png"
+alt="github_run_workflow"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+Other than the output of the CI/CD workflow, you can observe the status of the new release via your Heroku app dashboard.
+
+- **Production**:  by default, releases are managed via "tags" applied to given PRs merged into main with the label of "released"
+
+<br/><br/>
+<img
+src="../img/github_label.png"
+alt="github_label"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+**Note: `workflow_dispatch` may also be applied if you'd like to be more intentional with releases.**
 
 ## Updating Allowed Hosts
 

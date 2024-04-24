@@ -68,9 +68,9 @@ A `sponsored bucket` is also declared in the `main.tf`, with downstream, related
 **DANDI Infrastructure assumes that you 1. own a domain, and 2. have purchased that domain (or have that domain managed) via AWS Route 53**
 
 DANDI Infrastructure connects domains from three different vendors:
-- `Netlify`: Manages load balancer IPs, as well as custom domains, specifically for the UI
-- `AWS Route 53`: Manages all CNAME records for SSL certificates, as well as linkage of Heroku API URLs to domain
-- `Heroku`: Issues domains for API services that are given aliases via AWS Route 53
+- **Netlify**: Manages load balancer IPs and custom domains for the UI.
+- **AWS Route 53**: Manages CNAME records for SSL certificates and links Heroku API URLs to domains.
+- **Heroku**: Provides domains for API services, which are aliased via AWS Route 53.
 
 ### Netlify
 
