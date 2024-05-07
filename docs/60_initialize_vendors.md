@@ -275,7 +275,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 ## Terraform Cloud
 
-Terraform is configuration tool for managing "infrastructure-as-code" -- meaning that we can programatically manage infrastructure in
+Terraform is configuration tool for managing "infrastructure-as-code" -- meaning that we can programmatically manage infrastructure in
 a traceable, version-controlled form.
 
 The Terraform ecosystem provides a UI tool called **Terraform Cloud**
