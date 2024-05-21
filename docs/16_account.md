@@ -2,7 +2,7 @@
 
 A DANDI account is only required for specific features.
 Without a DANDI account, you can search, view, and download files.
-With a DANDI account, you can additionally create Dandisets and access the DANDI Hub to analyze existing data.
+With a DANDI account, you can additionally create and edit Dandisets and access the DANDI Hub to analyze existing data.
 
 ## Instructions
 
