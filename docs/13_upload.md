@@ -109,20 +109,44 @@ There are two options for storing your DANDI access credentials.
         and a plaintext (unencrypted) keyfile.
 
     - Specifying the `keyring` backend
-        - You can set the backend the `keyring` library uses either by setting the
-          `PYTHON_KEYRING_BACKEND` environment variable or by filling in the `keyring`
-          library's [configuration file](https://github.com/jaraco/keyring#configuring).
-        - IDs for the available backends can be listed by running `keyring --list`.
-        - If no backend is specified in this way, the library will use the available
-          backend with the highest priority.
-        - If the DANDI CLI encounters an error while attempting to fetch the API key
-          from the default keyring backend, it will fall back to using an encrypted
-          keyfile (the `keyrings.alt.file.EncryptedKeyring` backend).  If the keyfile
-          does not already exist, the CLI will ask you for confirmation; if you answer
-          "yes," the `keyring` configuration file (if it does not already exist; see
-          above) will be configured to use `EncryptedKeyring` as the default backend.
-          If you answer "no," the CLI will exit with an error, and you must store the
+        - You can set the backend the `keyring` library uses either by setting
+          the `PYTHON_KEYRING_BACKEND` environment variable or by filling in
+          the `keyring` library's [configuration
+          file](https://github.com/jaraco/keyring#configuring).
+
+        - IDs for the available backends can be listed by running `keyring
+          --list`.
+
+        - If no backend is specified in this way, the library will use the
+          available backend with the highest priority.
+
+        - If the DANDI CLI encounters an error while attempting to fetch the
+          API key from the default keyring backend, it will fall back to using
+          an encrypted keyfile (the `keyrings.alt.file.EncryptedKeyring`
+          backend).  If the keyfile does not already exist, the CLI will ask
+          you for confirmation; if you answer "yes," the `keyring`
+          configuration file (if it does not already exist; see above) will be
+          configured to use `EncryptedKeyring` as the default backend.  If you
+          answer "no," the CLI will exit with an error, and you must store the
           API key somewhere accessible to the CLI on your own.
+
+            - Unless a different location is set via the `keyring`
+              configuration file, the encrypted keyfile will be located at the
+              following path:
+
+                - On Linux and macOS, if the `XDG_DATA_HOME` environment
+                  variable is set to a nonempty string, the keyfile will be at
+                  `$XDG_DATA_HOME/python_keyring/crypted_pass.cfg`; otherwise,
+                  it will be at
+                  `~/.local/share/python_keyring/crypted_pass.cfg`.
+
+                - On Windows, if the `LOCALAPPDATA` environment variable is
+                  set, the keyfile will be at `%LOCALAPPDATA%\Python
+                  Keyring\crypted_pass.cfg`; otherwise, if the `ProgramData`
+                  environment variable is set, the keyfile will be at
+                  `%ProgramData%\Python Keyring\crypted_pass.cfg`; otherwise,
+                  it will be at `Python Keyring\crypted_pass.cfg` within the
+                  current directory.
 
     - Storing the API key with `keyring`
         1. You can store your API key where the `keyring` library can find it by using
