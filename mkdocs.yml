@@ -39,6 +39,9 @@ nav:
     - REST API Swagger: https://api.dandiarchive.org/swagger
     - REST API Redoc: https://api.dandiarchive.org/redoc
   - DANDI Hub: "50_hub.md"
+  - Health Status:
+    - Dandisets: https://github.com/dandi/dandisets-healthstatus
+    - Services: https://www.dandiarchive.org/upptime
   - Terms and Policies:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
