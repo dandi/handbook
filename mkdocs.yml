@@ -66,6 +66,7 @@ plugins:
   - search
   - open-in-new-tab
   - mkdocs-jupyter:
+      ignore_h1_titles: True
       include: ["*.ipynb"]
 
 # Customize theme
