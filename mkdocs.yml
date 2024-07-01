@@ -41,6 +41,12 @@ nav:
   - DANDI Hub: "50_hub.md"
   - Tutorials:
     - Streaming and interacting with NWB data: "example-notebooks/tutorials/bcm_2024/analysis-demo.ipynb"
+    - DANDI User Guide, Part I: "tutorials/DANDI User Guide, Part I.ipynb"
+    - DANDI User Guide, Part II: "tutorials/DANDI User Guide, Part II.ipynb"
+    - Simple Dandiset Search: "tutorials/simple_dandiset_search.ipynb"
+    - Advanced Asset Search: "tutorials/advanced_asset_search.ipynb"
+    - Streaming and interacting with NWB data: "tutorials/analysis-demo.ipynb"
+    - NWB Widget Demo: "tutorials/NWBWidget-demo.ipynb"
   - Terms and Policies:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
