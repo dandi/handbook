@@ -17,7 +17,7 @@ jobs:
         run: |
           git clone https://github.com/dandi/example-notebooks
           mv ./example-notebooks ./docs/
-      - run: ls -la ./docs/example-notebooks
+
       - name: Deploy docs
         uses: kabilar/mkdocs-deploy-gh-pages@master
         env:
