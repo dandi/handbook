@@ -69,30 +69,31 @@ an incorrect URL (e.g. `dandi download wrongurl`) will provide a list of support
 
 ## Using DataLad
 
-All dandisets are regularly mirrored to DataLad datasets which are made available from https://github.com/dandisets GitHub organization.
-Where present, individual [Zarr](https://zarr.dev/) files are included as subdatasets ([git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)) from the https://github.com/dandizarrs/ GitHub organization.
+All dandisets are regularly mirrored to DataLad datasets which are made available at the GitHub organization https://github.com/dandisets.
+Where present, individual [Zarr](https://zarr.dev/) files are included as subdatasets ([git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)) hosted in the GitHub organization <https://github.com/dandizarrs/>.
 
-Dandiset releases are tagged with Git tags and a history of modifications is available at the time intervals of execution of the mirroring job.
+The Git revision histories of each dataset reflect the Dandiset's draft state as of each execution of the mirroring job.
+Published Dandiset versions are tagged with Git tags.
 
-With DataLad you can
-- clone the entire dataset,
+With DataLad, you can:
+- clone an entire dataset,
 - use a specific version of it,
 - explore history of modifications,
-- download content of the files of interest,
-- drop the content of no longer needed files,
+- download content of files of interest,
+- locally discard the content of no-longer-needed files,
 - use the dataset in a reproducible manner,
 - include it as a subdataset in your own DataLad dataset,
-- use https://github.com/datalad/datalad-fuse/ to FUSE mount individual dandisets you cloned locally so that files content is made transparently streamed to your DANDI/DataLad unaware tools,
+- use https://github.com/datalad/datalad-fuse/ to [FUSE](https://en.wikipedia.org/wiki/Filesystem_in_Userspace)-mount individual locally-cloned dandisets so that their files' contents are transparently streamed to your DANDI/DataLad-unaware tools,
 - etc.
 
-Learn more about DataLad from its handbook at https://handbook.datalad.org/ .
+Learn more about DataLad from its handbook at <https://handbook.datalad.org/>.
 
-**Developers note:** DataLad datasets are created using [dandi/backups2datalad](https://github.com/dandi/backups2datalad/) tool which is also available for use by the community for independent DANDI deployments to similarly maintain mirror of DataLad datasets.
+**Developers' note:** DataLad datasets are created using the [dandi/backups2datalad](https://github.com/dandi/backups2datalad/) tool which is also available for use by the community to similarly maintain mirrors of independent DANDI deployments as DataLad datasets.
 
 ## Using WebDAV
 
-DANDI provides WebDAV service at https://webdav.dandiarchive.org/ to access the data in the DANDI archive.
-You can use any WebDAV client or simply a browser to access the data - any dandiset, any version, any file or collection of them.
+DANDI provides a [WebDAV](https://en.wikipedia.org/wiki/WebDAV) service at https://webdav.dandiarchive.org/ for accessing the data in the DANDI archive.
+You can use any WebDAV client or even a web browser to access the data - any dandiset, any version, any file or collection of files.
 You can use any web download tool to download the data from the DANDI archive, e.g.
 
 ````commandline
@@ -101,7 +102,7 @@ wget -r -np -nH --cut-dirs=3 https://webdav.dandiarchive.org/dandisets/000027/re
 
 for a download of a specific release `0.210831.2033` of the `000027` dandiset.
 
-**Note:** WebDAV service does not provide any data, and relies on redirects to AWS S3 storage where the data is stored.
-You might need to configure your WebDAV client to follow redirects, e.g. set `follow_redirect` to `1` in `/etc/davfs2/davfs2.conf` for [davfs2](https://savannah.nongnu.org/projects/davfs2) WebDAV client.
+**Note:** The WebDAV service does not directly serve any file contents; it instead relies on redirects to AWS S3 storage where the contents are stored.
+You might need to configure your WebDAV client to follow redirects; e.g., for the [davfs2](https://savannah.nongnu.org/projects/davfs2) WebDAV client, set `follow_redirect` to `1` in `/etc/davfs2/davfs2.conf`.
 
-**Developers note:** WebDAV service code is available at https://github.com/dandi/dandidav/ and can also be used for independent DANDI deployments.
+**Developers' note:** The WebDAV service's code is available at https://github.com/dandi/dandidav/ and can also be used for independent DANDI deployments.
