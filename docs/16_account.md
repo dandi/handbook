@@ -5,6 +5,7 @@ Without an account, users can freely search, view, and download available datase
 With an account, users can create and edit Dandisets, and use the DANDI Hub to analyze data.
 
 DANDI provides two servers:
+
 - **Main server**: [https://dandiarchive.org/](https://dandiarchive.org/) - This is the primary platform for most users.
 - **Staging server**: [https://gui-staging.dandiarchive.org/](https://gui-staging.dandiarchive.org/) - Ideal for training and testing purposes.
 
@@ -13,6 +14,7 @@ Accounts are independently managed on each server, allowing users to register on
 DANDI is freely accessible to the neuroscience research community.
 Membership is usually granted automatically to GitHub accounts with a `.edu` or similar academic email.
 If your registration is denied:
+
 - With an academic email not linked to your GitHub, please contact [help@dandiarchive.org](mailto:help@dandiarchive.org) for assistance using this email address.
 - Without an academic email, account approval is still possible under specific circumstances. Appeal decisions at [help@dandiarchive.org](mailto:help@dandiarchive.org).
 
