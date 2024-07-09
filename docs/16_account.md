@@ -19,7 +19,7 @@ If your registration is denied:
 ## How to Register for a DANDI Account
 
 1. **Create a GitHub Account**: If not already a GitHub user, [sign up here](https://github.com/).
-2. **Register on DANDI**: Navigate to the DANDI homepage and click the `LOG IN WITH GITHUB` button to register using your GitHub account.
+2. **Register on DANDI**: Navigate to the [DANDI homepage](https://dandiarchive.org) and click the `LOG IN WITH GITHUB` button to register using your GitHub account.
 3. **Confirmation of Review**: Post-registration, you will receive an email confirming that your account is under review. Your request will be reviewed within 24 hours.
    - **Note**: Reviews may extend beyond 24 hours for new GitHub accounts or non-.edu email addresses, particularly if the registration does not describe immediate plans to contribute data.
 4. **Accessing DANDI**: Upon approval, access DANDI by logging in through the `LOG IN WITH GITHUB` button.
