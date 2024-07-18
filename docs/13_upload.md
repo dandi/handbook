@@ -3,7 +3,7 @@
 This page provides instructions for creating a new Dandiset and uploading data to DANDI.
 
 ## **Prerequisites**
-1. **Convert data to NWB.** Your data should already be in NWB format (2.1+). We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
+1. **Convert data to NWB.** You should start by converting your data to NWB format (2.1+). We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
   This step can be complex depending on your data. Consider using the following tools:
    1. [NWB Graphical User Interface for Data Entry (GUIDE)](https://nwb-guide.readthedocs.io/en/stable/) is a cross-platform desktop application for converting data from common proprietary formats to NWB and uploading it to DANDI.
    2. [NeuroConv](https://neuroconv.readthedocs.io/) is a Python library that automates  conversion to NWB from a variety of popular formats. See the [Conversion Gallery](https://neuroconv.readthedocs.io/en/main/conversion_examples_gallery/index.html) for example conversion scripts.
