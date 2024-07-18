@@ -5,14 +5,15 @@ This page provides instructions for creating a new Dandiset and uploading data t
 ## **Prerequisites**
 1. **Convert data to NWB.** You should start by converting your data to NWB format (2.1+). We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
   This step can be complex depending on your data. Consider using the following tools:
-   1. [NWB Graphical User Interface for Data Entry (GUIDE)](https://nwb-guide.readthedocs.io/en/stable/) is a cross-platform desktop application for converting data from common proprietary formats to NWB and uploading it to DANDI.
-   2. [NeuroConv](https://neuroconv.readthedocs.io/) is a Python library that automates  conversion to NWB from a variety of popular formats. See the [Conversion Gallery](https://neuroconv.readthedocs.io/en/main/conversion_examples_gallery/index.html) for example conversion scripts.
-   3. [PyNWB](https://pynwb.readthedocs.io/en/stable/) and [MatNWB](https://github.com/NeurodataWithoutBorders/matnwb) are APIs in Python and MATLAB that allow full flexibility in reading and writing data. ([PyNWB tutorials](https://pynwb.readthedocs.io/en/stable/tutorials/index.html), [MatNWB tutorials](https://github.com/NeurodataWithoutBorders/matnwb?tab=readme-ov-file#tutorials))
-   4. [NWB Overview Docs](https://nwb-overview.readthedocs.io) points to more tools helpful for working with NWB files.
 
-   Feel free to [reach out to us for help](https://github.com/dandi/helpdesk/discussions).
+    1. **[NWB Graphical User Interface for Data Entry (GUIDE)](https://nwb-guide.readthedocs.io/en/stable/)** is a cross-platform desktop application for converting data from common proprietary formats to NWB and uploading it to DANDI.
+    2. **[NeuroConv](https://neuroconv.readthedocs.io/)** is a Python library that automates  conversion to NWB from a variety of popular formats. See the [Conversion Gallery](https://neuroconv.readthedocs.io/en/main/conversion_examples_gallery/index.html) for example conversion scripts.
+    3. **[PyNWB](https://pynwb.readthedocs.io/en/stable/)** and **[MatNWB](https://github.com/NeurodataWithoutBorders/matnwb)** are APIs in Python and MATLAB that allow full flexibility in reading and writing data. ([PyNWB tutorials](https://pynwb.readthedocs.io/en/stable/tutorials/index.html), [MatNWB tutorials](https://github.com/NeurodataWithoutBorders/matnwb?tab=readme-ov-file#tutorials))
+    4. **[NWB Overview Docs](https://nwb-overview.readthedocs.io)** points to more tools helpful for working with NWB files.
 
-1. **Choose a server.**
+    Feel free to [reach out to us for help](https://github.com/dandi/helpdesk/discussions).
+
+2. **Choose a server.**
     - **Production server**: https://dandiarchive.org. This is the main server for DANDI and should be used for sharing neuroscience data.
       When you create a Dandiset, a permanent ID is automatically assigned to it.
       This Dandiset can be fully public or embargoed according to NIH policy.
@@ -21,38 +22,39 @@ This page provides instructions for creating a new Dandiset and uploading data t
       It is not recommended for sharing data, but is recommended for testing the DANDI CLI and GUI or as a testing platform for developers.
       Note that the development server should not be used to stage your data.
    
-   The below instructions will alert you to where the commands for interacting with these two different servers differ slightly. 
-1. **Register for DANDI and copy the API key.** To create a new Dandiset and upload your data, you need to have a DANDI account.
-   * If you do not already have an account, see [Create a DANDI Account](./16_account.md) page for instructions. 
-   * Once you are logged in, copy your API key.
-   Click on your user initials in the top-right corner after logging in.
-   Production (https://dandiarchive.org) and staging (https://gui-staging.dandiarchive.org) servers have different API keys and different logins.
-   * Store your API key somewhere that the CLI can find it; see ["Storing Access Credentials"](#storing-access-credentials) below.
+     The below instructions will alert you to where the commands for interacting with these two different servers differ slightly. 
 
-### **Data upload/management workflow**
+3. **Register for DANDI and copy the API key.** To create a new Dandiset and upload your data, you need to have a DANDI account.
+     * If you do not already have an account, see [Create a DANDI Account](./16_account.md) page for instructions. 
+     * Once you are logged in, copy your API key.
+     Click on your user initials in the top-right corner after logging in.
+     Production (https://dandiarchive.org) and staging (https://gui-staging.dandiarchive.org) servers have different API keys and different logins.
+     * Store your API key somewhere that the CLI can find it; see ["Storing Access Credentials"](#storing-access-credentials) below.
+
+## **Data upload/management workflow**
 
 The NWB GUIDE provides a graphical interface for inspecting and validating NWB files, as well as for uploading data to
-DANDI. See the [NWB GUIDE Dataset Publication Tutorial](https://nwb-guide.readthedocs.io/en/latest/tutorials/dataset_publication.html) for more information.
+DANDI. See the **[NWB GUIDE Dataset Publication Tutorial](https://nwb-guide.readthedocs.io/en/latest/tutorials/dataset_publication.html)** for more information.
 
 The below instructions show how to do the same thing programmatically using the command line interface (CLI).
 The CLI approach may be more suitable for users who are comfortable with the command line or who need to automate the process, or for advanced use-cases.
 
 1. **Create a new Dandiset.** 
-   * Click `NEW DANDISET` in the Web application (top right corner) after logging in.
-   * You will be asked to enter basic metadata: a name (title) and description (abstract) for your dataset. 
-   * After you provide a name and description, the dataset identifier will be created; we will call this `<dataset_id>`.
+    * Click `NEW DANDISET` in the Web application (top right corner) after logging in.
+    * You will be asked to enter basic metadata: a name (title) and description (abstract) for your dataset. 
+    * After you provide a name and description, the dataset identifier will be created; we will call this `<dataset_id>`.
 1. **Check your files for [NWB Best Practices](https://nwbinspector.readthedocs.io/en/dev/best_practices/best_practices_index.html).**
    Run [NWB Inspector](https://nwbinspector.readthedocs.io/en/dev/user_guide/user_guide_index.html) programmatically. Install the Python library (`pip install -U nwbinspector`) and run:
 
-       nwbinspector <source_folder> --config dandi
-          
-   If the report is too large to efficiently navigate in your console, you can save a report using
+        nwbinspector <source_folder> --config dandi
+   
+     If the report is too large to efficiently navigate in your console, you can save a report using
 
-       nwbinspector <source_folder> --config dandi --report-file-path <report_location>.txt
+        nwbinspector <source_folder> --config dandi --report-file-path <report_location>.txt
           
-   For more details and other options, run:
+     For more details and other options, run:
                 
-       nwbinspector --help
+        nwbinspector --help
 
    Thoroughly read the NWBInspector report and try to address as many issues as possible.
    **DANDI will prevent validation and upload of any issues labeled as level 'CRITICAL' or above when using the `--config dandi` option.**
@@ -61,6 +63,7 @@ The CLI approach may be more suitable for users who are comfortable with the com
        uploading NWB 
        files and which are deemed critical. We recommend regularly running the inspector early in the process to generate the best NWB files possible. Note that some auto-detected violations, such as `check_data_orientation`, may be safely ignored in the event 
        that the data is confirmed to be in the correct form. See [the NWBInspector CLI documentation](https://nwbinspector.readthedocs.io/en/dev/user_guide/using_the_command_line_interface.html) for more information.
+
 1. **Validate NWB files.** Once your files are confirmed to adhere to the Best Practices, perform an official validation of the NWB files by running: `dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>`.
    **If you are having trouble with validation, make sure the conversions were run with the most recent version of `dandi`, `PyNWB` and `MatNWB`.**
 1. **Upload the data to DANDI.** This can either be done through the NWB GUIDE, or programmatically:
