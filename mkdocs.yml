@@ -45,7 +45,7 @@ nav:
     - Simple Dandiset Search: "example-notebooks/tutorials/neurodatarehack_2024/simple_dandiset_search.ipynb"
     - Advanced Asset Search: "example-notebooks/tutorials/cosyne_2023/advanced_asset_search.ipynb"
     - Streaming and interacting with NWB data: "example-notebooks/tutorials/bcm_2024/analysis-demo.ipynb"
-    - NWB Widget Demo: ""example-notebooks/demos/NWBWidget-demo.ipynb"
+    - NWB Widget Demo: "example-notebooks/demos/NWBWidget-demo.ipynb"
   - Health Status:
     - Dandisets: https://github.com/dandi/dandisets-healthstatus
     - Services: https://www.dandiarchive.org/upptime
