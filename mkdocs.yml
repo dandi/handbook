@@ -47,6 +47,9 @@ nav:
     - Advanced Asset Search: "tutorials/advanced_asset_search.ipynb"
     - Streaming and interacting with NWB data: "tutorials/analysis-demo.ipynb"
     - NWB Widget Demo: "tutorials/NWBWidget-demo.ipynb"
+  - Health Status:
+    - Dandisets: https://github.com/dandi/dandisets-healthstatus
+    - Services: https://www.dandiarchive.org/upptime
   - Terms and Policies:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
