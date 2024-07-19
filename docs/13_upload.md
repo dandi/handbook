@@ -2,7 +2,7 @@
 
 This page provides instructions for creating a new Dandiset and uploading data to DANDI.
 
-## **Prerequisites**
+## Prerequisites
 1. **Convert data to NWB.** You should start by converting your data to NWB format (2.1+). We suggest beginning the conversion process using only a small amount of data so that common issues may be spotted earlier in the process.
   This step can be complex depending on your data. Consider using the following tools:
 
@@ -31,7 +31,7 @@ This page provides instructions for creating a new Dandiset and uploading data t
      Production (https://dandiarchive.org) and staging (https://gui-staging.dandiarchive.org) servers have different API keys and different logins.
      * Store your API key somewhere that the CLI can find it; see ["Storing Access Credentials"](#storing-access-credentials) below.
 
-## **Data upload/management workflow**
+## Data upload/management workflow
 
 The NWB GUIDE provides a graphical interface for inspecting and validating NWB files, as well as for uploading data to
 DANDI. See the **[NWB GUIDE Dataset Publication Tutorial](https://nwb-guide.readthedocs.io/en/latest/tutorials/dataset_publication.html)** for more information.
@@ -56,19 +56,22 @@ The CLI approach may be more suitable for users who are comfortable with the com
                 
         nwbinspector --help
 
-   Thoroughly read the NWBInspector report and try to address as many issues as possible.
-   **DANDI will prevent validation and upload of any issues labeled as level 'CRITICAL' or above when using the `--config dandi` option.**
-    See 
-       ["Validation Levels for NWB Files"](./135_validation.md) for more information about validation criteria for 
-       uploading NWB 
-       files and which are deemed critical. We recommend regularly running the inspector early in the process to generate the best NWB files possible. Note that some auto-detected violations, such as `check_data_orientation`, may be safely ignored in the event 
-       that the data is confirmed to be in the correct form. See [the NWBInspector CLI documentation](https://nwbinspector.readthedocs.io/en/dev/user_guide/using_the_command_line_interface.html) for more information.
+     Thoroughly read the NWBInspector report and try to address as many issues as possible.
+     **DANDI will prevent validation and upload of any issues labeled as level 'CRITICAL' or above when using the `--config dandi` option.**
+     See ["Validation Levels for NWB Files"](./135_validation.md) for more information about validation criteria for 
+     uploading NWB files and which are deemed critical. We recommend regularly running the inspector early in the process to generate the best NWB files possible. Note that some auto-detected violations, such as `check_data_orientation`, may be safely ignored in the event 
+     that the data is confirmed to be in the correct form. See [the NWBInspector CLI documentation](https://nwbinspector.readthedocs.io/en/dev/user_guide/using_the_command_line_interface.html) for more information.
 
 1. **Install the [DANDI Client](https://pypi.org/project/dandi/).**
+
         pip install -U dandi
-1. **Validate NWB files.** Once your files are confirmed to adhere to the Best Practices, perform an official validation of the NWB files by running:
+
+1. **Validate NWB files.** Perform a validation of the NWB files by running:
+        
         dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>
-   **If you are having trouble with validation, make sure the conversions were run with the most recent version of `dandi`, `PyNWB` and `MatNWB`.**
+
+     **If you are having trouble with validation, make sure the conversions were run with the most recent version of `dandi`, `PyNWB` and `MatNWB`.**
+
 1. **Upload the data to DANDI.** This can either be done through the NWB GUIDE, or programmatically:
 
         dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft
@@ -78,14 +81,14 @@ The CLI approach may be more suitable for users who are comfortable with the com
         dandi validate .
         dandi upload
 
-   Note that the `organize` steps should not be used if you are preparing a BIDS dataset with the NWB files.
-   Uploading to the development server is controlled via `-i` option, e.g.
-   `dandi upload -i dandi-staging`.
-   Note that validation is also done during `upload`, but ensuring compliance using `validate` prior to upload helps avoid interruptions of the lengthier upload process due to validation failures.
+     Note that the `organize` steps should not be used if you are preparing a BIDS dataset with the NWB files.
+     Uploading to the development server is controlled via `-i` option, e.g. `dandi upload -i dandi-staging`.
+     Note that validation is also done during `upload`, but ensuring compliance using `validate` prior to upload helps avoid interruptions of the lengthier upload process due to validation failures.
+     If you have an issue using the DANDI Client, see the [DANDI Debugging section](./15_debugging.md).
+
 1. **Add metadata to the Dandiset.** Visit your Dandiset landing page:
    `https://dandiarchive.org/dandiset/<dataset_id>/draft` and click on the `METADATA` link.
 
-If you have an issue using the DANDI Client, see the [DANDI Debugging section](./15_debugging.md).
 
 ## Storing Access Credentials
 
@@ -109,8 +112,7 @@ There are two options for storing your DANDI access credentials.
     - Specifying the `keyring` backend
         - You can set the backend the `keyring` library uses either by setting
           the `PYTHON_KEYRING_BACKEND` environment variable or by filling in
-          the `keyring` library's [configuration
-          file](https://github.com/jaraco/keyring#configuring).
+          the `keyring` library's [configuration file](https://github.com/jaraco/keyring#configuring).
 
         - IDs for the available backends can be listed by running `keyring
           --list`.
