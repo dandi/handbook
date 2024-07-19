@@ -83,7 +83,7 @@ The CLI approach may be more suitable for users who are comfortable with the com
 1. **Add metadata to Dandiset.** Visit your Dandiset landing page:
    `https://dandiarchive.org/dandiset/<dataset_id>/draft` and click on the `METADATA` link.
 
-If you have an issue using the Python CLI, see the [Dandi Debugging section](./15_debugging.md).
+If you have an issue using the DANDI Client, see the [DANDI Debugging section](./15_debugging.md).
 
 ## Storing Access Credentials
 
