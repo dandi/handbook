@@ -79,7 +79,7 @@ The CLI approach may be more suitable for users who are comfortable with the com
    Note that the `organize` steps should not be used if you are preparing a BIDS dataset with the NWB files.
    Uploading to the development server is controlled via `-i` option, e.g.
    `dandi upload -i dandi-staging`.
-   Note that validation is also done during `upload`, but ensuring compliance using `validate` prior upload helps avoid interruptions of the lengthier upload process due to validation failures.
+   Note that validation is also done during `upload`, but ensuring compliance using `validate` prior to upload helps avoid interruptions of the lengthier upload process due to validation failures.
 1. **Add metadata to Dandiset.** Visit your Dandiset landing page:
    `https://dandiarchive.org/dandiset/<dataset_id>/draft` and click on the `METADATA` link.
 
