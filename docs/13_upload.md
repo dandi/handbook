@@ -64,7 +64,8 @@ The CLI approach may be more suitable for users who are comfortable with the com
        files and which are deemed critical. We recommend regularly running the inspector early in the process to generate the best NWB files possible. Note that some auto-detected violations, such as `check_data_orientation`, may be safely ignored in the event 
        that the data is confirmed to be in the correct form. See [the NWBInspector CLI documentation](https://nwbinspector.readthedocs.io/en/dev/user_guide/using_the_command_line_interface.html) for more information.
 
-1. **Validate NWB files.** Once your files are confirmed to adhere to the Best Practices, perform an official validation of the NWB files by running: `dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>`.
+1. **Validate NWB files.** Once your files are confirmed to adhere to the Best Practices, perform an official validation of the NWB files by running:
+        dandi validate --ignore DANDI.NO_DANDISET_FOUND <source_folder>
    **If you are having trouble with validation, make sure the conversions were run with the most recent version of `dandi`, `PyNWB` and `MatNWB`.**
 1. **Upload the data to DANDI.** This can either be done through the NWB GUIDE, or programmatically:
 
