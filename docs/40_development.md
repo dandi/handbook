@@ -128,10 +128,24 @@ those previews.
 
 ## Email Services
 
-The project's email domain name services are managed via Terraform as AWS Route
-53 entries. This allows the API server to send emails to users, etc. It also
-means we need a way to forward incoming emails to the proper mailing list--this
-is accomplished with a service called [ImprovMX](https://improvmx.com/).
+DANDI Archive maintains several email services to implement the following
+facilities:
+
+- **Public email.** Users of the archive can reach the developers for help or to
+  report problems by sending email to info@dandiarchive.org and
+  help@dandiarchive.org. These are "virtual" email addresses managed by DNS
+  entries.
+- **Transactional email.** The Archive sends email to users to manage the signup
+  process and to inform about special situations, long running operations, etc.
+  such as registration reject/approval, Dandiset embargo and unembargo, changes to
+  ownership, etc. These are sent via Amazon Simple Email Service (SES),
+  programmatically from the Archive code.
+- **Mass email.** The maintainers of the Archive infrequently send
+  mass email to all users of the Archive to inform about downtime
+  or other notifications of mass appeal. This function is managed through a
+  Mailchimp account that requires special procedures to keep it up to date.
+
+### DNS Entries for public email addresses
 
 The email addresses info@dandiarchive.org and help@dandiarchive.org are
 advertised to users as general email addresses to use to ask for information or
