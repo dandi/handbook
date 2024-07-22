@@ -126,7 +126,7 @@ However, this is not strictly required. You can contribute using the standard
 fork-and-pull-request model, but under this workflow we will lose the benefit of
 those previews.
 
-## Email Lists
+## Email Services
 
 The project's email domain name services are managed via Terraform as AWS Route
 53 entries. This allows the API server to send emails to users, etc. It also
@@ -168,7 +168,7 @@ there.
 ### Why do incoming emails to dandiarchive.org look crazy?
 
 When a user emails help@dandiarchive.org or info@dandiarchive.org, those
-messages are forwarded to dandi@mit.edu (see [above](#email-lists)) so that the
+messages are forwarded to dandi@mit.edu (see [above](#email-services)) so that the
 dev team sees them. However, these emails arrive with a long, spammy-looking
 From address with a Heroku DNS domain; this seems to be an artifact of how
 mit.edu processes emails, and does not occur in general (e.g. messages sent
