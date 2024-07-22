@@ -149,10 +149,11 @@ facilities:
 
 The email addresses info@dandiarchive.org and help@dandiarchive.org are
 advertised to users as general email addresses to use to ask for information or
-help; both of them are forwarded to dandi@mit.edu, a mailing list containing the
-leaders and developers of the project. The forwarding is done by the ImprovMX
-service, and more such email addresses can be created as needed within that
-service.
+help. These are managed via Terraform as AWS Route 53 MX entries. We use
+[ImprovMX](https://improvmx.com/) to forward emails sent to these addresses to
+dandi@mit.edu, a mailing list containing the leaders and developers of the
+project. (Other virtual addresses within the dandiarchive.org domain can be
+created as needed.)
 
 If you need the credentials for logging into ImprovMX, speak to Roni
 Choudhury (<roni.choudhury@kitware.com>).
