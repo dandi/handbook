@@ -30,6 +30,7 @@ nav:
     - Downloading Data and Dandisets: "12_download.md"
     - Creating Dandisets and Uploading Data: "13_upload.md"
     - Validation Levels for NWB Files: "135_validation.md"
+    - Dandiset Metadata: "136_metadata.md"
     - Publishing Dandisets: "14_publish.md"
     - Debugging: "15_debugging.md"
     - DANDI CLI and Python API: https://dandi.readthedocs.io
