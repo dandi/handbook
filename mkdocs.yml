@@ -39,6 +39,7 @@ nav:
     - Notes: "40_development.md"
     - REST API Swagger: https://api.dandiarchive.org/swagger
     - REST API Redoc: https://api.dandiarchive.org/redoc
+    - Contributing Documentation: "100_contribute_docs.md"
   - DANDI Hub: "50_hub.md"
   - Tutorials:
     - Dandiset Examples: https://www.dandiarchive.org/example-notebooks
@@ -48,7 +49,6 @@ nav:
   - Terms and Policies:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
-  - About This Doc: "100_about_this_doc.md"
 
 # List of extensions
 markdown_extensions:

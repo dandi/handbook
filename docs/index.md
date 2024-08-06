@@ -43,7 +43,7 @@ registered an account on the archive.
 
 If you want to get started right away and contribute directly to this
 documentation, see the [About This Documentation](.
-/100_about_this_doc.md) section.
+/100_contribute_docs.md) section.
 
 ## License
 
