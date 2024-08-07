@@ -67,6 +67,16 @@ application, e.g.:
 **Hint:** `dandi download` supports a number of [Resource Identifiers](https://dandi.readthedocs.io/en/latest/ref/urls.html#resource-ids) to point to a Dandiset, folder, or file.  Providing
 an incorrect URL (e.g. `dandi download wrongurl`) will provide a list of supported identifiers.
 
+### Download a specific file and preserve the directory tree of the Dandiset
+In the command below, replace the `<dandiset-id>`, `<version>`, and asset `<path>`.
+The `<path>` can be found by selecting the `View asset metadata` icon next to an asset on the web app and locating the `path` key.
+
+    dandi download --preserve-tree dandi://dandi/<dandiset-id>@<version>/<path>
+
+For example:
+
+    dandi download --preserve-tree dandi://dandi/000026@draft/sub-I58/ses-Hip-CT/micr/sub-I58_sample-01_chunk-01_hipCT.json
+
 ## Using DataLad
 
 All dandisets are regularly mirrored to DataLad datasets which are made available at the GitHub organization https://github.com/dandisets.
