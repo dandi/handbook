@@ -59,6 +59,7 @@ experiment. It is highly recommended to include this information.
 
 This section allows you to annotate the Dandiset with links to related resources such as publications and code repositories.
 It is highly recommended to add links to the following resources (if they exist):
+
   * The associated publication
   * The public code repository used to convert the data
   * A data analysis library associated with the publication that can take this data as input
