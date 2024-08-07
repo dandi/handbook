@@ -64,7 +64,7 @@ application, e.g.:
 `dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/0.210914.1900/assets/1a93dc97-327d-4f9c-992d-c2149e7810ae/download/`
 
 
-**Hint:** `dandi download` supports a number of resource identifiers to point to a Dandiset, folder, or file.  Providing
+**Hint:** `dandi download` supports a number of [Resource Identifiers](https://dandi.readthedocs.io/en/latest/ref/urls.html#resource-ids) to point to a Dandiset, folder, or file.  Providing
 an incorrect URL (e.g. `dandi download wrongurl`) will provide a list of supported identifiers.
 
 ## Using DataLad
