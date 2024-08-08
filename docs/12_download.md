@@ -40,7 +40,7 @@ If you have an issue using the Python CLI, see the [Dandi Debugging section](./1
 ### Download a Dandiset
 To download an entire Dandiset, you can use the same command as suggested by DANDI web application, e.g.:
 
-`dandi download DANDI:000023`
+    dandi download DANDI:000023
 
 ### Download data for a specific subject from a Dandiset
 You can download data for specific subjects.
@@ -48,20 +48,20 @@ Names of the subjects can be found on DANDI web application or by running a comm
 DANDI:000023`.
 Once you have the subject ID, you can download the data, e.g.:
 
-`dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/_draft_/assets/?path=sub-811677083`
+    dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/_draft_/assets/?path=sub-811677083
 
 You should replace `_draft_` with a specific version you are interested in (e.g. `0.210914.1900` in the case of this Dandiset).
 
 You can also use the link from DANDI web application, e.g.:
 
-`dandi download https://dandiarchive.org/dandiset/000023/0.210914.1900/files?location=sub-541516760%2F`
+    dandi download https://dandiarchive.org/dandiset/000023/0.210914.1900/files?location=sub-541516760%2F
 
 
 ### Download a specific file from a Dandiset
 You can download a specific file from a Dandiset when the link for the specific file can be found on the DANDI web
 application, e.g.:
 
-`dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/0.210914.1900/assets/1a93dc97-327d-4f9c-992d-c2149e7810ae/download/`
+    dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/0.210914.1900/assets/1a93dc97-327d-4f9c-992d-c2149e7810ae/download/
 
 
 **Hint:** `dandi download` supports a number of resource identifiers to point to a Dandiset, folder, or file.  Providing
