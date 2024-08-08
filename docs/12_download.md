@@ -68,6 +68,7 @@ application, e.g.:
 an incorrect URL (e.g. `dandi download wrongurl`) will provide a list of supported identifiers.
 
 ### Download a specific file and preserve the directory tree of the Dandiset
+Now available in version `0.63.0` is the `--preserve-tree` option.
 In the command below, replace the `<dandiset-id>`, `<version>`, and asset `<path>`.
 The `<path>` can be found by selecting the `View asset metadata` icon next to an asset on https://dandiarchive.org and locating the `path` key.
 
