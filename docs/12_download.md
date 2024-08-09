@@ -48,9 +48,9 @@ Names of the subjects can be found on DANDI web application or by running a comm
 DANDI:000023`.
 Once you have the subject ID, you can download the data, e.g.:
 
-    dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/_draft_/assets/?path=sub-811677083
+    dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/draft/assets/?path=sub-811677083
 
-You should replace `_draft_` with a specific version you are interested in (e.g. `0.210914.1900` in the case of this Dandiset).
+You could replace `draft` with a specific non-draft version you are interested in (e.g. `0.210914.1900` in the case of this Dandiset), if you are not interested in the latest, possibly different state of the Dandiset.
 
 You can also use the link from DANDI web application, e.g.:
 
