@@ -136,8 +136,8 @@ facilities:
   help@dandiarchive.org. These are "virtual" email addresses managed by DNS
   entries.
 - **Transactional email.** The Archive sends email to users to manage the signup
-  process and to inform about special situations, long running operations, etc.
-  such as registration reject/approval, Dandiset embargo and unembargo, changes to
+  process and to inform about special situations such as long running operations, 
+  registration reject/approval, Dandiset embargo and unembargo, changes to
   ownership, etc. These are sent via Amazon Simple Email Service (SES),
   programmatically from the Archive code.
 - **Mass email.** The maintainers of the Archive infrequently send
