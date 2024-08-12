@@ -131,7 +131,7 @@ those previews.
 DANDI Archive maintains several email services to implement the following
 facilities:
 
-- **Public email.** Users of the archive can reach the developers for help or to
+- **Public email.** Users of the Archive can reach the developers for help or to
   report problems by sending email to info@dandiarchive.org and
   help@dandiarchive.org. These are "virtual" email addresses managed by DNS
   entries.
