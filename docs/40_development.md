@@ -126,19 +126,34 @@ However, this is not strictly required. You can contribute using the standard
 fork-and-pull-request model, but under this workflow we will lose the benefit of
 those previews.
 
-## Email Lists
+## Email Services
 
-The project's email domain name services are managed via Terraform as AWS Route
-53 entries. This allows the API server to send emails to users, etc. It also
-means we need a way to forward incoming emails to the proper mailing list--this
-is accomplished with a service called [ImprovMX](https://improvmx.com/).
+DANDI Archive maintains several email services to implement the following
+facilities:
+
+- **Public email.** Users of the Archive can reach the developers for help or to
+  report problems by sending email to info@dandiarchive.org and
+  help@dandiarchive.org. These are "virtual" email addresses managed by DNS
+  entries.
+- **Transactional email.** The Archive sends email to users to manage the signup
+  process and to inform about special situations such as long running operations, 
+  registration reject/approval, Dandiset embargo and unembargo, changes to
+  ownership, etc. These are sent via Amazon Simple Email Service (SES),
+  programmatically from the Archive code.
+- **Mass email.** The maintainers of the Archive infrequently send
+  mass email to all users of the Archive to inform about downtime
+  or other notifications of mass appeal. This function is managed through a
+  Mailchimp account that requires special procedures to keep it up to date.
+
+### DNS Entries for public email addresses
 
 The email addresses info@dandiarchive.org and help@dandiarchive.org are
 advertised to users as general email addresses to use to ask for information or
-help; both of them are forwarded to dandi@mit.edu, a mailing list containing the
-leaders and developers of the project. The forwarding is done by the ImprovMX
-service, and more such email addresses can be created as needed within that
-service.
+help. These are managed via Terraform as AWS Route 53 MX entries. We use
+[ImprovMX](https://improvmx.com/) to forward emails sent to these addresses to
+dandi@mit.edu, a mailing list containing the leaders and developers of the
+project. (Other virtual addresses within the dandiarchive.org domain can be
+created as needed.)
 
 If you need the credentials for logging into ImprovMX, speak to Roni
 Choudhury (<roni.choudhury@kitware.com>).
@@ -168,7 +183,7 @@ there.
 ### Why do incoming emails to dandiarchive.org look crazy?
 
 When a user emails help@dandiarchive.org or info@dandiarchive.org, those
-messages are forwarded to dandi@mit.edu (see [above](#email-lists)) so that the
+messages are forwarded to dandi@mit.edu (see [above](#email-services)) so that the
 dev team sees them. However, these emails arrive with a long, spammy-looking
 From address with a Heroku DNS domain; this seems to be an artifact of how
 mit.edu processes emails, and does not occur in general (e.g. messages sent
