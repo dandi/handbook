@@ -67,7 +67,7 @@ application, e.g.:
 **Hint:** `dandi download` supports a number of [Resource Identifiers](https://dandi.readthedocs.io/en/latest/ref/urls.html#resource-ids) to point to a Dandiset, folder, or file.  Providing
 an incorrect URL (e.g. `dandi download wrongurl`) will provide a list of supported identifiers.
 
-### Download a specific file and preserve the directory tree of the Dandiset
+### Download the `dandiset.yaml` file and a specific file within the directory tree of the Dandiset
 Now available in version `0.63.0` is the `--preserve-tree` option.
 In the command below, replace the `<dandiset-id>`, `<version>`, and asset `<path>`.
 The `<path>` can be found by selecting the `View asset metadata` icon next to an asset on https://dandiarchive.org and locating the `path` key.
