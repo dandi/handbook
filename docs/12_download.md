@@ -64,8 +64,19 @@ application, e.g.:
     dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/0.210914.1900/assets/1a93dc97-327d-4f9c-992d-c2149e7810ae/download/
 
 
-**Hint:** `dandi download` supports a number of resource identifiers to point to a Dandiset, folder, or file.  Providing
+**Hint:** `dandi download` supports a number of [Resource Identifiers](https://dandi.readthedocs.io/en/latest/ref/urls.html#resource-ids) to point to a Dandiset, folder, or file.  Providing
 an incorrect URL (e.g. `dandi download wrongurl`) will provide a list of supported identifiers.
+
+### Download the `dandiset.yaml` file and a specific file within the directory tree of the Dandiset
+Now available in version `0.63.0` is the `--preserve-tree` option.
+In the command below, replace the `<dandiset-id>`, `<version>`, and asset `<path>`.
+The `<path>` can be found by selecting the `View asset metadata` icon next to an asset on https://dandiarchive.org and locating the `path` key.
+
+    dandi download --preserve-tree dandi://dandi/<dandiset-id>@<version>/<path>
+
+For example:
+
+    dandi download --preserve-tree dandi://dandi/000026@draft/sub-I58/ses-Hip-CT/micr/sub-I58_sample-01_chunk-01_hipCT.json
 
 ## Using DataLad
 
