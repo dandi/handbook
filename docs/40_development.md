@@ -158,6 +158,59 @@ created as needed.)
 If you need the credentials for logging into ImprovMX, speak to Roni
 Choudhury (<roni.choudhury@kitware.com>).
 
+### Mass emails with Mailchimp
+
+The Archive maintainers are able to send email to all users through the mass
+emailing functions of a dedicated Mailchimp account. In technical parlance,
+these communications are also known as "marketing email", though as a rule the
+maintainers do not conduct any actual marketing through this channel.
+nonetheless, such communications are governed by laws and regulations such as
+the American CAN-SPAM Act, the California-specific CCPA, and the European
+Union's GDPR; Mailchimp helps the maintainers comply with these rules and
+regulations.
+
+Our major use case for mass email is to notify the userbase of upcoming downtime
+(as is needed for, e.g., a major data migration or maintenance windows).
+
+If you need to mass email the DANDI Archive userbase, speak to Roni Choudhury
+(<roni.choudhury@kitware.com>).
+
+#### Updating the DANDI userbase audience in Mailchimp
+
+Follow these steps before sending a mass email through Mailchimp to ensure that
+the Mailchimp-maintained DANDI userbase audience is up to date.
+
+1. Log into the DANDI admin panel and navigate to the dashboard page (at, e.g.,
+   `api.dandiarchive.org/dashboard`).
+2. Click on the `Mailchimp CSV` link in the navbar to download the CSV file to
+   disk.
+3. Log into Mailchimp, click on the `Audience` section in the sidebar, then
+   click on the `Manage Audience` dropdown and select `Manage contacts`.
+4. Click on the `Manage audience` dropdown and select `Archive all contacts`.
+   Then follow the confirmation prompt to carry out the archiving operation.
+5. Click on the `Add contacts` dropdown and select `Import contacts`.
+6. Select the `Upload a file` option, and follow the wizard steps, uploading the
+   CSV file from step 2 when prompted. Activate the `Update any existing
+   contacts` checkbox under the `Organize your contacts` step. Do not set any
+   tags during the `Tag your contacts` step. In the `Match column labels to
+   contact information` step, visually verify that the email address, first
+   name, and last name columns look correct matched. In the `Subscribe contacts
+   to marketing` step, ensure that `Subscribed` is selected in the dropdown. In
+   the `Review and complete your import`, read over the summary and ensure it is
+   correct before clicking the `Complete Import` button to finish the process.
+
+It is necessary to "deactivate" the entire userbase before reimporting the
+current slate of users from the freshly computed CSV file because Mailchimp does
+not have a way to perform a PUT-like operation during import (to borrow a term
+from RESTful API design), only to add new users and update existing ones.
+
+The reason to archive the contacts instead of deleting them has to do with
+Mailchimp's semantics for those actions. Deleting a user means they cannot be
+re-added to the audience, while archiving is a reversible action that retains
+all data and history and merely removes that user from the audience for purposes
+of receiving emails. Thus, we use an archive-and-reimport procedure to emulate
+the PUT-like operation we actually need.
+
 ## Miscellaneous Tips and Information
 
 ### Use email address to log into dev Django admin panel
