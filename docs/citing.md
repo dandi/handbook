@@ -8,8 +8,8 @@ An example formatted citation can also be found on the Dandiset's landing page a
 uses the DataCite citation style, which is a widely accepted standard for citing datasets, but you may need to adapt it
 to the citation style required by the journal you are submitting to.
 
-If the Dandiset has an associated publication, it may also be appropriate to cite the publication, but this does not
-replace the need to cite the Dandiset itself.
+**If the Dandiset has an associated publication, it may also be appropriate to cite the publication, but this does not
+replace the need to cite the Dandiset itself.**
 
 Citing the Dandiset and other datasets is important because it provides a direct link to the data used in your research. That is crucial, because it:
   - allows others to better understand and verify your results, and facilitates reproducibility, 
