@@ -27,6 +27,6 @@ the Dandiset used in the research. Here is an example of a well formatted Data A
 The data that support the findings of this study are openly available on the DANDI Archive at [DOI of Dandiset].
 ```
 
-It is important to note that a Data Availability Statement does not replace the need for a full citation in the
-manuscript's references section.
+**It is important to note that a Data Availability Statement does not replace the need for a full citation in the
+manuscript's references section.**
 Both elements serve different purposes and are typically required for comprehensive documentation of data sources.
