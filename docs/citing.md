@@ -11,9 +11,11 @@ to the citation style required by the journal you are submitting to.
 If the Dandiset has an associated publication, it may also be appropriate to cite the publication, but this does not
 replace the need to cite the Dandiset itself.
 
-Citing the Dandiset is important because it provides a direct link to the data used in your research, which can be used
-to verify your results and to facilitate reproducibility. It also provides credit to the data contributors and helps
-us track the impact of the data DANDI hosts.
+Citing the Dandiset and other datasets is important because it provides a direct link to the data used in your research. That is crucial, because it:
+  - allows others to better understand and verify your results, and facilitates reproducibility, 
+  - connects your work to other research using the same dataset,
+  - provides credit to the data collectors and maintainers, 
+  - helps track the impact of DANDI and other data archives.
 
 
 Data availability statements
