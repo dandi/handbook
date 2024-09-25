@@ -24,7 +24,7 @@ It is common for journals to require a Data Availability Statement in the manusc
 the Dandiset used in the research. Here is an example of a well formatted Data Availability Statement:
 
 ```
-The data that support the findings of this study are openly available on the DANDI Archive at [DOI of Dandiset].
+The data that support the findings of this study are openly available on the DANDI Archive (RRID:SCR_017571) at [DOI of Dandiset].
 ```
 
 **It is important to note that a Data Availability Statement does not replace the need for a full citation in the
