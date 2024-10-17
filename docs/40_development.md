@@ -164,7 +164,7 @@ The Archive maintainers are able to send email to all users through the mass
 emailing functions of a dedicated Mailchimp account. In technical parlance,
 these communications are also known as "marketing email", though as a rule the
 maintainers do not conduct any actual marketing through this channel.
-nonetheless, such communications are governed by laws and regulations such as
+Nonetheless, such communications are governed by laws and regulations such as
 the American CAN-SPAM Act, the California-specific CCPA, and the European
 Union's GDPR; Mailchimp helps the maintainers comply with these rules and
 regulations.
@@ -194,7 +194,7 @@ the Mailchimp-maintained DANDI userbase audience is up to date.
    contacts` checkbox under the `Organize your contacts` step. Do not set any
    tags during the `Tag your contacts` step. In the `Match column labels to
    contact information` step, visually verify that the email address, first
-   name, and last name columns look correct matched. In the `Subscribe contacts
+   name, and last name columns look correctly matched. In the `Subscribe contacts
    to marketing` step, ensure that `Subscribed` is selected in the dropdown. In
    the `Review and complete your import`, read over the summary and ensure it is
    correct before clicking the `Complete Import` button to finish the process.
