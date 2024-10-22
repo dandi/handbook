@@ -1,6 +1,4 @@
-# Work In Progress
-
-## Setting up Cloudfront
+## Setting up Cloudfront for Private Assets
 
 
 

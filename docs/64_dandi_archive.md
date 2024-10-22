@@ -182,3 +182,24 @@ src="../img/user_metadata.png"
 alt="user_metadata"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
+
+## Addition of the Cache Table for Metrics
+
+On the DANDI homepage, metrics exist for how many users, and how much data is stored in the Archive.
+
+<br/><br/>
+<img
+src="../img/dandi_stats.png"
+alt="dandi_stats"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+<br/><br/>
+
+In order to not constantly query for those values, DANDI uses a [Django cache table](https://docs.djangoproject.com/en/5.1/topics/cache/#creating-the-cache-table). This table must be separately initialized.
+
+This can be done via the CLI command of:
+
+```shell
+heroku run python manage.py createcachetable dandi_cache_table --app <insert-app-here>
+```
+
+You may not see updated stats immediately, as the stats are cached for 12 hours at a time.
