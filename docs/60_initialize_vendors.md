@@ -1,8 +1,5 @@
 # Initialize Vendor Accounts
 
-This series of documents explains how to create a new instance of the DANDI project (i.e. a clone of the entire DANDI ecosystem). It is suggested that you briefly read through each of the
-documents in this guide before starting.
-
 The DANDI ecosystem relies on vendor services to operate.  So first you will need to set up accounts with the following vendors:
 
 • **Heroku**

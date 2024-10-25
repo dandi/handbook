@@ -1,6 +1,4 @@
-# Work In Progress -- This page should not be referenced until further abstraction is handled for the DANDI CLI tool
-
-For data management (predominately `upload` and `download` of data 
+For data management (predominately `upload`, `download` and `validation` of data 
 to/from DANDI), a local CLI (command line interface) is used.
 
 **Note: please make sure [you have set up your PyPI account](..60_initialize_vendors/##pypi).**
@@ -31,10 +29,14 @@ known_instances = {
 }
 ```
 
-## Connecting to PyPI
-
-
 ## Handling Versioning
+
+DANDI CLI leverages a tool called [versioneer](https://pypi.org/project/versioneer/) for semantic versioning in PyPI.
+
+Upon merging of a PR into `main`, if a given GitHub label is attached to the PR (`major`, `minor` or `patch` specifically)
+`versioneer` will generate a human-readable CHANGELOG entry, and then push to PyPI the proper new semantic version.
+
+
 
 
 

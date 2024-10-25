@@ -1,5 +1,3 @@
-# Work In Progress
-
 This step assumes that you have completed all steps in: [Initialize Vendors](../60_initialize_vendors) & [DANDI Infrastructure](../63_dandi_infrastructure)
 
 ## Initial Steps
@@ -126,7 +124,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 Other than the output of the CI/CD workflow, you can observe the status of the new release via your Heroku app dashboard.
 
-- **Production**:  by default, releases are managed via "tags" applied to given PRs merged into main with the label of "released"
+- **Production**:  by default, releases are managed via "tags" applied to given PRs merged into main with the label of "release"
 
 <br/><br/>
 <img
