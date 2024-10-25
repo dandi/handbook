@@ -30,7 +30,9 @@ nav:
     - Downloading Data and Dandisets: "12_download.md"
     - Creating Dandisets and Uploading Data: "13_upload.md"
     - Validation Levels for NWB Files: "135_validation.md"
+    - Dandiset Metadata: "136_metadata.md"
     - Publishing Dandisets: "14_publish.md"
+    - Citing a Dandiset: "citing.md"
     - Debugging: "15_debugging.md"
     - DANDI CLI and Python API: https://dandi.readthedocs.io
   - Developer Guide:
@@ -47,11 +49,16 @@ nav:
       - DANDI Archive: "64_dandi_archive.md"
       - DANDI Hub: "65_dandi_hub.md"
       - Handling Neuroglancer in DANDI: "66_dandi_neuroglancer.md"
+    - Contributing Documentation: "100_contribute_docs.md"
   - DANDI Hub: "50_hub.md"
+  - Tutorials:
+    - Dandiset Examples: https://www.dandiarchive.org/example-notebooks
+  - Health Status:
+    - Dandisets: https://github.com/dandi/dandisets-healthstatus
+    - Services: https://www.dandiarchive.org/upptime
   - Terms and Policies:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
-  - About This Doc: "100_about_this_doc.md"
 
 # List of extensions
 markdown_extensions:
@@ -70,6 +77,9 @@ plugins:
 # Customize theme
 extra:
   homepage: https://dandiarchive.org
+  analytics:
+    provider: google
+    property: G-15WQLCLQ3L
   social:
     - icon: fontawesome/brands/slack
       link: https://dandiarchive.slack.com
