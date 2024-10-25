@@ -11,8 +11,8 @@ For example:
 
 ```python
 known_instances = {
-    "dandi": DandiInstance(
-        "dandi",
+    "dandi": DandiInstance(  # Your own "dandi""
+        "dandi", # Your own "dandi"
         "https://<your-domain>.org",  # UI URL
         "https://api.<your-domain>.org/api", # API URL
     ),
@@ -28,6 +28,11 @@ known_instances = {
     ),
 }
 ```
+
+Of note, you'll need to think about how you manage API access via the CLI -- `dandi` relies of the presence of a `DANDI_API_KEY`
+env. var [see here for code reference](https://github.com/dandi/dandi-cli/blob/6aa414c4db47394970f586cc4fb9758a634aef87/dandi/dandiapi.py#L492-L499)
+
+Dependent on the structure of your project, you might want to reflect a specific, unique environment variable value.
 
 ## Handling Versioning
 
