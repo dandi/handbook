@@ -48,7 +48,6 @@ nav:
       - DANDI Infrastructure: "63_dandi_infrastructure.md"
       - DANDI Archive: "64_dandi_archive.md"
       - DANDI Hub: "65_dandi_hub.md"
-      - Handling Neuroglancer in DANDI: "66_dandi_neuroglancer.md"
     - Contributing Documentation: "100_contribute_docs.md"
   - DANDI Hub: "50_hub.md"
   - Tutorials:

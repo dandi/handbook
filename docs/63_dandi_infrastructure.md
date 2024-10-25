@@ -1,5 +1,3 @@
-# Work In Progress
-
 ## Configuring Terraform
 
 [First, make sure you have properly set up your Terraform Cloud account and linked the account to the proper GitHub repository](../60_initialize_vendors/#terraform-cloud)

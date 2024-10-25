@@ -1,5 +1,3 @@
-# Work In Progress
-
 ## Setting up your GitHub OAuth Account
 
 Please follow the steps in [Initialize Vendors - GitHub](../60_initialize_vendors/#github) to get started.
