@@ -9,7 +9,7 @@ for data models in the DANDI Archive.
 
 • **AWS**
 
-Provides storage buckets, as well as domain management, for resourcees across the DANDI ecosystem 
+Provides storage buckets, as well as domain management, for resources across the DANDI ecosystem 
 
 • **GitHub**
 
