@@ -4,21 +4,46 @@ The DANDI ecosystem relies on vendor services to operate.  So first you will nee
 
 • **Heroku**
 
+Provisions the servers and worker processes for the API. Heroku also handles the Postgres instance responsible
+for data models in the DANDI Archive.
+
 • **AWS**
+
+Provides storage buckets, as well as domain management, for resourcees across the DANDI ecosystem 
 
 • **GitHub**
 
+Serves as the authentication provider for accounts across the DANDI ecosystem
+
 • **Terraform Cloud**
+
+Manages provisioned resources across cloud vendors in a version-controlled manner. 
 
 • **Netlify**
 
+Deploys production frontend build, as well as s staging previews to assist with frontend development
+
 • **Sentry**
+
+Provides observability and monitoring for API events
 
 • **PyPI**
 
-• **Datalad (TBD)**
+Serves as a public registry for the `dandi-cli` tool
 
-• **git-annex (TBD)**
+Some services are not yet integrated within the main infrastructure:
+
+• https://github.com/dandi/backups2datalad - to populate/update https://github.com/dandi/dandisets, https://github.com/dandisets, and https://github.com/dandizarrs/
+
+• TODO: heroku logs
+
+• TODO: aws s3 access stats dump
+
+• TODO: con/tinuous dumps of CI logs 
+
+• TODO: zarr manifests generation (ATM not on drogon even)
+
+• TODO: access stats analysis/plots (yet to be finished/cron deployed)
 
 ## Heroku
 
