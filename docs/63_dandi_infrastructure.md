@@ -121,6 +121,14 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 Lastly, validate your certificate via DNS Records. This can be done by using the CNAME values 
 expressed by the certificate and linking them as records in your DNS Hosted Zone.
 
+### Heroku Dyno Sizes
+
+`dandi-infrastructure` defines "dyno" (a.k.a process) sizes for each service being run. For specific reference,
+[see here in api.tf](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/api.tf#L14-L18).
+
+While your DANDI Archive clone may differ in traffic and activity, the defaults set in `dandi-infrastructure` rarely
+exceed 75% usage.
+
 ### Heroku API Domain
 
 Heroku will provision an API endpoint for your DANDI Archive. In order to properly map and configure that domain, first proceed to the 

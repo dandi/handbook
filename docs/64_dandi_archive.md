@@ -26,6 +26,8 @@ you'll see several entries:
 
 This `Procfile` shouldn't need to be changed or reconfigured much for a DANDI-clone; however, it is important to note so that one may understand how DANDI Archive is working.
 
+For information on the resource allocation of `dynos` in DANDI Archive, please reference documentation in [the Dandi Infrastructure Docs](../63_dandi_infrastructure)
+
 ## Understanding metrics and logging via Heroku
 
 Heroku provides observability in a very convenient manner. If you'd like to see what is happening with your app in real-time, simply access the options shown in the image below

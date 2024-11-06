@@ -357,6 +357,10 @@ You can now invoke Terraform `plan` and `apply` from the Terraform Cloud UI or v
 
 The frontend for `dandi-archive` is served via [Netlify](https://www.netlify.com/)
 
+**Note:** A `Starter` plan should be plenty enough (specifically "build minutes" shouldn't exceed much past ~300 at most a month)
+-- if you'd like more control over specific deployments and environments, you
+may want to consider `Pro` -- [see here for more details](https://www.netlify.com/pricing/)
+
 ##### Create Account and Initialize Project
 
 First, create an account. After creating an account, you'll want to navigate to `Sites`, where you can `Add a new site`, and then `Import an existing project`
@@ -413,6 +417,8 @@ alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
+For your account, the free `Developer` account should be accurate, as define in [Sentry's pricing structure](https://sentry.io/pricing/)
+
 ##### Select Django as an App Type
 
 DANDI Archive API is built as a Django app -- so proceed to select `Django` on the following screen:
@@ -465,7 +471,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 <br/><br/>
 
 In terms of creating and publishing your first project, go to the [documentation for setting up a CLI and Python Client](.
-./47_cli_python)
+./62_dandi_cli)
 
 
 ## datalad (TBD)
