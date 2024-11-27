@@ -27,10 +27,6 @@ Deploys production frontend build, as well as s staging previews to assist with 
 
 Provides observability and monitoring for API events
 
-• **PyPI**
-
-Serves as a public registry for the `dandi-cli` tool
-
 Some services are not yet integrated within the main infrastructure:
 
 • https://github.com/dandi/backups2datalad - to populate/update https://github.com/dandi/dandisets, https://github.com/dandisets, and https://github.com/dandizarrs/
@@ -441,38 +437,6 @@ src="../img/sentry_sdk_dsn.png"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
-
-## PyPI
-
-A common way that users interact with the DANDI ecosystem is via its CLI and Python client tool: [dandi-cli](https://pypi.org/project/dandi/)
-
-##### Create a PyPI Account
-
-Versions of this tool are hosted, versioned and managed by PyPI -- therefore, you will need to create an account.
-
-##### Retrieve an API Token
-
-After creating an account, you'll want to create your own API key -- first go to `Account settings`
-
-<br/><br/>
-<img
-src="../img/pypi_account.png"
-alt="retrieve"
-style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
-<br/><br/>
-
-Scroll down to `API tokens` and create a value -- keep track of this value for now. We will use it later
-
-<br/><br/>
-<img
-src="../img/pypi_api_token.png"
-alt="retrieve"
-style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
-<br/><br/>
-
-In terms of creating and publishing your first project, go to the [documentation for setting up a CLI and Python Client](.
-./62_dandi_cli)
-
 
 ## datalad (TBD)
 

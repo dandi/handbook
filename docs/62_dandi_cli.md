@@ -1,20 +1,20 @@
 For data management (predominately `upload`, `download` and `validation` of data 
 to/from DANDI), a local CLI (command line interface) is used.
 
-**Note: please make sure [you have set up your PyPI account](..60_initialize_vendors/##pypi).**
-
 ## Referencing your API
 
-To reference your DANDI-clone API, [update the URLs reference per each CLI action](https://github.com/dandi/dandi-cli/blob/15196a93310618f8897c7b43444e216bbb094549/dandi/consts.py#L119-L135)
+To reference your DANDI-clone API, [update the URLs reference per each CLI action](https://github.com/dandi/dandi-cli/blob/15196a93310618f8897c7b43444e216bbb094549/dandi/consts.py#L119-L135) and push a PR to the [dandi-cli GitHub repository](https://github.com/dandi/dandi-cli).
+
+Here is an example PR of another clone adding to the available instances of `DandiInstance` objects in `dandi-cli`: [see here](https://github.com/dandi/dandi-cli/pull/1527)
 
 For example:
 
 ```python
 known_instances = {
-    "dandi": DandiInstance(  # Your own "dandi""
-        "dandi", # Your own "dandi"
-        "https://<your-domain>.org",  # UI URL
-        "https://api.<your-domain>.org/api", # API URL
+    "dandi": DandiInstance(
+        "dandi",
+        "https://dandiarchive.org",
+        "https://api.dandiarchive.org/api",
     ),
     "dandi-staging": DandiInstance(
         "dandi-staging",
@@ -26,13 +26,22 @@ known_instances = {
         f"http://{instancehost}:8085",
         f"http://{instancehost}:8000/api",
     ),
+    "<your-dandi-clone>": DandiInstance( # Your own "dandi""
+        "<your-dandi-clone>", # Your own "dandi"
+        "https://<your-dandi-clone-domain>.org", 
+        "https://api.<your-dandi-clone-domain>.org/api", 
+    ),
 }
 ```
 
-Of note, you'll need to think about how you manage API access via the CLI -- `dandi` relies of the presence of a `DANDI_API_KEY`
+Once your DANDI clone is added to list of available `DandiInstance` objects, you should be able to perform operations via the `-i` flag -- for example:
+
+`dandi upload -i <your-dandi-clone>`
+
+**Note**: Users will be prompted for a `DANDI_API_KEY`
 env. var [see here for code reference](https://github.com/dandi/dandi-cli/blob/6aa414c4db47394970f586cc4fb9758a634aef87/dandi/dandiapi.py#L492-L499)
 
-Dependent on the structure of your project, you might want to reflect a specific, unique environment variable value.
+You do not need to create a unique value here -- a user can just reference the `DANDI_API_KEY` their API issues in their respective clone.
 
 ## Handling Versioning
 
