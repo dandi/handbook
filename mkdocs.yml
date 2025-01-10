@@ -3,7 +3,7 @@ repo_name: "dandi/handbook"
 repo_url: "https://github.com/dandi/handbook"
 copyright: "CC-BY 4.0"
 use_directory_urls: true
-site_url: https://www.dandiarchive.org/handbook/
+site_url: https://docs.dandiarchive.org
 
 # Material theme
 theme:
