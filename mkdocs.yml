@@ -3,7 +3,7 @@ repo_name: "dandi/handbook"
 repo_url: "https://github.com/dandi/handbook"
 copyright: "CC-BY 4.0"
 use_directory_urls: true
-site_url: https://www.dandiarchive.org/handbook/
+site_url: https://docs.dandiarchive.org
 
 # Material theme
 theme:
@@ -42,6 +42,7 @@ nav:
     - Validation Levels for NWB Files: "135_validation.md"
     - Dandiset Metadata: "136_metadata.md"
     - Publishing Dandisets: "14_publish.md"
+    - Citing a Dandiset: "citing.md"
     - Debugging: "15_debugging.md"
     - DANDI CLI and Python API: https://dandi.readthedocs.io
   - Developer Guide:
@@ -49,6 +50,7 @@ nav:
     - Notes: "40_development.md"
     - REST API Swagger: https://api.dandiarchive.org/swagger
     - REST API Redoc: https://api.dandiarchive.org/redoc
+    - Contributing Documentation: "100_contribute_docs.md"
   - DANDI Hub: "50_hub.md"
   - Tutorials:
     - Dandiset Examples: https://www.dandiarchive.org/example-notebooks
@@ -58,7 +60,6 @@ nav:
   - Terms and Policies:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
-  - About This Doc: "100_about_this_doc.md"
 
 # List of extensions
 markdown_extensions:
@@ -77,6 +78,9 @@ plugins:
 # Customize theme
 extra:
   homepage: https://dandiarchive.org
+  analytics:
+    provider: google
+    property: G-15WQLCLQ3L
   social:
     - icon: fontawesome/brands/slack
       link: https://dandiarchive.slack.com
