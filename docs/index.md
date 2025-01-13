@@ -30,14 +30,14 @@ request features [at our helpdesk](https://github.com/dandi/helpdesk/issues/new/
 and use the tag [dandi](https://neurostars.org/tag/dandi).
 - You can use the DANDI Slack workspace, which we will invite you to after approving your [registration on 
   DANDI using GitHub](https://dandiarchive.org/) (this registration is required to upload data or to use the DANDI 
-  JupyterHub). See [here for details on how to 
-  register](./13_upload.md).
+  JupyterHub). See [here for details on how to
+  [register](./13_upload.md).
 - Email us: [info@dandiarchive.org](mailto: info@dandiarchive.org)
 
 ## Contributing and Feedback
 
 We are looking for people to give us feedback on this documentation. If anything
-is unclear, [open an issue on our repository](https://github.com/dandi/handbook/issues). You can also get in touch on 
+is unclear, [open an issue on our repository](https://github.com/dandi/handbook/issues). You can also get in touch on
 our Slack channel, which is available to those who have
 registered an account on the archive.
 
