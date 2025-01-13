@@ -1,6 +1,6 @@
 site_name: DANDI Documentation
-repo_name: "dandi/handbook"
-repo_url: "https://github.com/dandi/handbook"
+repo_name: "dandi/dandi-docs"
+repo_url: "https://github.com/dandi/dandi-docs"
 copyright: "CC-BY 4.0"
 use_directory_urls: true
 site_url: https://docs.dandiarchive.org
