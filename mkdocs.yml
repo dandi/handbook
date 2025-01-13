@@ -12,8 +12,18 @@ theme:
   favicon: img/favicon.ico
   logo: img/dandi-logo-square_sw.png
   palette:
-    primary: "dark blue"
-    accent: "light blue"
+    - scheme: default
+      toggle: 
+        icon: material/weather-night
+        name: Dark mode
+      primary: "dark blue"
+      accent: "light blue"
+    - scheme: slate
+      toggle: 
+        icon: material/weather-sunny
+        name: Light mode
+      primary: "dark blue"
+      accent: "light blue"
   features:
     - toc.integrate
 
